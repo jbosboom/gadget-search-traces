@@ -1,0 +1,2396 @@
+Report on /data/ssd/ditripwire-point.mdb/ started at 2020-01-10 14:46:45 EST
+Database ID c6aaf9359c7e0558, created on inconsolable at 2020-01-10 00:07:52 EST
+Source spec: 3-fanin 04-ditripwire-123-point
+
+==> Step 1: 0 user, 0 sys, 0h0m0s wall (0.04), 2.89 GiB (0.00, 5)
+-->    closed:           5           5   1.0       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           5           5   1.0       0 MiB
+-->   combine:           5           5   1.0       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.00
+
+Target trace:
+  2 = source {diode}
+Source trace:
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  2 = connect 17198 at 1 delete 1 @0
+
+==> Step 2: 0 user, 0 sys, 0h0m0s wall (0.05), 2.89 GiB (0.00, 7)
+-->    closed:           6           6   1.0       0 MiB
+--> closemirr:           1           1   1.0       0 MiB
+-->   connect:           1           1   1.0       0 MiB
+-->   combine:           6           6   1.0       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.12
+
+==> Step 3: 0 user, 0 sys, 0h0m0s wall (1.01), 2.89 GiB (0.00, 0)
+-->    closed:           6           6   1.0       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           1           1   1.0       0 MiB
+-->   combine:           6           6   1.0       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.12
+
+==> Step 4: 0 user, 0 sys, 0h0m0s wall (0.98), 2.89 GiB (0.00, 0)
+-->    closed:           6           6   1.0       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:           6           6   1.0       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.12
+
+Target trace:
+  207 = source {diode-diode-parallel}
+Source trace:
+  15 = source {3-fanin}
+  207 = combine 15 splice 0 with 15 rotate 0 connect at 2 @0
+
+Target trace:
+  208 = source {diode-diode-antiparallel-r}
+Source trace:
+  15 = source {3-fanin}
+  208 = combine 15 splice 0 with 15 rotate 2 connect at 5 @0
+
+Target trace:
+  209 = source {diode-diode-antiparallel-s}
+Source trace:
+  15 = source {3-fanin}
+  209 = combine 15 splice 0 with 15 rotate 1 connect at 2 @1
+
+Target trace:
+  211 = source {4-fanin}
+Source trace:
+  15 = source {3-fanin}
+  211 = combine 15 splice 0 with 15 rotate 1 connect at 5 @2
+
+Target trace:
+  279 = source {dilock-ditripwire-parallel-open-0-s, ditripwire-dilock-parallel-0-open-r}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  279 = combine 17198 splice 3 with 15 rotate 2 connect at 5 delete 3,4 @0
+
+Target trace:
+  286 = source {dilock-ditripwire-parallel-closed-1-s, ditripwire-dilock-parallel-1-closed-r}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  286 = combine 17198 splice 0 with 15 rotate 1 connect at 7 delete 0,1 @1
+
+Target trace:
+  290 = source {dilock-ditripwire-parallel-closed-1-r, ditripwire-dilock-parallel-1-closed-s}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  290 = combine 17513 splice 1 with 15 rotate 2 connect at 3 delete 1,2 @3
+
+Target trace:
+  308 = source {dilock-ditripwire-parallel-open-0-r, ditripwire-dilock-parallel-0-open-s}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  308 = combine 17513 splice 2 with 15 rotate 2 connect at 4 delete 2,3 @0
+
+Target trace:
+  23367 = source {05-ditripwire-15-ditripwire-234-point-down-r, 05-ditripwire-15-ditripwire-243-point-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  23367 = combine 17532 splice 0 with 15 rotate 1 connect at 7 @2
+
+Target trace:
+  29069 = source {05-ditripwire-134-point-234-point-up-up-s, 05-ditripwire-134-point-243-point-up-down-s, 05-ditripwire-143-point-234-point-down-up-s, 05-ditripwire-143-point-243-point-down-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  29069 = combine 17198 splice 0 with 15 rotate 2 connect at 2 @1
+
+Target trace:
+  30287 = source {05-ditripwire-15-ditripwire-234-point-up-s, 05-ditripwire-15-ditripwire-243-point-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  30287 = combine 17198 splice 1 with 15 rotate 2 connect at 3 @0
+
+Target trace:
+  33650 = source {05-ditripwire-15-ditripwire-234-point-down-s, 05-ditripwire-15-ditripwire-243-point-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  33650 = combine 17546 splice 1 with 15 rotate 2 connect at 3 @0
+
+Target trace:
+  36317 = source {05-ditripwire-15-ditripwire-234-point-up-r, 05-ditripwire-15-ditripwire-243-point-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  36317 = combine 17513 splice 0 with 15 rotate 1 connect at 7 @2
+
+Target trace:
+  39224 = source {05-ditripwire-134-point-234-point-down-down-s, 05-ditripwire-134-point-243-point-down-up-s, 05-ditripwire-143-point-234-point-up-down-s, 05-ditripwire-143-point-243-point-up-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  39224 = combine 17546 splice 0 with 15 rotate 2 connect at 2 @1
+
+Target trace:
+  41861 = source {05-ditripwire-134-point-234-point-up-up-r, 05-ditripwire-134-point-243-point-up-down-r, 05-ditripwire-143-point-234-point-down-up-r, 05-ditripwire-143-point-243-point-down-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  41861 = combine 17513 splice 0 with 15 rotate 2 connect at 2 @1
+
+Target trace:
+  46919 = source {05-ditripwire-134-point-234-point-down-down-r, 05-ditripwire-134-point-243-point-down-up-r, 05-ditripwire-143-point-234-point-up-down-r, 05-ditripwire-143-point-243-point-up-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  46919 = combine 17532 splice 0 with 15 rotate 2 connect at 2 @1
+
+==> Step 5: 0 user, 0 sys, 0h0m0s wall (0.30), 2.89 GiB (0.00, 19)
+-->    closed:         190          61   3.1       0 MiB
+--> closemirr:         184          55   3.3       0 MiB
+-->   connect:         184          55   3.3       0 MiB
+-->   combine:         184          55   3.3       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.89
+
+==> Step 6: 0 user, 0 sys, 0h0m0s wall (0.96), 2.89 GiB (0.00, 0)
+-->    closed:         190          61   3.1       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:         184          55   3.3       0 MiB
+-->   combine:         184          55   3.3       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.89
+
+Target trace:
+  370 = source {03-ditripwire-123-point-up-r, 03-ditripwire-132-point-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  5151545 = combine 17513 splice 2 with 15 rotate 1 connect at 4 @0
+  370 = connect 5151545 at 3 @0
+
+Target trace:
+  469 = source {03-ditripwire-123-point-up-s, 03-ditripwire-132-point-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  5151617 = combine 17198 splice 2 with 15 rotate 1 connect at 4 @0
+  469 = connect 5151617 at 3 @0
+
+Target trace:
+  522 = source {03-ditripwire-123-point-down-s, 03-ditripwire-132-point-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  5151702 = combine 17546 splice 3 with 15 rotate 0 connect at 5 @3
+  522 = connect 5151702 at 5 @2
+
+Target trace:
+  647 = source {03-ditripwire-123-point-down-r, 03-ditripwire-132-point-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  5151647 = combine 17532 splice 2 with 15 rotate 1 connect at 4 @0
+  647 = connect 5151647 at 3 @0
+
+==> Step 7: 0 user, 0 sys, 0h0m0s wall (0.13), 2.89 GiB (0.00, 14)
+-->    closed:         238         109   2.2       0 MiB
+--> closemirr:          48          48   1.0       0 MiB
+-->   connect:          48          48   1.0       0 MiB
+-->   combine:         232         103   2.3       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.90
+
+==> Step 8: 0 user, 0 sys, 0h0m0s wall (1.00), 2.89 GiB (0.00, 0)
+-->    closed:         238         109   2.2       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:          48          48   1.0       0 MiB
+-->   combine:         232         103   2.3       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.90
+
+==> Step 9: 0 user, 0 sys, 0h0m0s wall (0.16), 2.89 GiB (0.00, 61)
+-->    closed:         238         109   2.2       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:         232         103   2.3       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.90
+
+Target trace:
+  16850 = source {5-fanin}
+Source trace:
+  15 = source {3-fanin}
+  211 = combine 15 splice 0 with 15 rotate 1 connect at 5 @2
+  16850 = combine 211 splice 0 with 15 rotate 1 connect at 6 @2
+
+Target trace:
+  17624 = source {04-ditripwire-14-ditripwire-234-point-down-r, 04-ditripwire-14-ditripwire-243-point-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  5151647 = combine 17532 splice 2 with 15 rotate 1 connect at 4 @0
+  647 = connect 5151647 at 3 @0
+  17624 = combine 647 splice 0 with 15 rotate 1 connect at 6 @2
+
+Target trace:
+  17757 = source {04-ditripwire-14-ditripwire-234-point-up-s, 04-ditripwire-14-ditripwire-243-point-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  5151617 = combine 17198 splice 2 with 15 rotate 1 connect at 4 @0
+  469 = connect 5151617 at 3 @0
+  17757 = combine 469 splice 1 with 15 rotate 2 connect at 3 @0
+
+Target trace:
+  17976 = source {04-ditripwire-134-point-234-point-up-up-s, 04-ditripwire-134-point-243-point-up-down-s, 04-ditripwire-143-point-234-point-down-up-s, 04-ditripwire-143-point-243-point-down-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  5151617 = combine 17198 splice 2 with 15 rotate 1 connect at 4 @0
+  469 = connect 5151617 at 3 @0
+  17976 = combine 469 splice 0 with 15 rotate 2 connect at 2 @1
+
+Target trace:
+  17987 = source {04-ditripwire-134-point-234-point-down-down-s, 04-ditripwire-134-point-243-point-down-up-s, 04-ditripwire-143-point-234-point-up-down-s, 04-ditripwire-143-point-243-point-up-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  5151702 = combine 17546 splice 3 with 15 rotate 0 connect at 5 @3
+  522 = connect 5151702 at 5 @2
+  17987 = combine 522 splice 0 with 15 rotate 2 connect at 2 @1
+
+Target trace:
+  18058 = source {04-ditripwire-14-ditripwire-234-point-up-r, 04-ditripwire-14-ditripwire-243-point-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  5151545 = combine 17513 splice 2 with 15 rotate 1 connect at 4 @0
+  370 = connect 5151545 at 3 @0
+  18058 = combine 370 splice 0 with 15 rotate 1 connect at 6 @2
+
+Target trace:
+  18777 = source {04-ditripwire-134-point-234-point-down-down-r, 04-ditripwire-134-point-243-point-down-up-r, 04-ditripwire-143-point-234-point-up-down-r, 04-ditripwire-143-point-243-point-up-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  5151647 = combine 17532 splice 2 with 15 rotate 1 connect at 4 @0
+  647 = connect 5151647 at 3 @0
+  18777 = combine 647 splice 0 with 15 rotate 2 connect at 2 @1
+
+Target trace:
+  19067 = source {04-ditripwire-14-ditripwire-234-point-down-s, 04-ditripwire-14-ditripwire-243-point-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  5151702 = combine 17546 splice 3 with 15 rotate 0 connect at 5 @3
+  522 = connect 5151702 at 5 @2
+  19067 = combine 522 splice 1 with 15 rotate 2 connect at 3 @0
+
+Target trace:
+  19122 = source {04-ditripwire-134-point-234-point-up-up-r, 04-ditripwire-134-point-243-point-up-down-r, 04-ditripwire-143-point-234-point-down-up-r, 04-ditripwire-143-point-243-point-down-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  5151545 = combine 17513 splice 2 with 15 rotate 1 connect at 4 @0
+  370 = connect 5151545 at 3 @0
+  19122 = combine 370 splice 0 with 15 rotate 2 connect at 2 @1
+
+Target trace:
+  297678 = source {06-ditripwire-145-point-245-point-345-point-down-down-down-r, 06-ditripwire-145-point-245-point-354-point-down-down-up-r, 06-ditripwire-145-point-254-point-345-point-down-up-down-r, 06-ditripwire-145-point-254-point-354-point-down-up-up-r, 06-ditripwire-154-point-245-point-345-point-up-down-down-r, 06-ditripwire-154-point-245-point-354-point-up-down-up-r, 06-ditripwire-154-point-254-point-345-point-up-up-down-r, 06-ditripwire-154-point-254-point-354-point-up-up-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  46919 = combine 17532 splice 0 with 15 rotate 2 connect at 2 @1
+  297678 = combine 46919 splice 0 with 15 rotate 1 connect at 8 @2
+
+Target trace:
+  339858 = source {06-ditripwire-16-ditripwire-26-ditripwire-345-point-up-r, 06-ditripwire-16-ditripwire-26-ditripwire-354-point-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  36317 = combine 17513 splice 0 with 15 rotate 1 connect at 7 @2
+  339858 = combine 36317 splice 0 with 15 rotate 1 connect at 8 @2
+
+Target trace:
+  385230 = source {06-ditripwire-16-ditripwire-26-ditripwire-345-point-up-s, 06-ditripwire-16-ditripwire-26-ditripwire-354-point-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  30287 = combine 17198 splice 1 with 15 rotate 2 connect at 3 @0
+  385230 = combine 30287 splice 1 with 15 rotate 2 connect at 3 @0
+
+Target trace:
+  408598 = source {06-ditripwire-145-point-245-point-345-point-up-up-up-s, 06-ditripwire-145-point-245-point-354-point-up-up-down-s, 06-ditripwire-145-point-254-point-345-point-up-down-up-s, 06-ditripwire-145-point-254-point-354-point-up-down-down-s, 06-ditripwire-154-point-245-point-345-point-down-up-up-s, 06-ditripwire-154-point-245-point-354-point-down-up-down-s, 06-ditripwire-154-point-254-point-345-point-down-down-up-s, 06-ditripwire-154-point-254-point-354-point-down-down-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  29069 = combine 17198 splice 0 with 15 rotate 2 connect at 2 @1
+  408598 = combine 29069 splice 0 with 15 rotate 1 connect at 8 @2
+
+Target trace:
+  443359 = source {06-ditripwire-16-ditripwire-245-point-345-point-up-up-s, 06-ditripwire-16-ditripwire-245-point-354-point-up-down-s, 06-ditripwire-16-ditripwire-254-point-345-point-down-up-s, 06-ditripwire-16-ditripwire-254-point-354-point-down-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  29069 = combine 17198 splice 0 with 15 rotate 2 connect at 2 @1
+  443359 = combine 29069 splice 1 with 15 rotate 2 connect at 3 @0
+
+Target trace:
+  472478 = source {06-ditripwire-145-point-245-point-345-point-down-down-down-s, 06-ditripwire-145-point-245-point-354-point-down-down-up-s, 06-ditripwire-145-point-254-point-345-point-down-up-down-s, 06-ditripwire-145-point-254-point-354-point-down-up-up-s, 06-ditripwire-154-point-245-point-345-point-up-down-down-s, 06-ditripwire-154-point-245-point-354-point-up-down-up-s, 06-ditripwire-154-point-254-point-345-point-up-up-down-s, 06-ditripwire-154-point-254-point-354-point-up-up-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  39224 = combine 17546 splice 0 with 15 rotate 2 connect at 2 @1
+  472478 = combine 39224 splice 0 with 15 rotate 1 connect at 8 @2
+
+Target trace:
+  574933 = source {06-ditripwire-16-ditripwire-245-point-345-point-down-down-r, 06-ditripwire-16-ditripwire-245-point-354-point-down-up-r, 06-ditripwire-16-ditripwire-254-point-345-point-up-down-r, 06-ditripwire-16-ditripwire-254-point-354-point-up-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  23367 = combine 17532 splice 0 with 15 rotate 1 connect at 7 @2
+  574933 = combine 23367 splice 0 with 15 rotate 2 connect at 2 @1
+
+Target trace:
+  720309 = source {06-ditripwire-16-ditripwire-26-ditripwire-345-point-down-r, 06-ditripwire-16-ditripwire-26-ditripwire-354-point-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  23367 = combine 17532 splice 0 with 15 rotate 1 connect at 7 @2
+  720309 = combine 23367 splice 0 with 15 rotate 1 connect at 8 @2
+
+Target trace:
+  733434 = source {06-ditripwire-16-ditripwire-245-point-345-point-up-up-r, 06-ditripwire-16-ditripwire-245-point-354-point-up-down-r, 06-ditripwire-16-ditripwire-254-point-345-point-down-up-r, 06-ditripwire-16-ditripwire-254-point-354-point-down-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  36317 = combine 17513 splice 0 with 15 rotate 1 connect at 7 @2
+  733434 = combine 36317 splice 0 with 15 rotate 2 connect at 2 @1
+
+Target trace:
+  789697 = source {06-ditripwire-16-ditripwire-26-ditripwire-345-point-down-s, 06-ditripwire-16-ditripwire-26-ditripwire-354-point-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  33650 = combine 17546 splice 1 with 15 rotate 2 connect at 3 @0
+  789697 = combine 33650 splice 1 with 15 rotate 2 connect at 3 @0
+
+Target trace:
+  873784 = source {06-ditripwire-145-point-245-point-345-point-up-up-up-r, 06-ditripwire-145-point-245-point-354-point-up-up-down-r, 06-ditripwire-145-point-254-point-345-point-up-down-up-r, 06-ditripwire-145-point-254-point-354-point-up-down-down-r, 06-ditripwire-154-point-245-point-345-point-down-up-up-r, 06-ditripwire-154-point-245-point-354-point-down-up-down-r, 06-ditripwire-154-point-254-point-345-point-down-down-up-r, 06-ditripwire-154-point-254-point-354-point-down-down-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  41861 = combine 17513 splice 0 with 15 rotate 2 connect at 2 @1
+  873784 = combine 41861 splice 0 with 15 rotate 1 connect at 8 @2
+
+Target trace:
+  931759 = source {06-ditripwire-16-ditripwire-245-point-345-point-down-down-s, 06-ditripwire-16-ditripwire-245-point-354-point-down-up-s, 06-ditripwire-16-ditripwire-254-point-345-point-up-down-s, 06-ditripwire-16-ditripwire-254-point-354-point-up-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  33650 = combine 17546 splice 1 with 15 rotate 2 connect at 3 @0
+  931759 = combine 33650 splice 0 with 15 rotate 2 connect at 2 @1
+
+Target trace:
+  82589 = source {06-ditripwire-123-point-456-point-up-down-s, 06-ditripwire-123-point-465-point-up-up-s, 06-ditripwire-132-point-456-point-down-down-s, 06-ditripwire-132-point-465-point-down-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  5151702 = combine 17546 splice 3 with 15 rotate 0 connect at 5 @3
+  522 = connect 5151702 at 5 @2
+  82589 = combine 522 splice 1 with 17198 rotate 3 connect at 5 @0
+
+Target trace:
+  106507 = source {06-ditripwire-123-point-456-point-up-up-s, 06-ditripwire-123-point-465-point-up-down-s, 06-ditripwire-132-point-456-point-down-up-s, 06-ditripwire-132-point-465-point-down-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  5151617 = combine 17198 splice 2 with 15 rotate 1 connect at 4 @0
+  469 = connect 5151617 at 3 @0
+  106507 = combine 469 splice 1 with 17198 rotate 3 connect at 5 @3
+
+Target trace:
+  184743 = source {06-ditripwire-123-point-456-point-up-down-r, 06-ditripwire-123-point-465-point-up-up-r, 06-ditripwire-132-point-456-point-down-down-r, 06-ditripwire-132-point-465-point-down-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  5151647 = combine 17532 splice 2 with 15 rotate 1 connect at 4 @0
+  647 = connect 5151647 at 3 @0
+  184743 = combine 647 splice 0 with 17513 rotate 3 connect at 8 @1
+
+Target trace:
+  190962 = source {06-ditripwire-123-point-456-point-up-up-r, 06-ditripwire-123-point-465-point-up-down-r, 06-ditripwire-132-point-456-point-down-up-r, 06-ditripwire-132-point-465-point-down-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  5151545 = combine 17513 splice 2 with 15 rotate 1 connect at 4 @0
+  370 = connect 5151545 at 3 @0
+  190962 = combine 370 splice 0 with 17513 rotate 3 connect at 8 @1
+
+Target trace:
+  167080 = source {06-ditripwire-123-point-456-point-down-up-r, 06-ditripwire-123-point-465-point-down-down-r, 06-ditripwire-132-point-456-point-up-up-r, 06-ditripwire-132-point-465-point-up-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  5151545 = combine 17513 splice 2 with 15 rotate 1 connect at 4 @0
+  370 = connect 5151545 at 3 @0
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  167080 = combine 370 splice 0 with 17532 rotate 3 connect at 8 @4
+
+Target trace:
+  183945 = source {06-ditripwire-123-point-456-point-down-down-r, 06-ditripwire-123-point-465-point-down-up-r, 06-ditripwire-132-point-456-point-up-down-r, 06-ditripwire-132-point-465-point-up-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  5151647 = combine 17532 splice 2 with 15 rotate 1 connect at 4 @0
+  647 = connect 5151647 at 3 @0
+  183945 = combine 647 splice 0 with 17532 rotate 3 connect at 8 @1
+
+Target trace:
+  86912 = source {06-ditripwire-123-point-456-point-down-down-s, 06-ditripwire-123-point-465-point-down-up-s, 06-ditripwire-132-point-456-point-up-down-s, 06-ditripwire-132-point-465-point-up-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  5151702 = combine 17546 splice 3 with 15 rotate 0 connect at 5 @3
+  522 = connect 5151702 at 5 @2
+  86912 = combine 522 splice 1 with 17546 rotate 3 connect at 5 @3
+
+Target trace:
+  104073 = source {06-ditripwire-123-point-456-point-down-up-s, 06-ditripwire-123-point-465-point-down-down-s, 06-ditripwire-132-point-456-point-up-up-s, 06-ditripwire-132-point-465-point-up-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  5151617 = combine 17198 splice 2 with 15 rotate 1 connect at 4 @0
+  469 = connect 5151617 at 3 @0
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  104073 = combine 469 splice 1 with 17546 rotate 3 connect at 5 @3
+
+==> Step 10: 0 user, 0 sys, 0h0m0s wall (0.21), 2.89 GiB (0.00, 181)
+-->    closed:        7151        1196   6.0       0 MiB
+--> closemirr:        6913        1089   6.3       0 MiB
+-->   connect:        6913        1089   6.3       0 MiB
+-->   combine:        6913        1089   6.3       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.90
+
+==> Step 11: 0 user, 0 sys, 0h0m0s wall (1.00), 2.89 GiB (0.00, 0)
+-->    closed:        7151        1196   6.0       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:        6913        1089   6.3       0 MiB
+-->   combine:        6913        1089   6.3       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.90
+
+Target trace:
+  79295 = source {06-ditripwire-124-point-345-point-up-down-s, 06-ditripwire-124-point-354-point-up-up-s, 06-ditripwire-142-point-345-point-down-down-s, 06-ditripwire-142-point-354-point-down-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  39224 = combine 17546 splice 0 with 15 rotate 2 connect at 2 @1
+  16561197 = combine 39224 splice 1 with 17198 rotate 3 connect at 5 @0
+  79295 = connect 16561197 at 0 @6
+
+Target trace:
+  82457 = source {06-ditripwire-124-point-345-point-down-up-r, 06-ditripwire-124-point-354-point-down-down-r, 06-ditripwire-142-point-345-point-up-up-r, 06-ditripwire-142-point-354-point-up-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  41861 = combine 17513 splice 0 with 15 rotate 2 connect at 2 @1
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  16561219 = combine 41861 splice 4 with 17532 rotate 4 connect at 8 @0
+  82457 = connect 16561219 at 7 @0
+
+Target trace:
+  86977 = source {06-ditripwire-124-point-345-point-down-up-s, 06-ditripwire-124-point-354-point-down-down-s, 06-ditripwire-142-point-345-point-up-up-s, 06-ditripwire-142-point-354-point-up-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  5151657 = combine 17546 splice 3 with 15 rotate 1 connect at 5 @0
+  16561191 = combine 5151657 splice 2 with 17198 rotate 2 connect at 6 @0
+  86977 = connect 16561191 at 5 @0
+
+Target trace:
+  111882 = source {06-ditripwire-125-point-345-point-down-down-s, 06-ditripwire-125-point-354-point-down-up-s, 06-ditripwire-152-point-345-point-up-down-s, 06-ditripwire-152-point-354-point-up-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  5151657 = combine 17546 splice 3 with 15 rotate 1 connect at 5 @0
+  16561236 = combine 5151657 splice 2 with 17546 rotate 2 connect at 6 @0
+  111882 = connect 16561236 at 5 @0
+
+Target trace:
+  122380 = source {06-ditripwire-125-point-345-point-down-down-r, 06-ditripwire-125-point-354-point-down-up-r, 06-ditripwire-152-point-345-point-up-down-r, 06-ditripwire-152-point-354-point-up-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  46919 = combine 17532 splice 0 with 15 rotate 2 connect at 2 @1
+  16561238 = combine 46919 splice 4 with 17532 rotate 4 connect at 8 @5
+  122380 = connect 16561238 at 2 @2
+
+Target trace:
+  169731 = source {06-ditripwire-125-point-345-point-up-up-s, 06-ditripwire-125-point-354-point-up-down-s, 06-ditripwire-152-point-345-point-down-up-s, 06-ditripwire-152-point-354-point-down-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  29069 = combine 17198 splice 0 with 15 rotate 2 connect at 2 @1
+  16561214 = combine 29069 splice 1 with 17198 rotate 3 connect at 5 @0
+  169731 = connect 16561214 at 0 @1
+
+Target trace:
+  188302 = source {06-ditripwire-124-point-345-point-up-down-r, 06-ditripwire-124-point-354-point-up-up-r, 06-ditripwire-142-point-345-point-down-down-r, 06-ditripwire-142-point-354-point-down-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  5151513 = combine 17513 splice 2 with 15 rotate 0 connect at 4 @0
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  16561253 = combine 5151513 splice 4 with 17532 rotate 0 connect at 8 @0
+  188302 = connect 16561253 at 3 @0
+
+Target trace:
+  217255 = source {06-ditripwire-125-point-345-point-up-up-r, 06-ditripwire-125-point-354-point-up-down-r, 06-ditripwire-152-point-345-point-down-up-r, 06-ditripwire-152-point-354-point-down-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  41861 = combine 17513 splice 0 with 15 rotate 2 connect at 2 @1
+  16561187 = combine 41861 splice 4 with 17513 rotate 4 connect at 8 @5
+  217255 = connect 16561187 at 2 @0
+
+==> Step 12: 0 user, 0 sys, 0h0m0s wall (0.15), 2.89 GiB (0.00, 776)
+-->    closed:        7955        1534   5.2       0 MiB
+--> closemirr:         804         340   2.4       0 MiB
+-->   connect:         804         340   2.4       0 MiB
+-->   combine:        7717        1427   5.4       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.91
+
+==> Step 13: 0 user, 0 sys, 0h0m0s wall (1.07), 2.89 GiB (0.00, 0)
+-->    closed:        7955        1534   5.2       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:         804         340   2.4       0 MiB
+-->   combine:        7717        1427   5.4       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.91
+
+==> Step 14: 0 user, 0 sys, 0h0m0s wall (0.17), 2.89 GiB (0.00, 344)
+-->    closed:        7968        1546   5.2       0 MiB
+--> closemirr:          13          12   1.1       0 MiB
+-->   connect:          13          12   1.1       0 MiB
+-->   combine:        7730        1439   5.4       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.91
+
+==> Step 15: 0 user, 0 sys, 0h0m0s wall (1.31), 2.89 GiB (0.00, 0)
+-->    closed:        7968        1546   5.2       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:          13          12   1.1       0 MiB
+-->   combine:        7730        1439   5.4       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.91
+
+==> Step 16: 0 user, 0 sys, 0h0m0s wall (0.15), 2.89 GiB (0.00, 3)
+-->    closed:        7968        1546   5.2       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:        7730        1439   5.4       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.91
+
+Target trace:
+  19638 = source {6-fanin}
+Source trace:
+  15 = source {3-fanin}
+  211 = combine 15 splice 0 with 15 rotate 1 connect at 5 @2
+  16850 = combine 211 splice 0 with 15 rotate 1 connect at 6 @2
+  19638 = combine 16850 splice 0 with 15 rotate 1 connect at 7 @2
+
+Target trace:
+  52414 = source {05-ditripwire-15-ditripwire-245-point-345-point-up-up-s, 05-ditripwire-15-ditripwire-245-point-354-point-up-down-s, 05-ditripwire-15-ditripwire-254-point-345-point-down-up-s, 05-ditripwire-15-ditripwire-254-point-354-point-down-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  5151617 = combine 17198 splice 2 with 15 rotate 1 connect at 4 @0
+  469 = connect 5151617 at 3 @0
+  17757 = combine 469 splice 1 with 15 rotate 2 connect at 3 @0
+  52414 = combine 17757 splice 0 with 15 rotate 2 connect at 2 @1
+
+Target trace:
+  52420 = source {05-ditripwire-145-point-245-point-345-point-down-down-down-s, 05-ditripwire-145-point-245-point-354-point-down-down-up-s, 05-ditripwire-145-point-254-point-345-point-down-up-down-s, 05-ditripwire-145-point-254-point-354-point-down-up-up-s, 05-ditripwire-154-point-245-point-345-point-up-down-down-s, 05-ditripwire-154-point-245-point-354-point-up-down-up-s, 05-ditripwire-154-point-254-point-345-point-up-up-down-s, 05-ditripwire-154-point-254-point-354-point-up-up-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  5151702 = combine 17546 splice 3 with 15 rotate 0 connect at 5 @3
+  522 = connect 5151702 at 5 @2
+  17987 = combine 522 splice 0 with 15 rotate 2 connect at 2 @1
+  52420 = combine 17987 splice 0 with 15 rotate 1 connect at 7 @2
+
+Target trace:
+  52528 = source {05-ditripwire-15-ditripwire-25-ditripwire-345-point-up-s, 05-ditripwire-15-ditripwire-25-ditripwire-354-point-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  5151617 = combine 17198 splice 2 with 15 rotate 1 connect at 4 @0
+  469 = connect 5151617 at 3 @0
+  17757 = combine 469 splice 1 with 15 rotate 2 connect at 3 @0
+  52528 = combine 17757 splice 1 with 15 rotate 2 connect at 3 @0
+
+Target trace:
+  53426 = source {05-ditripwire-145-point-245-point-345-point-up-up-up-s, 05-ditripwire-145-point-245-point-354-point-up-up-down-s, 05-ditripwire-145-point-254-point-345-point-up-down-up-s, 05-ditripwire-145-point-254-point-354-point-up-down-down-s, 05-ditripwire-154-point-245-point-345-point-down-up-up-s, 05-ditripwire-154-point-245-point-354-point-down-up-down-s, 05-ditripwire-154-point-254-point-345-point-down-down-up-s, 05-ditripwire-154-point-254-point-354-point-down-down-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  5151617 = combine 17198 splice 2 with 15 rotate 1 connect at 4 @0
+  469 = connect 5151617 at 3 @0
+  17976 = combine 469 splice 0 with 15 rotate 2 connect at 2 @1
+  53426 = combine 17976 splice 0 with 15 rotate 1 connect at 7 @2
+
+Target trace:
+  54432 = source {05-ditripwire-15-ditripwire-25-ditripwire-345-point-down-r, 05-ditripwire-15-ditripwire-25-ditripwire-354-point-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  5151647 = combine 17532 splice 2 with 15 rotate 1 connect at 4 @0
+  647 = connect 5151647 at 3 @0
+  17624 = combine 647 splice 0 with 15 rotate 1 connect at 6 @2
+  54432 = combine 17624 splice 0 with 15 rotate 1 connect at 7 @2
+
+Target trace:
+  60269 = source {05-ditripwire-145-point-245-point-345-point-down-down-down-r, 05-ditripwire-145-point-245-point-354-point-down-down-up-r, 05-ditripwire-145-point-254-point-345-point-down-up-down-r, 05-ditripwire-145-point-254-point-354-point-down-up-up-r, 05-ditripwire-154-point-245-point-345-point-up-down-down-r, 05-ditripwire-154-point-245-point-354-point-up-down-up-r, 05-ditripwire-154-point-254-point-345-point-up-up-down-r, 05-ditripwire-154-point-254-point-354-point-up-up-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  5151647 = combine 17532 splice 2 with 15 rotate 1 connect at 4 @0
+  647 = connect 5151647 at 3 @0
+  18777 = combine 647 splice 0 with 15 rotate 2 connect at 2 @1
+  60269 = combine 18777 splice 0 with 15 rotate 1 connect at 7 @2
+
+Target trace:
+  60959 = source {05-ditripwire-15-ditripwire-25-ditripwire-345-point-up-r, 05-ditripwire-15-ditripwire-25-ditripwire-354-point-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  5151545 = combine 17513 splice 2 with 15 rotate 1 connect at 4 @0
+  370 = connect 5151545 at 3 @0
+  18058 = combine 370 splice 0 with 15 rotate 1 connect at 6 @2
+  60959 = combine 18058 splice 0 with 15 rotate 1 connect at 7 @2
+
+Target trace:
+  62048 = source {05-ditripwire-15-ditripwire-245-point-345-point-up-up-r, 05-ditripwire-15-ditripwire-245-point-354-point-up-down-r, 05-ditripwire-15-ditripwire-254-point-345-point-down-up-r, 05-ditripwire-15-ditripwire-254-point-354-point-down-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  5151545 = combine 17513 splice 2 with 15 rotate 1 connect at 4 @0
+  370 = connect 5151545 at 3 @0
+  18058 = combine 370 splice 0 with 15 rotate 1 connect at 6 @2
+  62048 = combine 18058 splice 0 with 15 rotate 2 connect at 2 @1
+
+Target trace:
+  62090 = source {05-ditripwire-15-ditripwire-25-ditripwire-345-point-down-s, 05-ditripwire-15-ditripwire-25-ditripwire-354-point-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  5151702 = combine 17546 splice 3 with 15 rotate 0 connect at 5 @3
+  522 = connect 5151702 at 5 @2
+  19067 = combine 522 splice 1 with 15 rotate 2 connect at 3 @0
+  62090 = combine 19067 splice 1 with 15 rotate 2 connect at 3 @0
+
+Target trace:
+  63400 = source {05-ditripwire-15-ditripwire-245-point-345-point-down-down-s, 05-ditripwire-15-ditripwire-245-point-354-point-down-up-s, 05-ditripwire-15-ditripwire-254-point-345-point-up-down-s, 05-ditripwire-15-ditripwire-254-point-354-point-up-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  5151702 = combine 17546 splice 3 with 15 rotate 0 connect at 5 @3
+  522 = connect 5151702 at 5 @2
+  17987 = combine 522 splice 0 with 15 rotate 2 connect at 2 @1
+  63400 = combine 17987 splice 1 with 15 rotate 2 connect at 3 @0
+
+Target trace:
+  65486 = source {05-ditripwire-15-ditripwire-245-point-345-point-down-down-r, 05-ditripwire-15-ditripwire-245-point-354-point-down-up-r, 05-ditripwire-15-ditripwire-254-point-345-point-up-down-r, 05-ditripwire-15-ditripwire-254-point-354-point-up-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  5151647 = combine 17532 splice 2 with 15 rotate 1 connect at 4 @0
+  647 = connect 5151647 at 3 @0
+  17624 = combine 647 splice 0 with 15 rotate 1 connect at 6 @2
+  65486 = combine 17624 splice 0 with 15 rotate 2 connect at 2 @1
+
+Target trace:
+  68765 = source {05-ditripwire-145-point-245-point-345-point-up-up-up-r, 05-ditripwire-145-point-245-point-354-point-up-up-down-r, 05-ditripwire-145-point-254-point-345-point-up-down-up-r, 05-ditripwire-145-point-254-point-354-point-up-down-down-r, 05-ditripwire-154-point-245-point-345-point-down-up-up-r, 05-ditripwire-154-point-245-point-354-point-down-up-down-r, 05-ditripwire-154-point-254-point-345-point-down-down-up-r, 05-ditripwire-154-point-254-point-354-point-down-down-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  5151545 = combine 17513 splice 2 with 15 rotate 1 connect at 4 @0
+  370 = connect 5151545 at 3 @0
+  19122 = combine 370 splice 0 with 15 rotate 2 connect at 2 @1
+  68765 = combine 19122 splice 0 with 15 rotate 1 connect at 7 @2
+
+==> Step 17: 0 user, 0 sys, 0h0m0s wall (0.28), 2.89 GiB (0.00, 394)
+-->    closed:       23621        3193   7.4       0 MiB
+--> closemirr:       15653        1707   9.2       0 MiB
+-->   connect:       15653        1707   9.2       0 MiB
+-->   combine:       15653        1707   9.2       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.93
+
+==> Step 18: 0 user, 0 sys, 0h0m0s wall (1.01), 2.89 GiB (0.00, 0)
+-->    closed:       23621        3193   7.4       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:       15653        1707   9.2       0 MiB
+-->   combine:       15653        1707   9.2       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.93
+
+Target trace:
+  21932 = source {05-ditripwire-124-point-345-point-down-up-s, 05-ditripwire-124-point-354-point-down-down-s, 05-ditripwire-142-point-345-point-up-up-s, 05-ditripwire-142-point-354-point-up-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  5151617 = combine 17198 splice 2 with 15 rotate 1 connect at 4 @0
+  469 = connect 5151617 at 3 @0
+  17976 = combine 469 splice 0 with 15 rotate 2 connect at 2 @1
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  16568501 = combine 17976 splice 1 with 17546 rotate 3 connect at 5 @3
+  21932 = connect 16568501 at 5 @0
+
+Target trace:
+  23612 = source {05-ditripwire-125-point-345-point-up-up-s, 05-ditripwire-125-point-354-point-up-down-s, 05-ditripwire-152-point-345-point-down-up-s, 05-ditripwire-152-point-354-point-down-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  5151617 = combine 17198 splice 2 with 15 rotate 1 connect at 4 @0
+  469 = connect 5151617 at 3 @0
+  17976 = combine 469 splice 0 with 15 rotate 2 connect at 2 @1
+  16568551 = combine 17976 splice 1 with 17198 rotate 3 connect at 5 @0
+  23612 = connect 16568551 at 0 @1
+
+Target trace:
+  30617 = source {05-ditripwire-124-point-345-point-up-down-s, 05-ditripwire-124-point-354-point-up-up-s, 05-ditripwire-142-point-345-point-down-down-s, 05-ditripwire-142-point-354-point-down-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  5151702 = combine 17546 splice 3 with 15 rotate 0 connect at 5 @3
+  522 = connect 5151702 at 5 @2
+  17987 = combine 522 splice 0 with 15 rotate 2 connect at 2 @1
+  16568445 = combine 17987 splice 1 with 17198 rotate 3 connect at 5 @0
+  30617 = connect 16568445 at 0 @5
+
+Target trace:
+  30682 = source {05-ditripwire-125-point-345-point-down-down-r, 05-ditripwire-125-point-354-point-down-up-r, 05-ditripwire-152-point-345-point-up-down-r, 05-ditripwire-152-point-354-point-up-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  5151647 = combine 17532 splice 2 with 15 rotate 1 connect at 4 @0
+  647 = connect 5151647 at 3 @0
+  18777 = combine 647 splice 0 with 15 rotate 2 connect at 2 @1
+  16568580 = combine 18777 splice 3 with 17532 rotate 4 connect at 7 @4
+  30682 = connect 16568580 at 2 @2
+
+Target trace:
+  33106 = source {05-ditripwire-125-point-345-point-up-up-r, 05-ditripwire-125-point-354-point-up-down-r, 05-ditripwire-152-point-345-point-down-up-r, 05-ditripwire-152-point-354-point-down-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  5151545 = combine 17513 splice 2 with 15 rotate 1 connect at 4 @0
+  370 = connect 5151545 at 3 @0
+  19122 = combine 370 splice 0 with 15 rotate 2 connect at 2 @1
+  16568355 = combine 19122 splice 3 with 17513 rotate 4 connect at 7 @4
+  33106 = connect 16568355 at 2 @0
+
+Target trace:
+  36416 = source {05-ditripwire-124-point-345-point-down-up-r, 05-ditripwire-124-point-354-point-down-down-r, 05-ditripwire-142-point-345-point-up-up-r, 05-ditripwire-142-point-354-point-up-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  5151545 = combine 17513 splice 2 with 15 rotate 1 connect at 4 @0
+  370 = connect 5151545 at 3 @0
+  19122 = combine 370 splice 0 with 15 rotate 2 connect at 2 @1
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  16568346 = combine 19122 splice 3 with 17532 rotate 4 connect at 7 @0
+  36416 = connect 16568346 at 6 @0
+
+Target trace:
+  38567 = source {05-ditripwire-124-point-345-point-up-down-r, 05-ditripwire-124-point-354-point-up-up-r, 05-ditripwire-142-point-345-point-down-down-r, 05-ditripwire-142-point-354-point-down-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  5151647 = combine 17532 splice 2 with 15 rotate 1 connect at 4 @0
+  647 = connect 5151647 at 3 @0
+  18777 = combine 647 splice 0 with 15 rotate 2 connect at 2 @1
+  16568613 = combine 18777 splice 3 with 17513 rotate 4 connect at 7 @4
+  38567 = connect 16568613 at 2 @0
+
+Target trace:
+  39233 = source {05-ditripwire-125-point-345-point-down-down-s, 05-ditripwire-125-point-354-point-down-up-s, 05-ditripwire-152-point-345-point-up-down-s, 05-ditripwire-152-point-354-point-up-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  5151702 = combine 17546 splice 3 with 15 rotate 0 connect at 5 @3
+  522 = connect 5151702 at 5 @2
+  17987 = combine 522 splice 0 with 15 rotate 2 connect at 2 @1
+  16568319 = combine 17987 splice 1 with 17546 rotate 3 connect at 5 @0
+  39233 = connect 16568319 at 0 @1
+
+==> Step 19: 0 user, 0 sys, 0h0m0s wall (0.24), 2.89 GiB (0.00, 439)
+-->    closed:       26285        4299   6.1       0 MiB
+--> closemirr:        2664        1132   2.4       0 MiB
+-->   connect:        2664        1132   2.4       0 MiB
+-->   combine:       18317        2820   6.5       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.93
+
+==> Step 20: 0 user, 0 sys, 0h0m0s wall (1.00), 2.89 GiB (0.00, 0)
+-->    closed:       26285        4299   6.1       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:        2664        1132   2.4       0 MiB
+-->   combine:       18317        2820   6.5       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.93
+
+==> Step 21: 0 user, 0 sys, 0h0m0s wall (0.18), 2.89 GiB (0.00, 397)
+-->    closed:       26285        4299   6.1       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:       18317        2820   6.5       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.93
+
+Target trace:
+  71396 = source {7-fanin}
+Source trace:
+  15 = source {3-fanin}
+  211 = combine 15 splice 0 with 15 rotate 1 connect at 5 @2
+  16850 = combine 211 splice 0 with 15 rotate 1 connect at 6 @2
+  19638 = combine 16850 splice 0 with 15 rotate 1 connect at 7 @2
+  71396 = combine 19638 splice 0 with 15 rotate 1 connect at 8 @2
+
+Target trace:
+  258061 = source {06-ditripwire-16-ditripwire-236-point-456-point-up-up-s, 06-ditripwire-16-ditripwire-236-point-465-point-up-down-s, 06-ditripwire-16-ditripwire-263-point-456-point-down-up-s, 06-ditripwire-16-ditripwire-263-point-465-point-down-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  5151617 = combine 17198 splice 2 with 15 rotate 1 connect at 4 @0
+  469 = connect 5151617 at 3 @0
+  17976 = combine 469 splice 0 with 15 rotate 2 connect at 2 @1
+  16568551 = combine 17976 splice 1 with 17198 rotate 3 connect at 5 @0
+  23612 = connect 16568551 at 0 @1
+  258061 = combine 23612 splice 1 with 15 rotate 2 connect at 3 @0
+
+Target trace:
+  296808 = source {06-ditripwire-136-point-236-point-456-point-up-up-up-s, 06-ditripwire-136-point-236-point-465-point-up-up-down-s, 06-ditripwire-136-point-263-point-456-point-up-down-up-s, 06-ditripwire-136-point-263-point-465-point-up-down-down-s, 06-ditripwire-163-point-236-point-456-point-down-up-up-s, 06-ditripwire-163-point-236-point-465-point-down-up-down-s, 06-ditripwire-163-point-263-point-456-point-down-down-up-s, 06-ditripwire-163-point-263-point-465-point-down-down-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  5151617 = combine 17198 splice 2 with 15 rotate 1 connect at 4 @0
+  469 = connect 5151617 at 3 @0
+  17976 = combine 469 splice 0 with 15 rotate 2 connect at 2 @1
+  16568551 = combine 17976 splice 1 with 17198 rotate 3 connect at 5 @0
+  23612 = connect 16568551 at 0 @1
+  296808 = combine 23612 splice 0 with 15 rotate 2 connect at 2 @1
+
+Target trace:
+  315010 = source {06-ditripwire-126-point-356-point-456-point-down-down-down-r, 06-ditripwire-126-point-356-point-465-point-down-down-up-r, 06-ditripwire-126-point-365-point-456-point-down-up-down-r, 06-ditripwire-126-point-365-point-465-point-down-up-up-r, 06-ditripwire-162-point-356-point-456-point-up-down-down-r, 06-ditripwire-162-point-356-point-465-point-up-down-up-r, 06-ditripwire-162-point-365-point-456-point-up-up-down-r, 06-ditripwire-162-point-365-point-465-point-up-up-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  5151647 = combine 17532 splice 2 with 15 rotate 1 connect at 4 @0
+  647 = connect 5151647 at 3 @0
+  18777 = combine 647 splice 0 with 15 rotate 2 connect at 2 @1
+  16568580 = combine 18777 splice 3 with 17532 rotate 4 connect at 7 @4
+  30682 = connect 16568580 at 2 @2
+  315010 = combine 30682 splice 0 with 15 rotate 2 connect at 2 @1
+
+Target trace:
+  373895 = source {06-ditripwire-135-point-235-point-456-point-up-up-down-s, 06-ditripwire-135-point-235-point-465-point-up-up-up-s, 06-ditripwire-135-point-253-point-456-point-up-down-down-s, 06-ditripwire-135-point-253-point-465-point-up-down-up-s, 06-ditripwire-153-point-235-point-456-point-down-up-down-s, 06-ditripwire-153-point-235-point-465-point-down-up-up-s, 06-ditripwire-153-point-253-point-456-point-down-down-down-s, 06-ditripwire-153-point-253-point-465-point-down-down-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  5151702 = combine 17546 splice 3 with 15 rotate 0 connect at 5 @3
+  522 = connect 5151702 at 5 @2
+  17987 = combine 522 splice 0 with 15 rotate 2 connect at 2 @1
+  16568445 = combine 17987 splice 1 with 17198 rotate 3 connect at 5 @0
+  30617 = connect 16568445 at 0 @5
+  373895 = combine 30617 splice 2 with 15 rotate 2 connect at 4 @3
+
+Target trace:
+  383381 = source {06-ditripwire-136-point-236-point-456-point-down-down-down-r, 06-ditripwire-136-point-236-point-465-point-down-down-up-r, 06-ditripwire-136-point-263-point-456-point-down-up-down-r, 06-ditripwire-136-point-263-point-465-point-down-up-up-r, 06-ditripwire-163-point-236-point-456-point-up-down-down-r, 06-ditripwire-163-point-236-point-465-point-up-down-up-r, 06-ditripwire-163-point-263-point-456-point-up-up-down-r, 06-ditripwire-163-point-263-point-465-point-up-up-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  5151647 = combine 17532 splice 2 with 15 rotate 1 connect at 4 @0
+  647 = connect 5151647 at 3 @0
+  18777 = combine 647 splice 0 with 15 rotate 2 connect at 2 @1
+  16568580 = combine 18777 splice 3 with 17532 rotate 4 connect at 7 @4
+  30682 = connect 16568580 at 2 @2
+  383381 = combine 30682 splice 4 with 15 rotate 2 connect at 6 @0
+
+Target trace:
+  462839 = source {06-ditripwire-16-ditripwire-236-point-456-point-down-down-r, 06-ditripwire-16-ditripwire-236-point-465-point-down-up-r, 06-ditripwire-16-ditripwire-263-point-456-point-up-down-r, 06-ditripwire-16-ditripwire-263-point-465-point-up-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  5151647 = combine 17532 splice 2 with 15 rotate 1 connect at 4 @0
+  647 = connect 5151647 at 3 @0
+  18777 = combine 647 splice 0 with 15 rotate 2 connect at 2 @1
+  16568580 = combine 18777 splice 3 with 17532 rotate 4 connect at 7 @4
+  30682 = connect 16568580 at 2 @2
+  462839 = combine 30682 splice 3 with 15 rotate 2 connect at 5 @0
+
+Target trace:
+  478600 = source {06-ditripwire-125-point-356-point-456-point-up-down-down-s, 06-ditripwire-125-point-356-point-465-point-up-down-up-s, 06-ditripwire-125-point-365-point-456-point-up-up-down-s, 06-ditripwire-125-point-365-point-465-point-up-up-up-s, 06-ditripwire-152-point-356-point-456-point-down-down-down-s, 06-ditripwire-152-point-356-point-465-point-down-down-up-s, 06-ditripwire-152-point-365-point-456-point-down-up-down-s, 06-ditripwire-152-point-365-point-465-point-down-up-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  5151702 = combine 17546 splice 3 with 15 rotate 0 connect at 5 @3
+  522 = connect 5151702 at 5 @2
+  17987 = combine 522 splice 0 with 15 rotate 2 connect at 2 @1
+  16568445 = combine 17987 splice 1 with 17198 rotate 3 connect at 5 @0
+  30617 = connect 16568445 at 0 @5
+  478600 = combine 30617 splice 0 with 15 rotate 2 connect at 2 @1
+
+Target trace:
+  521943 = source {06-ditripwire-16-ditripwire-236-point-456-point-up-up-r, 06-ditripwire-16-ditripwire-236-point-465-point-up-down-r, 06-ditripwire-16-ditripwire-263-point-456-point-down-up-r, 06-ditripwire-16-ditripwire-263-point-465-point-down-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  5151545 = combine 17513 splice 2 with 15 rotate 1 connect at 4 @0
+  370 = connect 5151545 at 3 @0
+  19122 = combine 370 splice 0 with 15 rotate 2 connect at 2 @1
+  16568355 = combine 19122 splice 3 with 17513 rotate 4 connect at 7 @4
+  33106 = connect 16568355 at 2 @0
+  521943 = combine 33106 splice 0 with 15 rotate 1 connect at 8 @2
+
+Target trace:
+  533440 = source {06-ditripwire-125-point-356-point-456-point-down-up-up-r, 06-ditripwire-125-point-356-point-465-point-down-up-down-r, 06-ditripwire-125-point-365-point-456-point-down-down-up-r, 06-ditripwire-125-point-365-point-465-point-down-down-down-r, 06-ditripwire-152-point-356-point-456-point-up-up-up-r, 06-ditripwire-152-point-356-point-465-point-up-up-down-r, 06-ditripwire-152-point-365-point-456-point-up-down-up-r, 06-ditripwire-152-point-365-point-465-point-up-down-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  5151545 = combine 17513 splice 2 with 15 rotate 1 connect at 4 @0
+  370 = connect 5151545 at 3 @0
+  19122 = combine 370 splice 0 with 15 rotate 2 connect at 2 @1
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  16568346 = combine 19122 splice 3 with 17532 rotate 4 connect at 7 @0
+  36416 = connect 16568346 at 6 @0
+  533440 = combine 36416 splice 0 with 15 rotate 2 connect at 2 @1
+
+Target trace:
+  551216 = source {06-ditripwire-136-point-236-point-456-point-down-down-down-s, 06-ditripwire-136-point-236-point-465-point-down-down-up-s, 06-ditripwire-136-point-263-point-456-point-down-up-down-s, 06-ditripwire-136-point-263-point-465-point-down-up-up-s, 06-ditripwire-163-point-236-point-456-point-up-down-down-s, 06-ditripwire-163-point-236-point-465-point-up-down-up-s, 06-ditripwire-163-point-263-point-456-point-up-up-down-s, 06-ditripwire-163-point-263-point-465-point-up-up-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  5151702 = combine 17546 splice 3 with 15 rotate 0 connect at 5 @3
+  522 = connect 5151702 at 5 @2
+  17987 = combine 522 splice 0 with 15 rotate 2 connect at 2 @1
+  16568319 = combine 17987 splice 1 with 17546 rotate 3 connect at 5 @0
+  39233 = connect 16568319 at 0 @1
+  551216 = combine 39233 splice 0 with 15 rotate 2 connect at 2 @1
+
+Target trace:
+  576332 = source {06-ditripwire-16-ditripwire-236-point-456-point-down-down-s, 06-ditripwire-16-ditripwire-236-point-465-point-down-up-s, 06-ditripwire-16-ditripwire-263-point-456-point-up-down-s, 06-ditripwire-16-ditripwire-263-point-465-point-up-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  5151702 = combine 17546 splice 3 with 15 rotate 0 connect at 5 @3
+  522 = connect 5151702 at 5 @2
+  17987 = combine 522 splice 0 with 15 rotate 2 connect at 2 @1
+  16568319 = combine 17987 splice 1 with 17546 rotate 3 connect at 5 @0
+  39233 = connect 16568319 at 0 @1
+  576332 = combine 39233 splice 1 with 15 rotate 2 connect at 3 @0
+
+Target trace:
+  588671 = source {06-ditripwire-136-point-236-point-456-point-up-up-up-r, 06-ditripwire-136-point-236-point-465-point-up-up-down-r, 06-ditripwire-136-point-263-point-456-point-up-down-up-r, 06-ditripwire-136-point-263-point-465-point-up-down-down-r, 06-ditripwire-163-point-236-point-456-point-down-up-up-r, 06-ditripwire-163-point-236-point-465-point-down-up-down-r, 06-ditripwire-163-point-263-point-456-point-down-down-up-r, 06-ditripwire-163-point-263-point-465-point-down-down-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  5151545 = combine 17513 splice 2 with 15 rotate 1 connect at 4 @0
+  370 = connect 5151545 at 3 @0
+  19122 = combine 370 splice 0 with 15 rotate 2 connect at 2 @1
+  16568355 = combine 19122 splice 3 with 17513 rotate 4 connect at 7 @4
+  33106 = connect 16568355 at 2 @0
+  588671 = combine 33106 splice 0 with 15 rotate 2 connect at 2 @1
+
+Target trace:
+  597367 = source {06-ditripwire-16-ditripwire-235-point-456-point-down-up-s, 06-ditripwire-16-ditripwire-235-point-465-point-down-down-s, 06-ditripwire-16-ditripwire-253-point-456-point-up-up-s, 06-ditripwire-16-ditripwire-253-point-465-point-up-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  5151617 = combine 17198 splice 2 with 15 rotate 1 connect at 4 @0
+  469 = connect 5151617 at 3 @0
+  17976 = combine 469 splice 0 with 15 rotate 2 connect at 2 @1
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  16568501 = combine 17976 splice 1 with 17546 rotate 3 connect at 5 @3
+  21932 = connect 16568501 at 5 @0
+  597367 = combine 21932 splice 1 with 15 rotate 2 connect at 3 @0
+
+Target trace:
+  597592 = source {06-ditripwire-126-point-356-point-456-point-down-down-down-s, 06-ditripwire-126-point-356-point-465-point-down-down-up-s, 06-ditripwire-126-point-365-point-456-point-down-up-down-s, 06-ditripwire-126-point-365-point-465-point-down-up-up-s, 06-ditripwire-162-point-356-point-456-point-up-down-down-s, 06-ditripwire-162-point-356-point-465-point-up-down-up-s, 06-ditripwire-162-point-365-point-456-point-up-up-down-s, 06-ditripwire-162-point-365-point-465-point-up-up-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  5151702 = combine 17546 splice 3 with 15 rotate 0 connect at 5 @3
+  522 = connect 5151702 at 5 @2
+  17987 = combine 522 splice 0 with 15 rotate 2 connect at 2 @1
+  16568319 = combine 17987 splice 1 with 17546 rotate 3 connect at 5 @0
+  39233 = connect 16568319 at 0 @1
+  597592 = combine 39233 splice 4 with 15 rotate 2 connect at 6 @0
+
+Target trace:
+  651405 = source {06-ditripwire-16-ditripwire-235-point-456-point-down-up-r, 06-ditripwire-16-ditripwire-235-point-465-point-down-down-r, 06-ditripwire-16-ditripwire-253-point-456-point-up-up-r, 06-ditripwire-16-ditripwire-253-point-465-point-up-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  5151545 = combine 17513 splice 2 with 15 rotate 1 connect at 4 @0
+  370 = connect 5151545 at 3 @0
+  19122 = combine 370 splice 0 with 15 rotate 2 connect at 2 @1
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  16568346 = combine 19122 splice 3 with 17532 rotate 4 connect at 7 @0
+  36416 = connect 16568346 at 6 @0
+  651405 = combine 36416 splice 3 with 15 rotate 2 connect at 5 @0
+
+Target trace:
+  653287 = source {06-ditripwire-126-point-356-point-456-point-up-up-up-s, 06-ditripwire-126-point-356-point-465-point-up-up-down-s, 06-ditripwire-126-point-365-point-456-point-up-down-up-s, 06-ditripwire-126-point-365-point-465-point-up-down-down-s, 06-ditripwire-162-point-356-point-456-point-down-up-up-s, 06-ditripwire-162-point-356-point-465-point-down-up-down-s, 06-ditripwire-162-point-365-point-456-point-down-down-up-s, 06-ditripwire-162-point-365-point-465-point-down-down-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  5151617 = combine 17198 splice 2 with 15 rotate 1 connect at 4 @0
+  469 = connect 5151617 at 3 @0
+  17976 = combine 469 splice 0 with 15 rotate 2 connect at 2 @1
+  16568551 = combine 17976 splice 1 with 17198 rotate 3 connect at 5 @0
+  23612 = connect 16568551 at 0 @1
+  653287 = combine 23612 splice 4 with 15 rotate 2 connect at 6 @5
+
+Target trace:
+  665268 = source {06-ditripwire-125-point-356-point-456-point-up-down-down-r, 06-ditripwire-125-point-356-point-465-point-up-down-up-r, 06-ditripwire-125-point-365-point-456-point-up-up-down-r, 06-ditripwire-125-point-365-point-465-point-up-up-up-r, 06-ditripwire-152-point-356-point-456-point-down-down-down-r, 06-ditripwire-152-point-356-point-465-point-down-down-up-r, 06-ditripwire-152-point-365-point-456-point-down-up-down-r, 06-ditripwire-152-point-365-point-465-point-down-up-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  5151647 = combine 17532 splice 2 with 15 rotate 1 connect at 4 @0
+  647 = connect 5151647 at 3 @0
+  18777 = combine 647 splice 0 with 15 rotate 2 connect at 2 @1
+  16568613 = combine 18777 splice 3 with 17513 rotate 4 connect at 7 @4
+  38567 = connect 16568613 at 2 @0
+  665268 = combine 38567 splice 2 with 15 rotate 2 connect at 4 @0
+
+Target trace:
+  781518 = source {06-ditripwire-135-point-235-point-456-point-down-down-up-r, 06-ditripwire-135-point-235-point-465-point-down-down-down-r, 06-ditripwire-135-point-253-point-456-point-down-up-up-r, 06-ditripwire-135-point-253-point-465-point-down-up-down-r, 06-ditripwire-153-point-235-point-456-point-up-down-up-r, 06-ditripwire-153-point-235-point-465-point-up-down-down-r, 06-ditripwire-153-point-253-point-456-point-up-up-up-r, 06-ditripwire-153-point-253-point-465-point-up-up-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  5151545 = combine 17513 splice 2 with 15 rotate 1 connect at 4 @0
+  370 = connect 5151545 at 3 @0
+  19122 = combine 370 splice 0 with 15 rotate 2 connect at 2 @1
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  16568346 = combine 19122 splice 3 with 17532 rotate 4 connect at 7 @0
+  36416 = connect 16568346 at 6 @0
+  781518 = combine 36416 splice 4 with 15 rotate 2 connect at 6 @0
+
+Target trace:
+  791961 = source {06-ditripwire-16-ditripwire-235-point-456-point-up-down-s, 06-ditripwire-16-ditripwire-235-point-465-point-up-up-s, 06-ditripwire-16-ditripwire-253-point-456-point-down-down-s, 06-ditripwire-16-ditripwire-253-point-465-point-down-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  5151702 = combine 17546 splice 3 with 15 rotate 0 connect at 5 @3
+  522 = connect 5151702 at 5 @2
+  17987 = combine 522 splice 0 with 15 rotate 2 connect at 2 @1
+  16568445 = combine 17987 splice 1 with 17198 rotate 3 connect at 5 @0
+  30617 = connect 16568445 at 0 @5
+  791961 = combine 30617 splice 3 with 15 rotate 2 connect at 5 @0
+
+Target trace:
+  810067 = source {06-ditripwire-135-point-235-point-456-point-down-down-up-s, 06-ditripwire-135-point-235-point-465-point-down-down-down-s, 06-ditripwire-135-point-253-point-456-point-down-up-up-s, 06-ditripwire-135-point-253-point-465-point-down-up-down-s, 06-ditripwire-153-point-235-point-456-point-up-down-up-s, 06-ditripwire-153-point-235-point-465-point-up-down-down-s, 06-ditripwire-153-point-253-point-456-point-up-up-up-s, 06-ditripwire-153-point-253-point-465-point-up-up-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  5151617 = combine 17198 splice 2 with 15 rotate 1 connect at 4 @0
+  469 = connect 5151617 at 3 @0
+  17976 = combine 469 splice 0 with 15 rotate 2 connect at 2 @1
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  16568501 = combine 17976 splice 1 with 17546 rotate 3 connect at 5 @3
+  21932 = connect 16568501 at 5 @0
+  810067 = combine 21932 splice 0 with 15 rotate 2 connect at 2 @1
+
+Target trace:
+  811193 = source {06-ditripwire-126-point-356-point-456-point-up-up-up-r, 06-ditripwire-126-point-356-point-465-point-up-up-down-r, 06-ditripwire-126-point-365-point-456-point-up-down-up-r, 06-ditripwire-126-point-365-point-465-point-up-down-down-r, 06-ditripwire-162-point-356-point-456-point-down-up-up-r, 06-ditripwire-162-point-356-point-465-point-down-up-down-r, 06-ditripwire-162-point-365-point-456-point-down-down-up-r, 06-ditripwire-162-point-365-point-465-point-down-down-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  5151545 = combine 17513 splice 2 with 15 rotate 1 connect at 4 @0
+  370 = connect 5151545 at 3 @0
+  19122 = combine 370 splice 0 with 15 rotate 2 connect at 2 @1
+  16568355 = combine 19122 splice 3 with 17513 rotate 4 connect at 7 @4
+  33106 = connect 16568355 at 2 @0
+  811193 = combine 33106 splice 2 with 15 rotate 2 connect at 4 @0
+
+Target trace:
+  852845 = source {06-ditripwire-125-point-356-point-456-point-down-up-up-s, 06-ditripwire-125-point-356-point-465-point-down-up-down-s, 06-ditripwire-125-point-365-point-456-point-down-down-up-s, 06-ditripwire-125-point-365-point-465-point-down-down-down-s, 06-ditripwire-152-point-356-point-456-point-up-up-up-s, 06-ditripwire-152-point-356-point-465-point-up-up-down-s, 06-ditripwire-152-point-365-point-456-point-up-down-up-s, 06-ditripwire-152-point-365-point-465-point-up-down-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  5151617 = combine 17198 splice 2 with 15 rotate 1 connect at 4 @0
+  469 = connect 5151617 at 3 @0
+  17976 = combine 469 splice 0 with 15 rotate 2 connect at 2 @1
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  16568501 = combine 17976 splice 1 with 17546 rotate 3 connect at 5 @3
+  21932 = connect 16568501 at 5 @0
+  852845 = combine 21932 splice 4 with 15 rotate 2 connect at 6 @0
+
+Target trace:
+  882758 = source {06-ditripwire-16-ditripwire-235-point-456-point-up-down-r, 06-ditripwire-16-ditripwire-235-point-465-point-up-up-r, 06-ditripwire-16-ditripwire-253-point-456-point-down-down-r, 06-ditripwire-16-ditripwire-253-point-465-point-down-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  5151647 = combine 17532 splice 2 with 15 rotate 1 connect at 4 @0
+  647 = connect 5151647 at 3 @0
+  18777 = combine 647 splice 0 with 15 rotate 2 connect at 2 @1
+  16568613 = combine 18777 splice 3 with 17513 rotate 4 connect at 7 @4
+  38567 = connect 16568613 at 2 @0
+  882758 = combine 38567 splice 0 with 15 rotate 1 connect at 8 @2
+
+Target trace:
+  912813 = source {06-ditripwire-135-point-235-point-456-point-up-up-down-r, 06-ditripwire-135-point-235-point-465-point-up-up-up-r, 06-ditripwire-135-point-253-point-456-point-up-down-down-r, 06-ditripwire-135-point-253-point-465-point-up-down-up-r, 06-ditripwire-153-point-235-point-456-point-down-up-down-r, 06-ditripwire-153-point-235-point-465-point-down-up-up-r, 06-ditripwire-153-point-253-point-456-point-down-down-down-r, 06-ditripwire-153-point-253-point-465-point-down-down-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  5151647 = combine 17532 splice 2 with 15 rotate 1 connect at 4 @0
+  647 = connect 5151647 at 3 @0
+  18777 = combine 647 splice 0 with 15 rotate 2 connect at 2 @1
+  16568613 = combine 18777 splice 3 with 17513 rotate 4 connect at 7 @4
+  38567 = connect 16568613 at 2 @0
+  912813 = combine 38567 splice 0 with 15 rotate 2 connect at 2 @1
+
+Target trace:
+  1006850 = source {06-ditripwire-16-ditripwire-26-ditripwire-36-ditripwire-456-point-up-r, 06-ditripwire-16-ditripwire-26-ditripwire-36-ditripwire-465-point-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  5151545 = combine 17513 splice 2 with 15 rotate 1 connect at 4 @0
+  370 = connect 5151545 at 3 @0
+  18058 = combine 370 splice 0 with 15 rotate 1 connect at 6 @2
+  60959 = combine 18058 splice 0 with 15 rotate 1 connect at 7 @2
+  1006850 = combine 60959 splice 0 with 15 rotate 1 connect at 8 @2
+
+Target trace:
+  1010989 = source {06-ditripwire-16-ditripwire-256-point-356-point-456-point-up-up-up-s, 06-ditripwire-16-ditripwire-256-point-356-point-465-point-up-up-down-s, 06-ditripwire-16-ditripwire-256-point-365-point-456-point-up-down-up-s, 06-ditripwire-16-ditripwire-256-point-365-point-465-point-up-down-down-s, 06-ditripwire-16-ditripwire-265-point-356-point-456-point-down-up-up-s, 06-ditripwire-16-ditripwire-265-point-356-point-465-point-down-up-down-s, 06-ditripwire-16-ditripwire-265-point-365-point-456-point-down-down-up-s, 06-ditripwire-16-ditripwire-265-point-365-point-465-point-down-down-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  5151617 = combine 17198 splice 2 with 15 rotate 1 connect at 4 @0
+  469 = connect 5151617 at 3 @0
+  17757 = combine 469 splice 1 with 15 rotate 2 connect at 3 @0
+  52414 = combine 17757 splice 0 with 15 rotate 2 connect at 2 @1
+  1010989 = combine 52414 splice 0 with 15 rotate 1 connect at 8 @2
+
+Target trace:
+  1014672 = source {06-ditripwire-16-ditripwire-26-ditripwire-356-point-456-point-down-down-s, 06-ditripwire-16-ditripwire-26-ditripwire-356-point-465-point-down-up-s, 06-ditripwire-16-ditripwire-26-ditripwire-365-point-456-point-up-down-s, 06-ditripwire-16-ditripwire-26-ditripwire-365-point-465-point-up-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  5151702 = combine 17546 splice 3 with 15 rotate 0 connect at 5 @3
+  522 = connect 5151702 at 5 @2
+  19067 = combine 522 splice 1 with 15 rotate 2 connect at 3 @0
+  62090 = combine 19067 splice 1 with 15 rotate 2 connect at 3 @0
+  1014672 = combine 62090 splice 0 with 15 rotate 2 connect at 2 @1
+
+Target trace:
+  1015981 = source {06-ditripwire-156-point-256-point-356-point-456-point-up-up-up-up-s, 06-ditripwire-156-point-256-point-356-point-465-point-up-up-up-down-s, 06-ditripwire-156-point-256-point-365-point-456-point-up-up-down-up-s, 06-ditripwire-156-point-256-point-365-point-465-point-up-up-down-down-s, 06-ditripwire-156-point-265-point-356-point-456-point-up-down-up-up-s, 06-ditripwire-156-point-265-point-356-point-465-point-up-down-up-down-s, 06-ditripwire-156-point-265-point-365-point-456-point-up-down-down-up-s, 06-ditripwire-156-point-265-point-365-point-465-point-up-down-down-down-s, 06-ditripwire-165-point-256-point-356-point-456-point-down-up-up-up-s, 06-ditripwire-165-point-256-point-356-point-465-point-down-up-up-down-s, 06-ditripwire-165-point-256-point-365-point-456-point-down-up-down-up-s, 06-ditripwire-165-point-256-point-365-point-465-point-down-up-down-down-s, 06-ditripwire-165-point-265-point-356-point-456-point-down-down-up-up-s, 06-ditripwire-165-point-265-point-356-point-465-point-down-down-up-down-s, 06-ditripwire-165-point-265-point-365-point-456-point-down-down-down-up-s, 06-ditripwire-165-point-265-point-365-point-465-point-down-down-down-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  5151617 = combine 17198 splice 2 with 15 rotate 1 connect at 4 @0
+  469 = connect 5151617 at 3 @0
+  17976 = combine 469 splice 0 with 15 rotate 2 connect at 2 @1
+  53426 = combine 17976 splice 0 with 15 rotate 1 connect at 7 @2
+  1015981 = combine 53426 splice 0 with 15 rotate 1 connect at 8 @2
+
+Target trace:
+  1020570 = source {06-ditripwire-16-ditripwire-26-ditripwire-356-point-456-point-up-up-s, 06-ditripwire-16-ditripwire-26-ditripwire-356-point-465-point-up-down-s, 06-ditripwire-16-ditripwire-26-ditripwire-365-point-456-point-down-up-s, 06-ditripwire-16-ditripwire-26-ditripwire-365-point-465-point-down-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  5151617 = combine 17198 splice 2 with 15 rotate 1 connect at 4 @0
+  469 = connect 5151617 at 3 @0
+  17757 = combine 469 splice 1 with 15 rotate 2 connect at 3 @0
+  52414 = combine 17757 splice 0 with 15 rotate 2 connect at 2 @1
+  1020570 = combine 52414 splice 1 with 15 rotate 2 connect at 3 @0
+
+Target trace:
+  1025943 = source {06-ditripwire-156-point-256-point-356-point-456-point-down-down-down-down-s, 06-ditripwire-156-point-256-point-356-point-465-point-down-down-down-up-s, 06-ditripwire-156-point-256-point-365-point-456-point-down-down-up-down-s, 06-ditripwire-156-point-256-point-365-point-465-point-down-down-up-up-s, 06-ditripwire-156-point-265-point-356-point-456-point-down-up-down-down-s, 06-ditripwire-156-point-265-point-356-point-465-point-down-up-down-up-s, 06-ditripwire-156-point-265-point-365-point-456-point-down-up-up-down-s, 06-ditripwire-156-point-265-point-365-point-465-point-down-up-up-up-s, 06-ditripwire-165-point-256-point-356-point-456-point-up-down-down-down-s, 06-ditripwire-165-point-256-point-356-point-465-point-up-down-down-up-s, 06-ditripwire-165-point-256-point-365-point-456-point-up-down-up-down-s, 06-ditripwire-165-point-256-point-365-point-465-point-up-down-up-up-s, 06-ditripwire-165-point-265-point-356-point-456-point-up-up-down-down-s, 06-ditripwire-165-point-265-point-356-point-465-point-up-up-down-up-s, 06-ditripwire-165-point-265-point-365-point-456-point-up-up-up-down-s, 06-ditripwire-165-point-265-point-365-point-465-point-up-up-up-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  5151702 = combine 17546 splice 3 with 15 rotate 0 connect at 5 @3
+  522 = connect 5151702 at 5 @2
+  17987 = combine 522 splice 0 with 15 rotate 2 connect at 2 @1
+  52420 = combine 17987 splice 0 with 15 rotate 1 connect at 7 @2
+  1025943 = combine 52420 splice 0 with 15 rotate 1 connect at 8 @2
+
+Target trace:
+  1027070 = source {06-ditripwire-16-ditripwire-26-ditripwire-36-ditripwire-456-point-up-s, 06-ditripwire-16-ditripwire-26-ditripwire-36-ditripwire-465-point-down-s}
+Source trace:
+  15 = source {3-fanin}
+  17198 = source {04-ditripwire-123-point-up-s, 04-ditripwire-132-point-down-s}
+  5151617 = combine 17198 splice 2 with 15 rotate 1 connect at 4 @0
+  469 = connect 5151617 at 3 @0
+  17757 = combine 469 splice 1 with 15 rotate 2 connect at 3 @0
+  52528 = combine 17757 splice 1 with 15 rotate 2 connect at 3 @0
+  1027070 = combine 52528 splice 1 with 15 rotate 2 connect at 3 @0
+
+Target trace:
+  1048861 = source {06-ditripwire-16-ditripwire-26-ditripwire-36-ditripwire-456-point-down-r, 06-ditripwire-16-ditripwire-26-ditripwire-36-ditripwire-465-point-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  5151647 = combine 17532 splice 2 with 15 rotate 1 connect at 4 @0
+  647 = connect 5151647 at 3 @0
+  17624 = combine 647 splice 0 with 15 rotate 1 connect at 6 @2
+  54432 = combine 17624 splice 0 with 15 rotate 1 connect at 7 @2
+  1048861 = combine 54432 splice 0 with 15 rotate 1 connect at 8 @2
+
+Target trace:
+  1049436 = source {06-ditripwire-16-ditripwire-256-point-356-point-456-point-up-up-up-r, 06-ditripwire-16-ditripwire-256-point-356-point-465-point-up-up-down-r, 06-ditripwire-16-ditripwire-256-point-365-point-456-point-up-down-up-r, 06-ditripwire-16-ditripwire-256-point-365-point-465-point-up-down-down-r, 06-ditripwire-16-ditripwire-265-point-356-point-456-point-down-up-up-r, 06-ditripwire-16-ditripwire-265-point-356-point-465-point-down-up-down-r, 06-ditripwire-16-ditripwire-265-point-365-point-456-point-down-down-up-r, 06-ditripwire-16-ditripwire-265-point-365-point-465-point-down-down-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  5151545 = combine 17513 splice 2 with 15 rotate 1 connect at 4 @0
+  370 = connect 5151545 at 3 @0
+  18058 = combine 370 splice 0 with 15 rotate 1 connect at 6 @2
+  62048 = combine 18058 splice 0 with 15 rotate 2 connect at 2 @1
+  1049436 = combine 62048 splice 0 with 15 rotate 1 connect at 8 @2
+
+Target trace:
+  1051453 = source {06-ditripwire-16-ditripwire-26-ditripwire-356-point-456-point-down-down-r, 06-ditripwire-16-ditripwire-26-ditripwire-356-point-465-point-down-up-r, 06-ditripwire-16-ditripwire-26-ditripwire-365-point-456-point-up-down-r, 06-ditripwire-16-ditripwire-26-ditripwire-365-point-465-point-up-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  5151647 = combine 17532 splice 2 with 15 rotate 1 connect at 4 @0
+  647 = connect 5151647 at 3 @0
+  17624 = combine 647 splice 0 with 15 rotate 1 connect at 6 @2
+  54432 = combine 17624 splice 0 with 15 rotate 1 connect at 7 @2
+  1051453 = combine 54432 splice 0 with 15 rotate 2 connect at 2 @1
+
+Target trace:
+  1052629 = source {06-ditripwire-156-point-256-point-356-point-456-point-down-down-down-down-r, 06-ditripwire-156-point-256-point-356-point-465-point-down-down-down-up-r, 06-ditripwire-156-point-256-point-365-point-456-point-down-down-up-down-r, 06-ditripwire-156-point-256-point-365-point-465-point-down-down-up-up-r, 06-ditripwire-156-point-265-point-356-point-456-point-down-up-down-down-r, 06-ditripwire-156-point-265-point-356-point-465-point-down-up-down-up-r, 06-ditripwire-156-point-265-point-365-point-456-point-down-up-up-down-r, 06-ditripwire-156-point-265-point-365-point-465-point-down-up-up-up-r, 06-ditripwire-165-point-256-point-356-point-456-point-up-down-down-down-r, 06-ditripwire-165-point-256-point-356-point-465-point-up-down-down-up-r, 06-ditripwire-165-point-256-point-365-point-456-point-up-down-up-down-r, 06-ditripwire-165-point-256-point-365-point-465-point-up-down-up-up-r, 06-ditripwire-165-point-265-point-356-point-456-point-up-up-down-down-r, 06-ditripwire-165-point-265-point-356-point-465-point-up-up-down-up-r, 06-ditripwire-165-point-265-point-365-point-456-point-up-up-up-down-r, 06-ditripwire-165-point-265-point-365-point-465-point-up-up-up-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  5151647 = combine 17532 splice 2 with 15 rotate 1 connect at 4 @0
+  647 = connect 5151647 at 3 @0
+  18777 = combine 647 splice 0 with 15 rotate 2 connect at 2 @1
+  60269 = combine 18777 splice 0 with 15 rotate 1 connect at 7 @2
+  1052629 = combine 60269 splice 0 with 15 rotate 1 connect at 8 @2
+
+Target trace:
+  1056362 = source {06-ditripwire-16-ditripwire-26-ditripwire-356-point-456-point-up-up-r, 06-ditripwire-16-ditripwire-26-ditripwire-356-point-465-point-up-down-r, 06-ditripwire-16-ditripwire-26-ditripwire-365-point-456-point-down-up-r, 06-ditripwire-16-ditripwire-26-ditripwire-365-point-465-point-down-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  5151545 = combine 17513 splice 2 with 15 rotate 1 connect at 4 @0
+  370 = connect 5151545 at 3 @0
+  18058 = combine 370 splice 0 with 15 rotate 1 connect at 6 @2
+  60959 = combine 18058 splice 0 with 15 rotate 1 connect at 7 @2
+  1056362 = combine 60959 splice 0 with 15 rotate 2 connect at 2 @1
+
+Target trace:
+  1060470 = source {06-ditripwire-156-point-256-point-356-point-456-point-up-up-up-up-r, 06-ditripwire-156-point-256-point-356-point-465-point-up-up-up-down-r, 06-ditripwire-156-point-256-point-365-point-456-point-up-up-down-up-r, 06-ditripwire-156-point-256-point-365-point-465-point-up-up-down-down-r, 06-ditripwire-156-point-265-point-356-point-456-point-up-down-up-up-r, 06-ditripwire-156-point-265-point-356-point-465-point-up-down-up-down-r, 06-ditripwire-156-point-265-point-365-point-456-point-up-down-down-up-r, 06-ditripwire-156-point-265-point-365-point-465-point-up-down-down-down-r, 06-ditripwire-165-point-256-point-356-point-456-point-down-up-up-up-r, 06-ditripwire-165-point-256-point-356-point-465-point-down-up-up-down-r, 06-ditripwire-165-point-256-point-365-point-456-point-down-up-down-up-r, 06-ditripwire-165-point-256-point-365-point-465-point-down-up-down-down-r, 06-ditripwire-165-point-265-point-356-point-456-point-down-down-up-up-r, 06-ditripwire-165-point-265-point-356-point-465-point-down-down-up-down-r, 06-ditripwire-165-point-265-point-365-point-456-point-down-down-down-up-r, 06-ditripwire-165-point-265-point-365-point-465-point-down-down-down-down-r}
+Source trace:
+  15 = source {3-fanin}
+  17513 = source {04-ditripwire-123-point-up-r, 04-ditripwire-132-point-down-r}
+  5151545 = combine 17513 splice 2 with 15 rotate 1 connect at 4 @0
+  370 = connect 5151545 at 3 @0
+  19122 = combine 370 splice 0 with 15 rotate 2 connect at 2 @1
+  68765 = combine 19122 splice 0 with 15 rotate 1 connect at 7 @2
+  1060470 = combine 68765 splice 0 with 15 rotate 1 connect at 8 @2
+
+Target trace:
+  1072758 = source {06-ditripwire-16-ditripwire-256-point-356-point-456-point-down-down-down-r, 06-ditripwire-16-ditripwire-256-point-356-point-465-point-down-down-up-r, 06-ditripwire-16-ditripwire-256-point-365-point-456-point-down-up-down-r, 06-ditripwire-16-ditripwire-256-point-365-point-465-point-down-up-up-r, 06-ditripwire-16-ditripwire-265-point-356-point-456-point-up-down-down-r, 06-ditripwire-16-ditripwire-265-point-356-point-465-point-up-down-up-r, 06-ditripwire-16-ditripwire-265-point-365-point-456-point-up-up-down-r, 06-ditripwire-16-ditripwire-265-point-365-point-465-point-up-up-up-r}
+Source trace:
+  15 = source {3-fanin}
+  17532 = source {04-ditripwire-123-point-down-r, 04-ditripwire-132-point-up-r}
+  5151647 = combine 17532 splice 2 with 15 rotate 1 connect at 4 @0
+  647 = connect 5151647 at 3 @0
+  18777 = combine 647 splice 0 with 15 rotate 2 connect at 2 @1
+  60269 = combine 18777 splice 0 with 15 rotate 1 connect at 7 @2
+  1072758 = combine 60269 splice 3 with 15 rotate 2 connect at 5 @0
+
+Target trace:
+  1081167 = source {06-ditripwire-16-ditripwire-26-ditripwire-36-ditripwire-456-point-down-s, 06-ditripwire-16-ditripwire-26-ditripwire-36-ditripwire-465-point-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  5151702 = combine 17546 splice 3 with 15 rotate 0 connect at 5 @3
+  522 = connect 5151702 at 5 @2
+  19067 = combine 522 splice 1 with 15 rotate 2 connect at 3 @0
+  62090 = combine 19067 splice 1 with 15 rotate 2 connect at 3 @0
+  1081167 = combine 62090 splice 1 with 15 rotate 2 connect at 3 @0
+
+Target trace:
+  1088884 = source {06-ditripwire-16-ditripwire-256-point-356-point-456-point-down-down-down-s, 06-ditripwire-16-ditripwire-256-point-356-point-465-point-down-down-up-s, 06-ditripwire-16-ditripwire-256-point-365-point-456-point-down-up-down-s, 06-ditripwire-16-ditripwire-256-point-365-point-465-point-down-up-up-s, 06-ditripwire-16-ditripwire-265-point-356-point-456-point-up-down-down-s, 06-ditripwire-16-ditripwire-265-point-356-point-465-point-up-down-up-s, 06-ditripwire-16-ditripwire-265-point-365-point-456-point-up-up-down-s, 06-ditripwire-16-ditripwire-265-point-365-point-465-point-up-up-up-s}
+Source trace:
+  15 = source {3-fanin}
+  17546 = source {04-ditripwire-123-point-down-s, 04-ditripwire-132-point-up-s}
+  5151702 = combine 17546 splice 3 with 15 rotate 0 connect at 5 @3
+  522 = connect 5151702 at 5 @2
+  17987 = combine 522 splice 0 with 15 rotate 2 connect at 2 @1
+  52420 = combine 17987 splice 0 with 15 rotate 1 connect at 7 @2
+  1088884 = combine 52420 splice 1 with 15 rotate 2 connect at 3 @0
+
+==> Step 22: 0 user, 0 sys, 0h0m0s wall (0.54), 2.89 GiB (0.00, 1929)
+-->    closed:      313204       11672  26.8       0 MiB
+--> closemirr:      286919        7629  37.6       0 MiB
+-->   connect:      286919        7629  37.6       0 MiB
+-->   combine:      286919        7629  37.6       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.89
+
+==> Step 23: 0 user, 0 sys, 0h0m0s wall (1.00), 2.89 GiB (0.00, 0)
+-->    closed:      313204       11672  26.8       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:      286919        7629  37.6       0 MiB
+-->   combine:      286919        7629  37.6       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.89
+
+==> Step 24: 0 user, 0 sys, 0h0m0s wall (1.50), 2.89 GiB (0.00, 2168)
+-->    closed:      346447       14272  24.3       0 MiB
+--> closemirr:       33243        2698  12.3       0 MiB
+-->   connect:       33243        2698  12.3       0 MiB
+-->   combine:      320162       10303  31.1       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.88
+
+==> Step 25: 0 user, 0 sys, 0h0m0s wall (1.00), 2.89 GiB (0.00, 0)
+-->    closed:      346447       14272  24.3       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:       33243        2698  12.3       0 MiB
+-->   combine:      320162       10303  31.1       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.88
+
+==> Step 26: 0 user, 0 sys, 0h0m0s wall (0.39), 2.89 GiB (0.00, 391)
+-->    closed:      346805       14383  24.1       0 MiB
+--> closemirr:         358         114   3.1       0 MiB
+-->   connect:         358         114   3.1       0 MiB
+-->   combine:      320520       10416  30.8       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.88
+
+==> Step 27: 0 user, 0 sys, 0h0m0s wall (0.97), 2.89 GiB (0.00, 0)
+-->    closed:      346805       14383  24.1       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:         358         114   3.1       0 MiB
+-->   combine:      320520       10416  30.8       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.88
+
+==> Step 28: 0 user, 0 sys, 0h0m0s wall (0.44), 2.89 GiB (0.00, 9)
+-->    closed:      346805       14383  24.1       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:      320520       10416  30.8       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.88
+
+==> Step 29: 0 user, 0 sys, 0h0m0s wall (0.88), 2.92 GiB (0.03, 1090)
+-->    closed:      787439       51097  15.4       1 MiB
+--> closemirr:      440634       37183  11.9       1 MiB
+-->   connect:      440634       37183  11.9       1 MiB
+-->   combine:      440634       37183  11.9       1 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.85
+
+==> Step 30: 0 user, 0 sys, 0h0m0s wall (0.90), 2.92 GiB (0.00, 0)
+-->    closed:      787439       51097  15.4       1 MiB
+--> closemirr:           0           0             1 MiB
+-->   connect:      440634       37183  11.9       1 MiB
+-->   combine:      440634       37183  11.9       1 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.85
+
+==> Step 31: 0 user, 0 sys, 0h0m0s wall (0.60), 2.97 GiB (0.06, 7610)
+-->    closed:      834582       67719  12.3       2 MiB
+--> closemirr:       47143       16788   2.8       0 MiB
+-->   connect:       47143       16788   2.8       0 MiB
+-->   combine:      487777       53910   9.0       1 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.85
+
+==> Step 32: 0 user, 0 sys, 0h0m0s wall (0.97), 2.97 GiB (0.00, 0)
+-->    closed:      834582       67719  12.3       2 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:       47143       16788   2.8       0 MiB
+-->   combine:      487777       53910   9.0       1 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.85
+
+==> Step 33: 0 user, 0 sys, 0h0m0s wall (0.55), 2.99 GiB (0.02, 3481)
+-->    closed:      835007       68041  12.3       2 MiB
+--> closemirr:         425         344   1.2       0 MiB
+-->   connect:         425         344   1.2       0 MiB
+-->   combine:      488202       54237   9.0       1 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.85
+
+==> Step 34: 0 user, 0 sys, 0h0m0s wall (1.04), 2.99 GiB (0.00, 0)
+-->    closed:      835007       68041  12.3       2 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:         425         344   1.2       0 MiB
+-->   combine:      488202       54237   9.0       1 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.85
+
+==> Step 35: 0 user, 0 sys, 0h0m0s wall (0.91), 2.99 GiB (0.00, 4)
+-->    closed:      835007       68041  12.3       2 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:      488202       54237   9.0       1 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.85
+
+==> Step 36: 3 user, 1 sys, 0h0m3s wall (1.47), 4.11 GiB (1.12, 26577)
+-->    closed:     5357755      178844  30.0       4 MiB
+--> closemirr:     4522748      112513  40.2       2 MiB
+-->   connect:     4522748      112513  40.2       2 MiB
+-->   combine:     4522748      112513  40.2       2 MiB
+--> provenance:   0.03 GiB   0.03 GiB 0.88
+
+==> Step 37: 0 user, 0 sys, 0h0m0s wall (0.95), 4.11 GiB (0.00, 0)
+-->    closed:     5357755      178844  30.0       4 MiB
+--> closemirr:           0           0             2 MiB
+-->   connect:     4522748      112513  40.2       2 MiB
+-->   combine:     4522748      112513  40.2       2 MiB
+--> provenance:   0.03 GiB   0.03 GiB 0.88
+
+==> Step 38: 1 user, 0 sys, 0h0m0s wall (4.02), 4.11 GiB (0.00, 17064)
+-->    closed:     5607765      208214  26.9       4 MiB
+--> closemirr:      250010       29770   8.4       0 MiB
+-->   connect:      250010       29770   8.4       0 MiB
+-->   combine:     4772758      142175  33.6       4 MiB
+--> provenance:   0.03 GiB   0.03 GiB 0.87
+
+==> Step 39: 0 user, 0 sys, 0h0m0s wall (0.97), 4.11 GiB (0.00, 0)
+-->    closed:     5607765      208214  26.9       4 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:      250010       29770   8.4       0 MiB
+-->   combine:     4772758      142175  33.6       4 MiB
+--> provenance:   0.03 GiB   0.03 GiB 0.87
+
+==> Step 40: 0 user, 0 sys, 0h0m0s wall (0.92), 4.11 GiB (0.00, 5906)
+-->    closed:     5614754      210657  26.7       4 MiB
+--> closemirr:        6989        2599   2.7       0 MiB
+-->   connect:        6989        2599   2.7       0 MiB
+-->   combine:     4779747      144645  33.0       4 MiB
+--> provenance:   0.03 GiB   0.03 GiB 0.87
+
+==> Step 41: 0 user, 0 sys, 0h0m0s wall (0.91), 4.11 GiB (0.00, 0)
+-->    closed:     5614754      210657  26.7       4 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:        6989        2599   2.7       0 MiB
+-->   combine:     4779747      144645  33.0       4 MiB
+--> provenance:   0.03 GiB   0.03 GiB 0.87
+
+==> Step 42: 0 user, 0 sys, 0h0m0s wall (0.98), 4.11 GiB (0.00, 8)
+-->    closed:     5614754      210657  26.7       4 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:     4779747      144645  33.0       4 MiB
+--> provenance:   0.03 GiB   0.03 GiB 0.87
+
+==> Step 43: 4 user, 1 sys, 0h0m2s wall (2.72), 4.49 GiB (0.37, 9024)
+-->    closed:    11252770      275141  40.9       8 MiB
+--> closemirr:     5638016       69535  81.1       2 MiB
+-->   connect:     5638016       69535  81.1       2 MiB
+-->   combine:     5638016       69535  81.1       2 MiB
+--> provenance:   0.06 GiB   0.06 GiB 0.89
+
+==> Step 44: 0 user, 0 sys, 0h0m0s wall (0.90), 4.49 GiB (0.00, 0)
+-->    closed:    11252770      275141  40.9       8 MiB
+--> closemirr:           0           0             2 MiB
+-->   connect:     5638016       69535  81.1       2 MiB
+-->   combine:     5638016       69535  81.1       2 MiB
+--> provenance:   0.06 GiB   0.06 GiB 0.89
+
+==> Step 45: 1 user, 0 sys, 0h0m0s wall (8.69), 4.49 GiB (0.00, 10080)
+-->    closed:    11541404      294096  39.2       8 MiB
+--> closemirr:      288634       19561  14.8       0 MiB
+-->   connect:      288634       19561  14.8       0 MiB
+-->   combine:     5926650       89043  66.6       2 MiB
+--> provenance:   0.06 GiB   0.06 GiB 0.89
+
+==> Step 46: 0 user, 0 sys, 0h0m0s wall (0.95), 4.49 GiB (0.00, 0)
+-->    closed:    11541404      294096  39.2       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:      288634       19561  14.8       0 MiB
+-->   combine:     5926650       89043  66.6       2 MiB
+--> provenance:   0.06 GiB   0.06 GiB 0.89
+
+==> Step 47: 0 user, 0 sys, 0h0m0s wall (1.09), 4.49 GiB (0.00, 1977)
+-->    closed:    11548347      296106  39.0       8 MiB
+--> closemirr:        6943        2146   3.2       0 MiB
+-->   connect:        6943        2146   3.2       0 MiB
+-->   combine:     5933593       91151  65.1       2 MiB
+--> provenance:   0.06 GiB   0.06 GiB 0.89
+
+==> Step 48: 0 user, 0 sys, 0h0m0s wall (0.93), 4.49 GiB (0.00, 0)
+-->    closed:    11548347      296106  39.0       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:        6943        2146   3.2       0 MiB
+-->   combine:     5933593       91151  65.1       2 MiB
+--> provenance:   0.06 GiB   0.06 GiB 0.89
+
+==> Step 49: 0 user, 0 sys, 0h0m0s wall (0.97), 4.49 GiB (0.00, 9)
+-->    closed:    11548347      296106  39.0       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:     5933593       91151  65.1       2 MiB
+--> provenance:   0.06 GiB   0.06 GiB 0.89
+
+==> Step 50: 49 user, 9 sys, 0h0m5s wall (10.08), 5.75 GiB (1.26, 47367)
+-->    closed:    44944016      343974 130.7       8 MiB
+--> closemirr:    33395669       52565 635.3       1 MiB
+-->   connect:    33395669       52565 635.3       1 MiB
+-->   combine:    33395669       52565 635.3       1 MiB
+--> provenance:   0.22 GiB   0.25 GiB 0.91
+
+==> Step 51: 0 user, 0 sys, 0h0m0s wall (0.94), 5.75 GiB (0.00, 0)
+-->    closed:    44944016      343974 130.7       8 MiB
+--> closemirr:           0           0             1 MiB
+-->   connect:    33395669       52565 635.3       1 MiB
+-->   combine:    33395669       52565 635.3       1 MiB
+--> provenance:   0.22 GiB   0.25 GiB 0.91
+
+==> Step 52: 5 user, 0 sys, 0h0m0s wall (24.62), 5.75 GiB (0.00, 41485)
+-->    closed:    45881666      355575 129.0       8 MiB
+--> closemirr:      937650       12056  77.8       0 MiB
+-->   connect:      937650       12056  77.8       0 MiB
+-->   combine:    34333319       64590 531.6       1 MiB
+--> provenance:   0.23 GiB   0.25 GiB 0.91
+
+==> Step 53: 0 user, 0 sys, 0h0m0s wall (0.95), 5.75 GiB (0.00, 0)
+-->    closed:    45881666      355575 129.0       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:      937650       12056  77.8       0 MiB
+-->   combine:    34333319       64590 531.6       1 MiB
+--> provenance:   0.23 GiB   0.25 GiB 0.91
+
+==> Step 54: 0 user, 0 sys, 0h0m0s wall (3.19), 5.75 GiB (0.00, 3775)
+-->    closed:    45907274      356460 128.8       8 MiB
+--> closemirr:       25608         978  26.2       0 MiB
+-->   connect:       25608         978  26.2       0 MiB
+-->   combine:    34358927       65541 524.2       2 MiB
+--> provenance:   0.23 GiB   0.25 GiB 0.91
+
+==> Step 55: 0 user, 0 sys, 0h0m0s wall (1.00), 5.75 GiB (0.00, 0)
+-->    closed:    45907274      356460 128.8       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:       25608         978  26.2       0 MiB
+-->   combine:    34358927       65541 524.2       2 MiB
+--> provenance:   0.23 GiB   0.25 GiB 0.91
+
+==> Step 56: 0 user, 0 sys, 0h0m0s wall (0.85), 5.75 GiB (0.00, 45)
+-->    closed:    45907274      356460 128.8       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:    34358927       65541 524.2       2 MiB
+--> provenance:   0.23 GiB   0.25 GiB 0.91
+
+==> Step 57: 43 user, 8 sys, 0h0m5s wall (10.30), 6.27 GiB (0.52, 47694)
+-->    closed:    77904324      370746 210.1       8 MiB
+--> closemirr:    31997050       15768   big       0 MiB
+-->   connect:    31997050       15768   big       0 MiB
+-->   combine:    31997050       15768   big       0 MiB
+--> provenance:   0.39 GiB   0.43 GiB 0.91
+
+==> Step 58: 0 user, 0 sys, 0h0m0s wall (1.05), 6.27 GiB (0.00, 0)
+-->    closed:    77904324      370746 210.1       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:    31997050       15768   big       0 MiB
+-->   combine:    31997050       15768   big       0 MiB
+--> provenance:   0.39 GiB   0.43 GiB 0.91
+
+==> Step 59: 4 user, 0 sys, 0h0m0s wall (10.88), 6.27 GiB (0.00, 37608)
+-->    closed:    78708722      374961 209.9       8 MiB
+--> closemirr:      804398        4455 180.6       0 MiB
+-->   connect:      804398        4455 180.6       0 MiB
+-->   combine:    32801448       20206   big       0 MiB
+--> provenance:   0.39 GiB   0.43 GiB 0.91
+
+==> Step 60: 0 user, 0 sys, 0h0m0s wall (0.95), 6.27 GiB (0.00, 0)
+-->    closed:    78708722      374961 209.9       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:      804398        4455 180.6       0 MiB
+-->   combine:    32801448       20206   big       0 MiB
+--> provenance:   0.39 GiB   0.43 GiB 0.91
+
+==> Step 61: 0 user, 0 sys, 0h0m0s wall (4.07), 6.27 GiB (0.00, 2641)
+-->    closed:    78729428      375134 209.9       8 MiB
+--> closemirr:       20706         193 107.3       0 MiB
+-->   connect:       20706         193 107.3       0 MiB
+-->   combine:    32822154       20398   big       0 MiB
+--> provenance:   0.39 GiB   0.43 GiB 0.91
+
+==> Step 62: 0 user, 0 sys, 0h0m0s wall (0.98), 6.27 GiB (0.00, 0)
+-->    closed:    78729428      375134 209.9       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:       20706         193 107.3       0 MiB
+-->   combine:    32822154       20398   big       0 MiB
+--> provenance:   0.39 GiB   0.43 GiB 0.91
+
+==> Step 63: 0 user, 0 sys, 0h0m0s wall (0.64), 6.27 GiB (0.00, 41)
+-->    closed:    78729428      375134 209.9       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:    32822154       20398   big       0 MiB
+--> provenance:   0.39 GiB   0.43 GiB 0.91
+
+==> Step 64: 243 user, 48 sys, 0h0m13s wall (21.55), 10.25 GiB (3.98, 170679)
+-->    closed:   192412584      384889 499.9       8 MiB
+--> closemirr:   113683156       11759   big       0 MiB
+-->   connect:   113683156       11759   big       0 MiB
+-->   combine:   113683156       11759   big       0 MiB
+--> provenance:   0.96 GiB   1.06 GiB 0.91
+
+==> Step 65: 0 user, 0 sys, 0h0m0s wall (0.98), 10.25 GiB (0.00, 0)
+-->    closed:   192412584      384889 499.9       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:   113683156       11759   big       0 MiB
+-->   combine:   113683156       11759   big       0 MiB
+--> provenance:   0.96 GiB   1.06 GiB 0.91
+
+==> Step 66: 11 user, 1 sys, 0h0m0s wall (27.89), 10.25 GiB (0.00, 104949)
+-->    closed:   194439848      387206 502.2       8 MiB
+--> closemirr:     2027264        2461 823.8       0 MiB
+-->   connect:     2027264        2461 823.8       0 MiB
+-->   combine:   115710420       14218   big       0 MiB
+--> provenance:   0.97 GiB   1.07 GiB 0.91
+
+==> Step 67: 0 user, 0 sys, 0h0m0s wall (0.93), 10.25 GiB (0.00, 0)
+-->    closed:   194439848      387206 502.2       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:     2027264        2461 823.8       0 MiB
+-->   combine:   115710420       14218   big       0 MiB
+--> provenance:   0.97 GiB   1.07 GiB 0.91
+
+==> Step 68: 0 user, 0 sys, 0h0m0s wall (9.50), 10.25 GiB (0.00, 6722)
+-->    closed:   194476576      387559 501.8       8 MiB
+--> closemirr:       36728         424  86.6       0 MiB
+-->   connect:       36728         424  86.6       0 MiB
+-->   combine:   115747148       14636   big       0 MiB
+--> provenance:   0.97 GiB   1.07 GiB 0.91
+
+==> Step 69: 0 user, 0 sys, 0h0m0s wall (1.03), 10.25 GiB (0.00, 0)
+-->    closed:   194476576      387559 501.8       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:       36728         424  86.6       0 MiB
+-->   combine:   115747148       14636   big       0 MiB
+--> provenance:   0.97 GiB   1.07 GiB 0.91
+
+==> Step 70: 0 user, 0 sys, 0h0m0s wall (0.77), 10.25 GiB (0.00, 76)
+-->    closed:   194476576      387559 501.8       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:   115747148       14636   big       0 MiB
+--> provenance:   0.97 GiB   1.07 GiB 0.91
+
+==> Step 71: 177 user, 33 sys, 0h0m11s wall (18.95), 11.02 GiB (0.77, 138960)
+-->    closed:   285716110      390694 731.3       8 MiB
+--> closemirr:    91239534        3797   big       0 MiB
+-->   connect:    91239534        3797   big       0 MiB
+-->   combine:    91239534        3797   big       0 MiB
+--> provenance:   1.43 GiB   1.57 GiB 0.91
+
+==> Step 72: 0 user, 0 sys, 0h0m0s wall (1.01), 11.02 GiB (0.00, 0)
+-->    closed:   285716110      390694 731.3       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:    91239534        3797   big       0 MiB
+-->   combine:    91239534        3797   big       0 MiB
+--> provenance:   1.43 GiB   1.57 GiB 0.91
+
+==> Step 73: 9 user, 1 sys, 0h0m0s wall (26.59), 11.02 GiB (0.00, 80650)
+-->    closed:   287252588      392991 730.9       8 MiB
+--> closemirr:     1536478        2461 624.3       0 MiB
+-->   connect:     1536478        2461 624.3       0 MiB
+-->   combine:    92776012        6257   big       0 MiB
+--> provenance:   1.43 GiB   1.58 GiB 0.91
+
+==> Step 74: 0 user, 0 sys, 0h0m0s wall (0.96), 11.02 GiB (0.00, 0)
+-->    closed:   287252588      392991 730.9       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:     1536478        2461 624.3       0 MiB
+-->   combine:    92776012        6257   big       0 MiB
+--> provenance:   1.43 GiB   1.58 GiB 0.91
+
+==> Step 75: 0 user, 0 sys, 0h0m0s wall (8.30), 11.02 GiB (0.00, 5149)
+-->    closed:   287286776      393144 730.7       8 MiB
+--> closemirr:       34188         185 184.8       0 MiB
+-->   connect:       34188         185 184.8       0 MiB
+-->   combine:    92810200        6440   big       0 MiB
+--> provenance:   1.43 GiB   1.58 GiB 0.91
+
+==> Step 76: 0 user, 0 sys, 0h0m0s wall (0.93), 11.02 GiB (0.00, 0)
+-->    closed:   287286776      393144 730.7       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:       34188         185 184.8       0 MiB
+-->   combine:    92810200        6440   big       0 MiB
+--> provenance:   1.43 GiB   1.58 GiB 0.91
+
+==> Step 77: 0 user, 0 sys, 0h0m0s wall (0.82), 11.02 GiB (0.00, 69)
+-->    closed:   287286776      393144 730.7       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:    92810200        6440   big       0 MiB
+--> provenance:   1.43 GiB   1.58 GiB 0.91
+
+==> Step 78: 493 user, 107 sys, 0h0m25s wall (23.74), 17.88 GiB (6.85, 330580)
+-->    closed:   504223551      401588   big       8 MiB
+--> closemirr:   216936775       10135   big       0 MiB
+-->   connect:   216936775       10135   big       0 MiB
+-->   combine:   216936775       10135   big       0 MiB
+--> provenance:   2.52 GiB   2.77 GiB 0.91
+
+==> Step 79: 0 user, 0 sys, 0h0m0s wall (1.00), 17.88 GiB (0.00, 0)
+-->    closed:   504223551      401588   big       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:   216936775       10135   big       0 MiB
+-->   combine:   216936775       10135   big       0 MiB
+--> provenance:   2.52 GiB   2.77 GiB 0.91
+
+==> Step 80: 19 user, 0 sys, 0h0m0s wall (41.45), 17.88 GiB (0.00, 0)
+-->    closed:   507340995      404194   big       8 MiB
+--> closemirr:     3117444        2780   big       0 MiB
+-->   connect:     3117444        2780   big       0 MiB
+-->   combine:   220054219       12911   big       0 MiB
+--> provenance:   2.53 GiB   2.79 GiB 0.91
+
+==> Step 81: 0 user, 0 sys, 0h0m0s wall (0.97), 17.88 GiB (0.00, 0)
+-->    closed:   507340995      404194   big       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:     3117444        2780   big       0 MiB
+-->   combine:   220054219       12911   big       0 MiB
+--> provenance:   2.53 GiB   2.79 GiB 0.91
+
+==> Step 82: 1 user, 0 sys, 0h0m0s wall (17.30), 17.88 GiB (0.00, 0)
+-->    closed:   507382515      404520   big       8 MiB
+--> closemirr:       41520         411 101.0       0 MiB
+-->   connect:       41520         411 101.0       0 MiB
+-->   combine:   220095739       13318   big       0 MiB
+--> provenance:   2.53 GiB   2.79 GiB 0.91
+
+==> Step 83: 0 user, 0 sys, 0h0m0s wall (0.96), 17.88 GiB (0.00, 0)
+-->    closed:   507382515      404520   big       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:       41520         411 101.0       0 MiB
+-->   combine:   220095739       13318   big       0 MiB
+--> provenance:   2.53 GiB   2.79 GiB 0.91
+
+==> Step 84: 0 user, 0 sys, 0h0m0s wall (1.36), 17.88 GiB (0.00, 0)
+-->    closed:   507382515      404520   big       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:   220095739       13318   big       0 MiB
+--> provenance:   2.53 GiB   2.79 GiB 0.91
+
+==> Step 85: 0 user, 0 sys, 0h0m0s wall (0.53), 17.88 GiB (0.00, 13)
+-->    closed:   507385057      406633   big       8 MiB
+--> closemirr:        2542        2526   1.0       0 MiB
+-->   connect:        2542        2526   1.0       0 MiB
+-->   combine:        2542        2526   1.0       0 MiB
+--> provenance:   2.53 GiB   2.79 GiB 0.91
+
+==> Step 86: 0 user, 0 sys, 0h0m0s wall (0.88), 17.88 GiB (0.00, 0)
+-->    closed:   507385057      406633   big       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:        2542        2526   1.0       0 MiB
+-->   combine:        2542        2526   1.0       0 MiB
+--> provenance:   2.53 GiB   2.79 GiB 0.91
+
+==> Step 87: 0 user, 0 sys, 0h0m0s wall (1.01), 17.88 GiB (0.00, 0)
+-->    closed:   507385157      406720   big       8 MiB
+--> closemirr:         100         100   1.0       0 MiB
+-->   connect:         100         100   1.0       0 MiB
+-->   combine:        2642        2626   1.0       0 MiB
+--> provenance:   2.53 GiB   2.79 GiB 0.91
+
+==> Step 88: 0 user, 0 sys, 0h0m0s wall (0.94), 17.88 GiB (0.00, 0)
+-->    closed:   507385157      406720   big       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:         100         100   1.0       0 MiB
+-->   combine:        2642        2626   1.0       0 MiB
+--> provenance:   2.53 GiB   2.79 GiB 0.91
+
+==> Step 89: 0 user, 0 sys, 0h0m0s wall (1.00), 17.88 GiB (0.00, 0)
+-->    closed:   507385157      406720   big       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:        2642        2626   1.0       0 MiB
+--> provenance:   2.53 GiB   2.79 GiB 0.91
+
+==> Step 90: 0 user, 0 sys, 0h0m0s wall (1.09), 17.88 GiB (0.00, 0)
+-->    closed:   507385801      407217   big       8 MiB
+--> closemirr:         644         642   1.0       0 MiB
+-->   connect:         644         642   1.0       0 MiB
+-->   combine:         644         642   1.0       0 MiB
+--> provenance:   2.53 GiB   2.79 GiB 0.91
+
+==> Step 91: 0 user, 0 sys, 0h0m0s wall (1.08), 17.88 GiB (0.00, 0)
+-->    closed:   507385801      407217   big       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:         644         642   1.0       0 MiB
+-->   combine:         644         642   1.0       0 MiB
+--> provenance:   2.53 GiB   2.79 GiB 0.91
+
+==> Step 92: 0 user, 0 sys, 0h0m0s wall (1.00), 17.88 GiB (0.00, 0)
+-->    closed:   507385801      407217   big       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:         644         642   1.0       0 MiB
+--> provenance:   2.53 GiB   2.79 GiB 0.91
+
+==> Step 93: 0 user, 0 sys, 0h0m0s wall (1.00), 17.88 GiB (0.00, 0)
+-->    closed:   507385801      407217   big       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:           0           0             0 MiB
+--> provenance:   2.53 GiB   2.79 GiB 0.91
+
+==> REPORT COMPLETED
+--> 560 targets found:
+   03-ditripwire-123-point-down-r (647)
+   03-ditripwire-123-point-down-s (522)
+   03-ditripwire-123-point-up-r (370)
+   03-ditripwire-123-point-up-s (469)
+   03-ditripwire-132-point-down-r (370)
+   03-ditripwire-132-point-down-s (469)
+   03-ditripwire-132-point-up-r (647)
+   03-ditripwire-132-point-up-s (522)
+   04-ditripwire-134-point-234-point-down-down-r (18777)
+   04-ditripwire-134-point-234-point-down-down-s (17987)
+   04-ditripwire-134-point-234-point-up-up-r (19122)
+   04-ditripwire-134-point-234-point-up-up-s (17976)
+   04-ditripwire-134-point-243-point-down-up-r (18777)
+   04-ditripwire-134-point-243-point-down-up-s (17987)
+   04-ditripwire-134-point-243-point-up-down-r (19122)
+   04-ditripwire-134-point-243-point-up-down-s (17976)
+   04-ditripwire-14-ditripwire-234-point-down-r (17624)
+   04-ditripwire-14-ditripwire-234-point-down-s (19067)
+   04-ditripwire-14-ditripwire-234-point-up-r (18058)
+   04-ditripwire-14-ditripwire-234-point-up-s (17757)
+   04-ditripwire-14-ditripwire-243-point-down-r (18058)
+   04-ditripwire-14-ditripwire-243-point-down-s (17757)
+   04-ditripwire-14-ditripwire-243-point-up-r (17624)
+   04-ditripwire-14-ditripwire-243-point-up-s (19067)
+   04-ditripwire-143-point-234-point-down-up-r (19122)
+   04-ditripwire-143-point-234-point-down-up-s (17976)
+   04-ditripwire-143-point-234-point-up-down-r (18777)
+   04-ditripwire-143-point-234-point-up-down-s (17987)
+   04-ditripwire-143-point-243-point-down-down-r (19122)
+   04-ditripwire-143-point-243-point-down-down-s (17976)
+   04-ditripwire-143-point-243-point-up-up-r (18777)
+   04-ditripwire-143-point-243-point-up-up-s (17987)
+   05-ditripwire-124-point-345-point-down-up-r (36416)
+   05-ditripwire-124-point-345-point-down-up-s (21932)
+   05-ditripwire-124-point-345-point-up-down-r (38567)
+   05-ditripwire-124-point-345-point-up-down-s (30617)
+   05-ditripwire-124-point-354-point-down-down-r (36416)
+   05-ditripwire-124-point-354-point-down-down-s (21932)
+   05-ditripwire-124-point-354-point-up-up-r (38567)
+   05-ditripwire-124-point-354-point-up-up-s (30617)
+   05-ditripwire-125-point-345-point-down-down-r (30682)
+   05-ditripwire-125-point-345-point-down-down-s (39233)
+   05-ditripwire-125-point-345-point-up-up-r (33106)
+   05-ditripwire-125-point-345-point-up-up-s (23612)
+   05-ditripwire-125-point-354-point-down-up-r (30682)
+   05-ditripwire-125-point-354-point-down-up-s (39233)
+   05-ditripwire-125-point-354-point-up-down-r (33106)
+   05-ditripwire-125-point-354-point-up-down-s (23612)
+   05-ditripwire-134-point-234-point-down-down-r (46919)
+   05-ditripwire-134-point-234-point-down-down-s (39224)
+   05-ditripwire-134-point-234-point-up-up-r (41861)
+   05-ditripwire-134-point-234-point-up-up-s (29069)
+   05-ditripwire-134-point-243-point-down-up-r (46919)
+   05-ditripwire-134-point-243-point-down-up-s (39224)
+   05-ditripwire-134-point-243-point-up-down-r (41861)
+   05-ditripwire-134-point-243-point-up-down-s (29069)
+   05-ditripwire-142-point-345-point-down-down-r (38567)
+   05-ditripwire-142-point-345-point-down-down-s (30617)
+   05-ditripwire-142-point-345-point-up-up-r (36416)
+   05-ditripwire-142-point-345-point-up-up-s (21932)
+   05-ditripwire-142-point-354-point-down-up-r (38567)
+   05-ditripwire-142-point-354-point-down-up-s (30617)
+   05-ditripwire-142-point-354-point-up-down-r (36416)
+   05-ditripwire-142-point-354-point-up-down-s (21932)
+   05-ditripwire-143-point-234-point-down-up-r (41861)
+   05-ditripwire-143-point-234-point-down-up-s (29069)
+   05-ditripwire-143-point-234-point-up-down-r (46919)
+   05-ditripwire-143-point-234-point-up-down-s (39224)
+   05-ditripwire-143-point-243-point-down-down-r (41861)
+   05-ditripwire-143-point-243-point-down-down-s (29069)
+   05-ditripwire-143-point-243-point-up-up-r (46919)
+   05-ditripwire-143-point-243-point-up-up-s (39224)
+   05-ditripwire-145-point-245-point-345-point-down-down-down-r (60269)
+   05-ditripwire-145-point-245-point-345-point-down-down-down-s (52420)
+   05-ditripwire-145-point-245-point-345-point-up-up-up-r (68765)
+   05-ditripwire-145-point-245-point-345-point-up-up-up-s (53426)
+   05-ditripwire-145-point-245-point-354-point-down-down-up-r (60269)
+   05-ditripwire-145-point-245-point-354-point-down-down-up-s (52420)
+   05-ditripwire-145-point-245-point-354-point-up-up-down-r (68765)
+   05-ditripwire-145-point-245-point-354-point-up-up-down-s (53426)
+   05-ditripwire-145-point-254-point-345-point-down-up-down-r (60269)
+   05-ditripwire-145-point-254-point-345-point-down-up-down-s (52420)
+   05-ditripwire-145-point-254-point-345-point-up-down-up-r (68765)
+   05-ditripwire-145-point-254-point-345-point-up-down-up-s (53426)
+   05-ditripwire-145-point-254-point-354-point-down-up-up-r (60269)
+   05-ditripwire-145-point-254-point-354-point-down-up-up-s (52420)
+   05-ditripwire-145-point-254-point-354-point-up-down-down-r (68765)
+   05-ditripwire-145-point-254-point-354-point-up-down-down-s (53426)
+   05-ditripwire-15-ditripwire-234-point-down-r (23367)
+   05-ditripwire-15-ditripwire-234-point-down-s (33650)
+   05-ditripwire-15-ditripwire-234-point-up-r (36317)
+   05-ditripwire-15-ditripwire-234-point-up-s (30287)
+   05-ditripwire-15-ditripwire-243-point-down-r (36317)
+   05-ditripwire-15-ditripwire-243-point-down-s (30287)
+   05-ditripwire-15-ditripwire-243-point-up-r (23367)
+   05-ditripwire-15-ditripwire-243-point-up-s (33650)
+   05-ditripwire-15-ditripwire-245-point-345-point-down-down-r (65486)
+   05-ditripwire-15-ditripwire-245-point-345-point-down-down-s (63400)
+   05-ditripwire-15-ditripwire-245-point-345-point-up-up-r (62048)
+   05-ditripwire-15-ditripwire-245-point-345-point-up-up-s (52414)
+   05-ditripwire-15-ditripwire-245-point-354-point-down-up-r (65486)
+   05-ditripwire-15-ditripwire-245-point-354-point-down-up-s (63400)
+   05-ditripwire-15-ditripwire-245-point-354-point-up-down-r (62048)
+   05-ditripwire-15-ditripwire-245-point-354-point-up-down-s (52414)
+   05-ditripwire-15-ditripwire-25-ditripwire-345-point-down-r (54432)
+   05-ditripwire-15-ditripwire-25-ditripwire-345-point-down-s (62090)
+   05-ditripwire-15-ditripwire-25-ditripwire-345-point-up-r (60959)
+   05-ditripwire-15-ditripwire-25-ditripwire-345-point-up-s (52528)
+   05-ditripwire-15-ditripwire-25-ditripwire-354-point-down-r (60959)
+   05-ditripwire-15-ditripwire-25-ditripwire-354-point-down-s (52528)
+   05-ditripwire-15-ditripwire-25-ditripwire-354-point-up-r (54432)
+   05-ditripwire-15-ditripwire-25-ditripwire-354-point-up-s (62090)
+   05-ditripwire-15-ditripwire-254-point-345-point-down-up-r (62048)
+   05-ditripwire-15-ditripwire-254-point-345-point-down-up-s (52414)
+   05-ditripwire-15-ditripwire-254-point-345-point-up-down-r (65486)
+   05-ditripwire-15-ditripwire-254-point-345-point-up-down-s (63400)
+   05-ditripwire-15-ditripwire-254-point-354-point-down-down-r (62048)
+   05-ditripwire-15-ditripwire-254-point-354-point-down-down-s (52414)
+   05-ditripwire-15-ditripwire-254-point-354-point-up-up-r (65486)
+   05-ditripwire-15-ditripwire-254-point-354-point-up-up-s (63400)
+   05-ditripwire-152-point-345-point-down-up-r (33106)
+   05-ditripwire-152-point-345-point-down-up-s (23612)
+   05-ditripwire-152-point-345-point-up-down-r (30682)
+   05-ditripwire-152-point-345-point-up-down-s (39233)
+   05-ditripwire-152-point-354-point-down-down-r (33106)
+   05-ditripwire-152-point-354-point-down-down-s (23612)
+   05-ditripwire-152-point-354-point-up-up-r (30682)
+   05-ditripwire-152-point-354-point-up-up-s (39233)
+   05-ditripwire-154-point-245-point-345-point-down-up-up-r (68765)
+   05-ditripwire-154-point-245-point-345-point-down-up-up-s (53426)
+   05-ditripwire-154-point-245-point-345-point-up-down-down-r (60269)
+   05-ditripwire-154-point-245-point-345-point-up-down-down-s (52420)
+   05-ditripwire-154-point-245-point-354-point-down-up-down-r (68765)
+   05-ditripwire-154-point-245-point-354-point-down-up-down-s (53426)
+   05-ditripwire-154-point-245-point-354-point-up-down-up-r (60269)
+   05-ditripwire-154-point-245-point-354-point-up-down-up-s (52420)
+   05-ditripwire-154-point-254-point-345-point-down-down-up-r (68765)
+   05-ditripwire-154-point-254-point-345-point-down-down-up-s (53426)
+   05-ditripwire-154-point-254-point-345-point-up-up-down-r (60269)
+   05-ditripwire-154-point-254-point-345-point-up-up-down-s (52420)
+   05-ditripwire-154-point-254-point-354-point-down-down-down-r (68765)
+   05-ditripwire-154-point-254-point-354-point-down-down-down-s (53426)
+   05-ditripwire-154-point-254-point-354-point-up-up-up-r (60269)
+   05-ditripwire-154-point-254-point-354-point-up-up-up-s (52420)
+   06-ditripwire-123-point-456-point-down-down-r (183945)
+   06-ditripwire-123-point-456-point-down-down-s (86912)
+   06-ditripwire-123-point-456-point-down-up-r (167080)
+   06-ditripwire-123-point-456-point-down-up-s (104073)
+   06-ditripwire-123-point-456-point-up-down-r (184743)
+   06-ditripwire-123-point-456-point-up-down-s (82589)
+   06-ditripwire-123-point-456-point-up-up-r (190962)
+   06-ditripwire-123-point-456-point-up-up-s (106507)
+   06-ditripwire-123-point-465-point-down-down-r (167080)
+   06-ditripwire-123-point-465-point-down-down-s (104073)
+   06-ditripwire-123-point-465-point-down-up-r (183945)
+   06-ditripwire-123-point-465-point-down-up-s (86912)
+   06-ditripwire-123-point-465-point-up-down-r (190962)
+   06-ditripwire-123-point-465-point-up-down-s (106507)
+   06-ditripwire-123-point-465-point-up-up-r (184743)
+   06-ditripwire-123-point-465-point-up-up-s (82589)
+   06-ditripwire-124-point-345-point-down-up-r (82457)
+   06-ditripwire-124-point-345-point-down-up-s (86977)
+   06-ditripwire-124-point-345-point-up-down-r (188302)
+   06-ditripwire-124-point-345-point-up-down-s (79295)
+   06-ditripwire-124-point-354-point-down-down-r (82457)
+   06-ditripwire-124-point-354-point-down-down-s (86977)
+   06-ditripwire-124-point-354-point-up-up-r (188302)
+   06-ditripwire-124-point-354-point-up-up-s (79295)
+   06-ditripwire-125-point-345-point-down-down-r (122380)
+   06-ditripwire-125-point-345-point-down-down-s (111882)
+   06-ditripwire-125-point-345-point-up-up-r (217255)
+   06-ditripwire-125-point-345-point-up-up-s (169731)
+   06-ditripwire-125-point-354-point-down-up-r (122380)
+   06-ditripwire-125-point-354-point-down-up-s (111882)
+   06-ditripwire-125-point-354-point-up-down-r (217255)
+   06-ditripwire-125-point-354-point-up-down-s (169731)
+   06-ditripwire-125-point-356-point-456-point-down-up-up-r (533440)
+   06-ditripwire-125-point-356-point-456-point-down-up-up-s (852845)
+   06-ditripwire-125-point-356-point-456-point-up-down-down-r (665268)
+   06-ditripwire-125-point-356-point-456-point-up-down-down-s (478600)
+   06-ditripwire-125-point-356-point-465-point-down-up-down-r (533440)
+   06-ditripwire-125-point-356-point-465-point-down-up-down-s (852845)
+   06-ditripwire-125-point-356-point-465-point-up-down-up-r (665268)
+   06-ditripwire-125-point-356-point-465-point-up-down-up-s (478600)
+   06-ditripwire-125-point-365-point-456-point-down-down-up-r (533440)
+   06-ditripwire-125-point-365-point-456-point-down-down-up-s (852845)
+   06-ditripwire-125-point-365-point-456-point-up-up-down-r (665268)
+   06-ditripwire-125-point-365-point-456-point-up-up-down-s (478600)
+   06-ditripwire-125-point-365-point-465-point-down-down-down-r (533440)
+   06-ditripwire-125-point-365-point-465-point-down-down-down-s (852845)
+   06-ditripwire-125-point-365-point-465-point-up-up-up-r (665268)
+   06-ditripwire-125-point-365-point-465-point-up-up-up-s (478600)
+   06-ditripwire-126-point-356-point-456-point-down-down-down-r (315010)
+   06-ditripwire-126-point-356-point-456-point-down-down-down-s (597592)
+   06-ditripwire-126-point-356-point-456-point-up-up-up-r (811193)
+   06-ditripwire-126-point-356-point-456-point-up-up-up-s (653287)
+   06-ditripwire-126-point-356-point-465-point-down-down-up-r (315010)
+   06-ditripwire-126-point-356-point-465-point-down-down-up-s (597592)
+   06-ditripwire-126-point-356-point-465-point-up-up-down-r (811193)
+   06-ditripwire-126-point-356-point-465-point-up-up-down-s (653287)
+   06-ditripwire-126-point-365-point-456-point-down-up-down-r (315010)
+   06-ditripwire-126-point-365-point-456-point-down-up-down-s (597592)
+   06-ditripwire-126-point-365-point-456-point-up-down-up-r (811193)
+   06-ditripwire-126-point-365-point-456-point-up-down-up-s (653287)
+   06-ditripwire-126-point-365-point-465-point-down-up-up-r (315010)
+   06-ditripwire-126-point-365-point-465-point-down-up-up-s (597592)
+   06-ditripwire-126-point-365-point-465-point-up-down-down-r (811193)
+   06-ditripwire-126-point-365-point-465-point-up-down-down-s (653287)
+   06-ditripwire-132-point-456-point-down-down-r (184743)
+   06-ditripwire-132-point-456-point-down-down-s (82589)
+   06-ditripwire-132-point-456-point-down-up-r (190962)
+   06-ditripwire-132-point-456-point-down-up-s (106507)
+   06-ditripwire-132-point-456-point-up-down-r (183945)
+   06-ditripwire-132-point-456-point-up-down-s (86912)
+   06-ditripwire-132-point-456-point-up-up-r (167080)
+   06-ditripwire-132-point-456-point-up-up-s (104073)
+   06-ditripwire-132-point-465-point-down-down-r (190962)
+   06-ditripwire-132-point-465-point-down-down-s (106507)
+   06-ditripwire-132-point-465-point-down-up-r (184743)
+   06-ditripwire-132-point-465-point-down-up-s (82589)
+   06-ditripwire-132-point-465-point-up-down-r (167080)
+   06-ditripwire-132-point-465-point-up-down-s (104073)
+   06-ditripwire-132-point-465-point-up-up-r (183945)
+   06-ditripwire-132-point-465-point-up-up-s (86912)
+   06-ditripwire-135-point-235-point-456-point-down-down-up-r (781518)
+   06-ditripwire-135-point-235-point-456-point-down-down-up-s (810067)
+   06-ditripwire-135-point-235-point-456-point-up-up-down-r (912813)
+   06-ditripwire-135-point-235-point-456-point-up-up-down-s (373895)
+   06-ditripwire-135-point-235-point-465-point-down-down-down-r (781518)
+   06-ditripwire-135-point-235-point-465-point-down-down-down-s (810067)
+   06-ditripwire-135-point-235-point-465-point-up-up-up-r (912813)
+   06-ditripwire-135-point-235-point-465-point-up-up-up-s (373895)
+   06-ditripwire-135-point-253-point-456-point-down-up-up-r (781518)
+   06-ditripwire-135-point-253-point-456-point-down-up-up-s (810067)
+   06-ditripwire-135-point-253-point-456-point-up-down-down-r (912813)
+   06-ditripwire-135-point-253-point-456-point-up-down-down-s (373895)
+   06-ditripwire-135-point-253-point-465-point-down-up-down-r (781518)
+   06-ditripwire-135-point-253-point-465-point-down-up-down-s (810067)
+   06-ditripwire-135-point-253-point-465-point-up-down-up-r (912813)
+   06-ditripwire-135-point-253-point-465-point-up-down-up-s (373895)
+   06-ditripwire-136-point-236-point-456-point-down-down-down-r (383381)
+   06-ditripwire-136-point-236-point-456-point-down-down-down-s (551216)
+   06-ditripwire-136-point-236-point-456-point-up-up-up-r (588671)
+   06-ditripwire-136-point-236-point-456-point-up-up-up-s (296808)
+   06-ditripwire-136-point-236-point-465-point-down-down-up-r (383381)
+   06-ditripwire-136-point-236-point-465-point-down-down-up-s (551216)
+   06-ditripwire-136-point-236-point-465-point-up-up-down-r (588671)
+   06-ditripwire-136-point-236-point-465-point-up-up-down-s (296808)
+   06-ditripwire-136-point-263-point-456-point-down-up-down-r (383381)
+   06-ditripwire-136-point-263-point-456-point-down-up-down-s (551216)
+   06-ditripwire-136-point-263-point-456-point-up-down-up-r (588671)
+   06-ditripwire-136-point-263-point-456-point-up-down-up-s (296808)
+   06-ditripwire-136-point-263-point-465-point-down-up-up-r (383381)
+   06-ditripwire-136-point-263-point-465-point-down-up-up-s (551216)
+   06-ditripwire-136-point-263-point-465-point-up-down-down-r (588671)
+   06-ditripwire-136-point-263-point-465-point-up-down-down-s (296808)
+   06-ditripwire-142-point-345-point-down-down-r (188302)
+   06-ditripwire-142-point-345-point-down-down-s (79295)
+   06-ditripwire-142-point-345-point-up-up-r (82457)
+   06-ditripwire-142-point-345-point-up-up-s (86977)
+   06-ditripwire-142-point-354-point-down-up-r (188302)
+   06-ditripwire-142-point-354-point-down-up-s (79295)
+   06-ditripwire-142-point-354-point-up-down-r (82457)
+   06-ditripwire-142-point-354-point-up-down-s (86977)
+   06-ditripwire-145-point-245-point-345-point-down-down-down-r (297678)
+   06-ditripwire-145-point-245-point-345-point-down-down-down-s (472478)
+   06-ditripwire-145-point-245-point-345-point-up-up-up-r (873784)
+   06-ditripwire-145-point-245-point-345-point-up-up-up-s (408598)
+   06-ditripwire-145-point-245-point-354-point-down-down-up-r (297678)
+   06-ditripwire-145-point-245-point-354-point-down-down-up-s (472478)
+   06-ditripwire-145-point-245-point-354-point-up-up-down-r (873784)
+   06-ditripwire-145-point-245-point-354-point-up-up-down-s (408598)
+   06-ditripwire-145-point-254-point-345-point-down-up-down-r (297678)
+   06-ditripwire-145-point-254-point-345-point-down-up-down-s (472478)
+   06-ditripwire-145-point-254-point-345-point-up-down-up-r (873784)
+   06-ditripwire-145-point-254-point-345-point-up-down-up-s (408598)
+   06-ditripwire-145-point-254-point-354-point-down-up-up-r (297678)
+   06-ditripwire-145-point-254-point-354-point-down-up-up-s (472478)
+   06-ditripwire-145-point-254-point-354-point-up-down-down-r (873784)
+   06-ditripwire-145-point-254-point-354-point-up-down-down-s (408598)
+   06-ditripwire-152-point-345-point-down-up-r (217255)
+   06-ditripwire-152-point-345-point-down-up-s (169731)
+   06-ditripwire-152-point-345-point-up-down-r (122380)
+   06-ditripwire-152-point-345-point-up-down-s (111882)
+   06-ditripwire-152-point-354-point-down-down-r (217255)
+   06-ditripwire-152-point-354-point-down-down-s (169731)
+   06-ditripwire-152-point-354-point-up-up-r (122380)
+   06-ditripwire-152-point-354-point-up-up-s (111882)
+   06-ditripwire-152-point-356-point-456-point-down-down-down-r (665268)
+   06-ditripwire-152-point-356-point-456-point-down-down-down-s (478600)
+   06-ditripwire-152-point-356-point-456-point-up-up-up-r (533440)
+   06-ditripwire-152-point-356-point-456-point-up-up-up-s (852845)
+   06-ditripwire-152-point-356-point-465-point-down-down-up-r (665268)
+   06-ditripwire-152-point-356-point-465-point-down-down-up-s (478600)
+   06-ditripwire-152-point-356-point-465-point-up-up-down-r (533440)
+   06-ditripwire-152-point-356-point-465-point-up-up-down-s (852845)
+   06-ditripwire-152-point-365-point-456-point-down-up-down-r (665268)
+   06-ditripwire-152-point-365-point-456-point-down-up-down-s (478600)
+   06-ditripwire-152-point-365-point-456-point-up-down-up-r (533440)
+   06-ditripwire-152-point-365-point-456-point-up-down-up-s (852845)
+   06-ditripwire-152-point-365-point-465-point-down-up-up-r (665268)
+   06-ditripwire-152-point-365-point-465-point-down-up-up-s (478600)
+   06-ditripwire-152-point-365-point-465-point-up-down-down-r (533440)
+   06-ditripwire-152-point-365-point-465-point-up-down-down-s (852845)
+   06-ditripwire-153-point-235-point-456-point-down-up-down-r (912813)
+   06-ditripwire-153-point-235-point-456-point-down-up-down-s (373895)
+   06-ditripwire-153-point-235-point-456-point-up-down-up-r (781518)
+   06-ditripwire-153-point-235-point-456-point-up-down-up-s (810067)
+   06-ditripwire-153-point-235-point-465-point-down-up-up-r (912813)
+   06-ditripwire-153-point-235-point-465-point-down-up-up-s (373895)
+   06-ditripwire-153-point-235-point-465-point-up-down-down-r (781518)
+   06-ditripwire-153-point-235-point-465-point-up-down-down-s (810067)
+   06-ditripwire-153-point-253-point-456-point-down-down-down-r (912813)
+   06-ditripwire-153-point-253-point-456-point-down-down-down-s (373895)
+   06-ditripwire-153-point-253-point-456-point-up-up-up-r (781518)
+   06-ditripwire-153-point-253-point-456-point-up-up-up-s (810067)
+   06-ditripwire-153-point-253-point-465-point-down-down-up-r (912813)
+   06-ditripwire-153-point-253-point-465-point-down-down-up-s (373895)
+   06-ditripwire-153-point-253-point-465-point-up-up-down-r (781518)
+   06-ditripwire-153-point-253-point-465-point-up-up-down-s (810067)
+   06-ditripwire-154-point-245-point-345-point-down-up-up-r (873784)
+   06-ditripwire-154-point-245-point-345-point-down-up-up-s (408598)
+   06-ditripwire-154-point-245-point-345-point-up-down-down-r (297678)
+   06-ditripwire-154-point-245-point-345-point-up-down-down-s (472478)
+   06-ditripwire-154-point-245-point-354-point-down-up-down-r (873784)
+   06-ditripwire-154-point-245-point-354-point-down-up-down-s (408598)
+   06-ditripwire-154-point-245-point-354-point-up-down-up-r (297678)
+   06-ditripwire-154-point-245-point-354-point-up-down-up-s (472478)
+   06-ditripwire-154-point-254-point-345-point-down-down-up-r (873784)
+   06-ditripwire-154-point-254-point-345-point-down-down-up-s (408598)
+   06-ditripwire-154-point-254-point-345-point-up-up-down-r (297678)
+   06-ditripwire-154-point-254-point-345-point-up-up-down-s (472478)
+   06-ditripwire-154-point-254-point-354-point-down-down-down-r (873784)
+   06-ditripwire-154-point-254-point-354-point-down-down-down-s (408598)
+   06-ditripwire-154-point-254-point-354-point-up-up-up-r (297678)
+   06-ditripwire-154-point-254-point-354-point-up-up-up-s (472478)
+   06-ditripwire-156-point-256-point-356-point-456-point-down-down-down-down-r (1052629)
+   06-ditripwire-156-point-256-point-356-point-456-point-down-down-down-down-s (1025943)
+   06-ditripwire-156-point-256-point-356-point-456-point-up-up-up-up-r (1060470)
+   06-ditripwire-156-point-256-point-356-point-456-point-up-up-up-up-s (1015981)
+   06-ditripwire-156-point-256-point-356-point-465-point-down-down-down-up-r (1052629)
+   06-ditripwire-156-point-256-point-356-point-465-point-down-down-down-up-s (1025943)
+   06-ditripwire-156-point-256-point-356-point-465-point-up-up-up-down-r (1060470)
+   06-ditripwire-156-point-256-point-356-point-465-point-up-up-up-down-s (1015981)
+   06-ditripwire-156-point-256-point-365-point-456-point-down-down-up-down-r (1052629)
+   06-ditripwire-156-point-256-point-365-point-456-point-down-down-up-down-s (1025943)
+   06-ditripwire-156-point-256-point-365-point-456-point-up-up-down-up-r (1060470)
+   06-ditripwire-156-point-256-point-365-point-456-point-up-up-down-up-s (1015981)
+   06-ditripwire-156-point-256-point-365-point-465-point-down-down-up-up-r (1052629)
+   06-ditripwire-156-point-256-point-365-point-465-point-down-down-up-up-s (1025943)
+   06-ditripwire-156-point-256-point-365-point-465-point-up-up-down-down-r (1060470)
+   06-ditripwire-156-point-256-point-365-point-465-point-up-up-down-down-s (1015981)
+   06-ditripwire-156-point-265-point-356-point-456-point-down-up-down-down-r (1052629)
+   06-ditripwire-156-point-265-point-356-point-456-point-down-up-down-down-s (1025943)
+   06-ditripwire-156-point-265-point-356-point-456-point-up-down-up-up-r (1060470)
+   06-ditripwire-156-point-265-point-356-point-456-point-up-down-up-up-s (1015981)
+   06-ditripwire-156-point-265-point-356-point-465-point-down-up-down-up-r (1052629)
+   06-ditripwire-156-point-265-point-356-point-465-point-down-up-down-up-s (1025943)
+   06-ditripwire-156-point-265-point-356-point-465-point-up-down-up-down-r (1060470)
+   06-ditripwire-156-point-265-point-356-point-465-point-up-down-up-down-s (1015981)
+   06-ditripwire-156-point-265-point-365-point-456-point-down-up-up-down-r (1052629)
+   06-ditripwire-156-point-265-point-365-point-456-point-down-up-up-down-s (1025943)
+   06-ditripwire-156-point-265-point-365-point-456-point-up-down-down-up-r (1060470)
+   06-ditripwire-156-point-265-point-365-point-456-point-up-down-down-up-s (1015981)
+   06-ditripwire-156-point-265-point-365-point-465-point-down-up-up-up-r (1052629)
+   06-ditripwire-156-point-265-point-365-point-465-point-down-up-up-up-s (1025943)
+   06-ditripwire-156-point-265-point-365-point-465-point-up-down-down-down-r (1060470)
+   06-ditripwire-156-point-265-point-365-point-465-point-up-down-down-down-s (1015981)
+   06-ditripwire-16-ditripwire-235-point-456-point-down-up-r (651405)
+   06-ditripwire-16-ditripwire-235-point-456-point-down-up-s (597367)
+   06-ditripwire-16-ditripwire-235-point-456-point-up-down-r (882758)
+   06-ditripwire-16-ditripwire-235-point-456-point-up-down-s (791961)
+   06-ditripwire-16-ditripwire-235-point-465-point-down-down-r (651405)
+   06-ditripwire-16-ditripwire-235-point-465-point-down-down-s (597367)
+   06-ditripwire-16-ditripwire-235-point-465-point-up-up-r (882758)
+   06-ditripwire-16-ditripwire-235-point-465-point-up-up-s (791961)
+   06-ditripwire-16-ditripwire-236-point-456-point-down-down-r (462839)
+   06-ditripwire-16-ditripwire-236-point-456-point-down-down-s (576332)
+   06-ditripwire-16-ditripwire-236-point-456-point-up-up-r (521943)
+   06-ditripwire-16-ditripwire-236-point-456-point-up-up-s (258061)
+   06-ditripwire-16-ditripwire-236-point-465-point-down-up-r (462839)
+   06-ditripwire-16-ditripwire-236-point-465-point-down-up-s (576332)
+   06-ditripwire-16-ditripwire-236-point-465-point-up-down-r (521943)
+   06-ditripwire-16-ditripwire-236-point-465-point-up-down-s (258061)
+   06-ditripwire-16-ditripwire-245-point-345-point-down-down-r (574933)
+   06-ditripwire-16-ditripwire-245-point-345-point-down-down-s (931759)
+   06-ditripwire-16-ditripwire-245-point-345-point-up-up-r (733434)
+   06-ditripwire-16-ditripwire-245-point-345-point-up-up-s (443359)
+   06-ditripwire-16-ditripwire-245-point-354-point-down-up-r (574933)
+   06-ditripwire-16-ditripwire-245-point-354-point-down-up-s (931759)
+   06-ditripwire-16-ditripwire-245-point-354-point-up-down-r (733434)
+   06-ditripwire-16-ditripwire-245-point-354-point-up-down-s (443359)
+   06-ditripwire-16-ditripwire-253-point-456-point-down-down-r (882758)
+   06-ditripwire-16-ditripwire-253-point-456-point-down-down-s (791961)
+   06-ditripwire-16-ditripwire-253-point-456-point-up-up-r (651405)
+   06-ditripwire-16-ditripwire-253-point-456-point-up-up-s (597367)
+   06-ditripwire-16-ditripwire-253-point-465-point-down-up-r (882758)
+   06-ditripwire-16-ditripwire-253-point-465-point-down-up-s (791961)
+   06-ditripwire-16-ditripwire-253-point-465-point-up-down-r (651405)
+   06-ditripwire-16-ditripwire-253-point-465-point-up-down-s (597367)
+   06-ditripwire-16-ditripwire-254-point-345-point-down-up-r (733434)
+   06-ditripwire-16-ditripwire-254-point-345-point-down-up-s (443359)
+   06-ditripwire-16-ditripwire-254-point-345-point-up-down-r (574933)
+   06-ditripwire-16-ditripwire-254-point-345-point-up-down-s (931759)
+   06-ditripwire-16-ditripwire-254-point-354-point-down-down-r (733434)
+   06-ditripwire-16-ditripwire-254-point-354-point-down-down-s (443359)
+   06-ditripwire-16-ditripwire-254-point-354-point-up-up-r (574933)
+   06-ditripwire-16-ditripwire-254-point-354-point-up-up-s (931759)
+   06-ditripwire-16-ditripwire-256-point-356-point-456-point-down-down-down-r (1072758)
+   06-ditripwire-16-ditripwire-256-point-356-point-456-point-down-down-down-s (1088884)
+   06-ditripwire-16-ditripwire-256-point-356-point-456-point-up-up-up-r (1049436)
+   06-ditripwire-16-ditripwire-256-point-356-point-456-point-up-up-up-s (1010989)
+   06-ditripwire-16-ditripwire-256-point-356-point-465-point-down-down-up-r (1072758)
+   06-ditripwire-16-ditripwire-256-point-356-point-465-point-down-down-up-s (1088884)
+   06-ditripwire-16-ditripwire-256-point-356-point-465-point-up-up-down-r (1049436)
+   06-ditripwire-16-ditripwire-256-point-356-point-465-point-up-up-down-s (1010989)
+   06-ditripwire-16-ditripwire-256-point-365-point-456-point-down-up-down-r (1072758)
+   06-ditripwire-16-ditripwire-256-point-365-point-456-point-down-up-down-s (1088884)
+   06-ditripwire-16-ditripwire-256-point-365-point-456-point-up-down-up-r (1049436)
+   06-ditripwire-16-ditripwire-256-point-365-point-456-point-up-down-up-s (1010989)
+   06-ditripwire-16-ditripwire-256-point-365-point-465-point-down-up-up-r (1072758)
+   06-ditripwire-16-ditripwire-256-point-365-point-465-point-down-up-up-s (1088884)
+   06-ditripwire-16-ditripwire-256-point-365-point-465-point-up-down-down-r (1049436)
+   06-ditripwire-16-ditripwire-256-point-365-point-465-point-up-down-down-s (1010989)
+   06-ditripwire-16-ditripwire-26-ditripwire-345-point-down-r (720309)
+   06-ditripwire-16-ditripwire-26-ditripwire-345-point-down-s (789697)
+   06-ditripwire-16-ditripwire-26-ditripwire-345-point-up-r (339858)
+   06-ditripwire-16-ditripwire-26-ditripwire-345-point-up-s (385230)
+   06-ditripwire-16-ditripwire-26-ditripwire-354-point-down-r (339858)
+   06-ditripwire-16-ditripwire-26-ditripwire-354-point-down-s (385230)
+   06-ditripwire-16-ditripwire-26-ditripwire-354-point-up-r (720309)
+   06-ditripwire-16-ditripwire-26-ditripwire-354-point-up-s (789697)
+   06-ditripwire-16-ditripwire-26-ditripwire-356-point-456-point-down-down-r (1051453)
+   06-ditripwire-16-ditripwire-26-ditripwire-356-point-456-point-down-down-s (1014672)
+   06-ditripwire-16-ditripwire-26-ditripwire-356-point-456-point-up-up-r (1056362)
+   06-ditripwire-16-ditripwire-26-ditripwire-356-point-456-point-up-up-s (1020570)
+   06-ditripwire-16-ditripwire-26-ditripwire-356-point-465-point-down-up-r (1051453)
+   06-ditripwire-16-ditripwire-26-ditripwire-356-point-465-point-down-up-s (1014672)
+   06-ditripwire-16-ditripwire-26-ditripwire-356-point-465-point-up-down-r (1056362)
+   06-ditripwire-16-ditripwire-26-ditripwire-356-point-465-point-up-down-s (1020570)
+   06-ditripwire-16-ditripwire-26-ditripwire-36-ditripwire-456-point-down-r (1048861)
+   06-ditripwire-16-ditripwire-26-ditripwire-36-ditripwire-456-point-down-s (1081167)
+   06-ditripwire-16-ditripwire-26-ditripwire-36-ditripwire-456-point-up-r (1006850)
+   06-ditripwire-16-ditripwire-26-ditripwire-36-ditripwire-456-point-up-s (1027070)
+   06-ditripwire-16-ditripwire-26-ditripwire-36-ditripwire-465-point-down-r (1006850)
+   06-ditripwire-16-ditripwire-26-ditripwire-36-ditripwire-465-point-down-s (1027070)
+   06-ditripwire-16-ditripwire-26-ditripwire-36-ditripwire-465-point-up-r (1048861)
+   06-ditripwire-16-ditripwire-26-ditripwire-36-ditripwire-465-point-up-s (1081167)
+   06-ditripwire-16-ditripwire-26-ditripwire-365-point-456-point-down-up-r (1056362)
+   06-ditripwire-16-ditripwire-26-ditripwire-365-point-456-point-down-up-s (1020570)
+   06-ditripwire-16-ditripwire-26-ditripwire-365-point-456-point-up-down-r (1051453)
+   06-ditripwire-16-ditripwire-26-ditripwire-365-point-456-point-up-down-s (1014672)
+   06-ditripwire-16-ditripwire-26-ditripwire-365-point-465-point-down-down-r (1056362)
+   06-ditripwire-16-ditripwire-26-ditripwire-365-point-465-point-down-down-s (1020570)
+   06-ditripwire-16-ditripwire-26-ditripwire-365-point-465-point-up-up-r (1051453)
+   06-ditripwire-16-ditripwire-26-ditripwire-365-point-465-point-up-up-s (1014672)
+   06-ditripwire-16-ditripwire-263-point-456-point-down-up-r (521943)
+   06-ditripwire-16-ditripwire-263-point-456-point-down-up-s (258061)
+   06-ditripwire-16-ditripwire-263-point-456-point-up-down-r (462839)
+   06-ditripwire-16-ditripwire-263-point-456-point-up-down-s (576332)
+   06-ditripwire-16-ditripwire-263-point-465-point-down-down-r (521943)
+   06-ditripwire-16-ditripwire-263-point-465-point-down-down-s (258061)
+   06-ditripwire-16-ditripwire-263-point-465-point-up-up-r (462839)
+   06-ditripwire-16-ditripwire-263-point-465-point-up-up-s (576332)
+   06-ditripwire-16-ditripwire-265-point-356-point-456-point-down-up-up-r (1049436)
+   06-ditripwire-16-ditripwire-265-point-356-point-456-point-down-up-up-s (1010989)
+   06-ditripwire-16-ditripwire-265-point-356-point-456-point-up-down-down-r (1072758)
+   06-ditripwire-16-ditripwire-265-point-356-point-456-point-up-down-down-s (1088884)
+   06-ditripwire-16-ditripwire-265-point-356-point-465-point-down-up-down-r (1049436)
+   06-ditripwire-16-ditripwire-265-point-356-point-465-point-down-up-down-s (1010989)
+   06-ditripwire-16-ditripwire-265-point-356-point-465-point-up-down-up-r (1072758)
+   06-ditripwire-16-ditripwire-265-point-356-point-465-point-up-down-up-s (1088884)
+   06-ditripwire-16-ditripwire-265-point-365-point-456-point-down-down-up-r (1049436)
+   06-ditripwire-16-ditripwire-265-point-365-point-456-point-down-down-up-s (1010989)
+   06-ditripwire-16-ditripwire-265-point-365-point-456-point-up-up-down-r (1072758)
+   06-ditripwire-16-ditripwire-265-point-365-point-456-point-up-up-down-s (1088884)
+   06-ditripwire-16-ditripwire-265-point-365-point-465-point-down-down-down-r (1049436)
+   06-ditripwire-16-ditripwire-265-point-365-point-465-point-down-down-down-s (1010989)
+   06-ditripwire-16-ditripwire-265-point-365-point-465-point-up-up-up-r (1072758)
+   06-ditripwire-16-ditripwire-265-point-365-point-465-point-up-up-up-s (1088884)
+   06-ditripwire-162-point-356-point-456-point-down-up-up-r (811193)
+   06-ditripwire-162-point-356-point-456-point-down-up-up-s (653287)
+   06-ditripwire-162-point-356-point-456-point-up-down-down-r (315010)
+   06-ditripwire-162-point-356-point-456-point-up-down-down-s (597592)
+   06-ditripwire-162-point-356-point-465-point-down-up-down-r (811193)
+   06-ditripwire-162-point-356-point-465-point-down-up-down-s (653287)
+   06-ditripwire-162-point-356-point-465-point-up-down-up-r (315010)
+   06-ditripwire-162-point-356-point-465-point-up-down-up-s (597592)
+   06-ditripwire-162-point-365-point-456-point-down-down-up-r (811193)
+   06-ditripwire-162-point-365-point-456-point-down-down-up-s (653287)
+   06-ditripwire-162-point-365-point-456-point-up-up-down-r (315010)
+   06-ditripwire-162-point-365-point-456-point-up-up-down-s (597592)
+   06-ditripwire-162-point-365-point-465-point-down-down-down-r (811193)
+   06-ditripwire-162-point-365-point-465-point-down-down-down-s (653287)
+   06-ditripwire-162-point-365-point-465-point-up-up-up-r (315010)
+   06-ditripwire-162-point-365-point-465-point-up-up-up-s (597592)
+   06-ditripwire-163-point-236-point-456-point-down-up-up-r (588671)
+   06-ditripwire-163-point-236-point-456-point-down-up-up-s (296808)
+   06-ditripwire-163-point-236-point-456-point-up-down-down-r (383381)
+   06-ditripwire-163-point-236-point-456-point-up-down-down-s (551216)
+   06-ditripwire-163-point-236-point-465-point-down-up-down-r (588671)
+   06-ditripwire-163-point-236-point-465-point-down-up-down-s (296808)
+   06-ditripwire-163-point-236-point-465-point-up-down-up-r (383381)
+   06-ditripwire-163-point-236-point-465-point-up-down-up-s (551216)
+   06-ditripwire-163-point-263-point-456-point-down-down-up-r (588671)
+   06-ditripwire-163-point-263-point-456-point-down-down-up-s (296808)
+   06-ditripwire-163-point-263-point-456-point-up-up-down-r (383381)
+   06-ditripwire-163-point-263-point-456-point-up-up-down-s (551216)
+   06-ditripwire-163-point-263-point-465-point-down-down-down-r (588671)
+   06-ditripwire-163-point-263-point-465-point-down-down-down-s (296808)
+   06-ditripwire-163-point-263-point-465-point-up-up-up-r (383381)
+   06-ditripwire-163-point-263-point-465-point-up-up-up-s (551216)
+   06-ditripwire-165-point-256-point-356-point-456-point-down-up-up-up-r (1060470)
+   06-ditripwire-165-point-256-point-356-point-456-point-down-up-up-up-s (1015981)
+   06-ditripwire-165-point-256-point-356-point-456-point-up-down-down-down-r (1052629)
+   06-ditripwire-165-point-256-point-356-point-456-point-up-down-down-down-s (1025943)
+   06-ditripwire-165-point-256-point-356-point-465-point-down-up-up-down-r (1060470)
+   06-ditripwire-165-point-256-point-356-point-465-point-down-up-up-down-s (1015981)
+   06-ditripwire-165-point-256-point-356-point-465-point-up-down-down-up-r (1052629)
+   06-ditripwire-165-point-256-point-356-point-465-point-up-down-down-up-s (1025943)
+   06-ditripwire-165-point-256-point-365-point-456-point-down-up-down-up-r (1060470)
+   06-ditripwire-165-point-256-point-365-point-456-point-down-up-down-up-s (1015981)
+   06-ditripwire-165-point-256-point-365-point-456-point-up-down-up-down-r (1052629)
+   06-ditripwire-165-point-256-point-365-point-456-point-up-down-up-down-s (1025943)
+   06-ditripwire-165-point-256-point-365-point-465-point-down-up-down-down-r (1060470)
+   06-ditripwire-165-point-256-point-365-point-465-point-down-up-down-down-s (1015981)
+   06-ditripwire-165-point-256-point-365-point-465-point-up-down-up-up-r (1052629)
+   06-ditripwire-165-point-256-point-365-point-465-point-up-down-up-up-s (1025943)
+   06-ditripwire-165-point-265-point-356-point-456-point-down-down-up-up-r (1060470)
+   06-ditripwire-165-point-265-point-356-point-456-point-down-down-up-up-s (1015981)
+   06-ditripwire-165-point-265-point-356-point-456-point-up-up-down-down-r (1052629)
+   06-ditripwire-165-point-265-point-356-point-456-point-up-up-down-down-s (1025943)
+   06-ditripwire-165-point-265-point-356-point-465-point-down-down-up-down-r (1060470)
+   06-ditripwire-165-point-265-point-356-point-465-point-down-down-up-down-s (1015981)
+   06-ditripwire-165-point-265-point-356-point-465-point-up-up-down-up-r (1052629)
+   06-ditripwire-165-point-265-point-356-point-465-point-up-up-down-up-s (1025943)
+   06-ditripwire-165-point-265-point-365-point-456-point-down-down-down-up-r (1060470)
+   06-ditripwire-165-point-265-point-365-point-456-point-down-down-down-up-s (1015981)
+   06-ditripwire-165-point-265-point-365-point-456-point-up-up-up-down-r (1052629)
+   06-ditripwire-165-point-265-point-365-point-456-point-up-up-up-down-s (1025943)
+   06-ditripwire-165-point-265-point-365-point-465-point-down-down-down-down-r (1060470)
+   06-ditripwire-165-point-265-point-365-point-465-point-down-down-down-down-s (1015981)
+   06-ditripwire-165-point-265-point-365-point-465-point-up-up-up-up-r (1052629)
+   06-ditripwire-165-point-265-point-365-point-465-point-up-up-up-up-s (1025943)
+   4-fanin (211)
+   5-fanin (16850)
+   6-fanin (19638)
+   7-fanin (71396)
+   dilock-ditripwire-parallel-closed-1-r (290)
+   dilock-ditripwire-parallel-closed-1-s (286)
+   dilock-ditripwire-parallel-open-0-r (308)
+   dilock-ditripwire-parallel-open-0-s (279)
+   diode (2)
+   diode-diode-antiparallel-r (208)
+   diode-diode-antiparallel-s (209)
+   diode-diode-parallel (207)
+   ditripwire-dilock-parallel-0-open-r (279)
+   ditripwire-dilock-parallel-0-open-s (308)
+   ditripwire-dilock-parallel-1-closed-r (286)
+   ditripwire-dilock-parallel-1-closed-s (290)
+--> 147 gadgets mentioned: 2 15 207 208 209 211 279 286 290 308 370 469 522 647 16850 17198 17513 17532 17546 17624 17757 17976 17987 18058 18777 19067 19122 19638 21932 23367 23612 29069 30287 30617 30682 33106 33650 36317 36416 38567 39224 39233 41861 46919 52414 52420 52528 53426 54432 60269 60959 62048 62090 63400 65486 68765 71396 79295 82457 82589 86912 86977 104073 106507 111882 122380 167080 169731 183945 184743 188302 190962 217255 258061 296808 297678 315010 339858 373895 383381 385230 408598 443359 462839 472478 478600 521943 533440 551216 574933 576332 588671 597367 597592 651405 653287 665268 720309 733434 781518 789697 791961 810067 811193 852845 873784 882758 912813 931759 1006850 1010989 1014672 1015981 1020570 1025943 1027070 1048861 1049436 1051453 1052629 1056362 1060470 1072758 1081167 1088884 5151513 5151545 5151617 5151647 5151657 5151702 16561187 16561191 16561197 16561214 16561219 16561236 16561238 16561253 16568319 16568346 16568355 16568445 16568501 16568551 16568580 16568613

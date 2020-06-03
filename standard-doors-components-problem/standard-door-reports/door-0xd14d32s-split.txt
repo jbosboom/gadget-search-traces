@@ -1,0 +1,1412 @@
+Report on /data/ssd3/door-0xd14d32.mdb started at 2019-08-26 16:33:14 EDT
+Database ID b0c81911868fcfa5, created on inconsolable at 2019-08-22 01:13:27 EDT
+Source spec: door-0xd14d32-s diode 3-split
+
+==> Step 1: 0 user, 0 sys, 0h0m0s wall (1.18), 0.03 GiB (0.00, 0)
+-->    closed:           5           5   1.0       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           5           5   1.0       0 MiB
+-->   combine:           5           5   1.0       0 MiB
+--> provenance:  0.000 GiB  0.000 GiB 1.00
+
+Target trace:
+  32 = source {directed-self-closing-door-0-s}
+Source trace:
+  22654 = source {door-0xd14d32-open-s}
+  32 = connect 22654 at 2 @0
+
+Target trace:
+  34 = source {directed-self-closing-door-1-s}
+Source trace:
+  22617 = source {door-0xd14d32-closed-s}
+  34 = connect 22617 at 1 @0
+
+==> Step 2: 0 user, 0 sys, 0h0m0s wall (0.10), 0.03 GiB (0.000, 0)
+-->    closed:           9           9   1.0       0 MiB
+--> closemirr:           4           4   1.0       0 MiB
+-->   connect:           4           4   1.0       0 MiB
+-->   combine:           9           9   1.0       0 MiB
+--> provenance:  0.001 GiB  0.001 GiB 1.00
+
+==> Step 3: 0 user, 0 sys, 0h0m0s wall (0.90), 0.03 GiB (0.00, 0)
+-->    closed:           9           9   1.0       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           4           4   1.0       0 MiB
+-->   combine:           9           9   1.0       0 MiB
+--> provenance:  0.001 GiB  0.001 GiB 1.00
+
+==> Step 4: 0 user, 0 sys, 0h0m0s wall (0.92), 0.03 GiB (0.00, 0)
+-->    closed:           9           9   1.0       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:           9           9   1.0       0 MiB
+--> provenance:  0.001 GiB  0.001 GiB 1.00
+
+Target trace:
+  10 = source {dicrumbler, dicrumbler-open}
+Source trace:
+  2 = source {diode}
+  22654 = source {door-0xd14d32-open-s}
+  32 = connect 22654 at 2 @0
+  10 = combine 32 splice 1 with 2 rotate 0 connect at 2 delete 1 @0
+
+Target trace:
+  2969 = source {2st_3-disemitripwire-antiparallel-matched-0-0-r, dilock-disemitripwire-antiparallel-matched-open-0-r, disemitripwire-2st_3-antiparallel-matched-0-0-r, disemitripwire-dilock-antiparallel-matched-0-open-r}
+Source trace:
+  2 = source {diode}
+  22654 = source {door-0xd14d32-open-s}
+  2969 = combine 22654 splice 1 with 2 rotate 0 connect at 2 delete 1 @0
+
+Target trace:
+  111 = source {4-split}
+  24522 = close 111 @0
+Source trace:
+  26 = source {3-split}
+  24443 = close 26 @0
+  24522 = combine 24443 splice 0 with 24443 rotate 0 connect at 2 @0
+
+Target trace:
+  5640 = source {2st_60-dilock-parallel-matched-0-open-r, dilock-2st_60-parallel-matched-open-0-s}
+  24523 = close 5640 @1
+Source trace:
+  26 = source {3-split}
+  24443 = close 26 @0
+  22654 = source {door-0xd14d32-open-s}
+  35721 = connect 22654 at 3 @0
+  24523 = combine 35721 splice 1 with 24443 rotate 0 connect at 3 @1
+
+Target trace:
+  414 = source {dicrumbler-one-way-tripwire-antiparallel-open-0-s, one-way-tripwire-dicrumbler-antiparallel-0-open-s}
+  25306 = close 414 @1
+Source trace:
+  26 = source {3-split}
+  24443 = close 26 @0
+  22654 = source {door-0xd14d32-open-s}
+  32 = connect 22654 at 2 @0
+  25306 = combine 32 splice 1 with 24443 rotate 0 connect at 3 @1
+
+Target trace:
+  5387 = source {2st_60-dicrumbler-antiparallel-matched-1-closed-s, dicrumbler-2st_60-antiparallel-matched-closed-1-s}
+  25325 = close 5387 @0
+Source trace:
+  26 = source {3-split}
+  24443 = close 26 @0
+  22617 = source {door-0xd14d32-closed-s}
+  34 = connect 22617 at 1 @0
+  25325 = combine 34 splice 0 with 24443 rotate 0 connect at 2 @0
+
+Target trace:
+  23968 = source {door-01d25d43-open-s}
+  35211 = close 23968 @1
+Source trace:
+  26 = source {3-split}
+  24443 = close 26 @0
+  22654 = source {door-0xd14d32-open-s}
+  35211 = combine 22654 splice 1 with 24443 rotate 0 connect at 3 @1
+
+Target trace:
+  24053 = source {door-01d25d43-closed-s}
+  35267 = close 24053 @0
+Source trace:
+  26 = source {3-split}
+  24443 = close 26 @0
+  22617 = source {door-0xd14d32-closed-s}
+  35267 = combine 22617 splice 0 with 24443 rotate 0 connect at 2 @0
+
+Target trace:
+  113 = source {diode-diode-antiparallel-r}
+Source trace:
+  22617 = source {door-0xd14d32-closed-s}
+  113 = combine 22617 splice 0 with 22617 rotate 1 connect at 4 delete 0,3,4,7 @0
+
+Target trace:
+  114 = source {diode-diode-parallel}
+Source trace:
+  22617 = source {door-0xd14d32-closed-s}
+  22654 = source {door-0xd14d32-open-s}
+  35721 = connect 22654 at 3 @0
+  114 = combine 35721 splice 1 with 22617 rotate 1 connect at 5 delete 1,4 @0
+
+Target trace:
+  2975 = source {2st_14-dicrumbler-parallel-matched-0-open-r, dicrumbler-2st_14-parallel-matched-open-0-s, dicrumbler-diode-parallel-open-0-s, diode-dicrumbler-parallel-0-open-r}
+Source trace:
+  22617 = source {door-0xd14d32-closed-s}
+  22654 = source {door-0xd14d32-open-s}
+  32 = connect 22654 at 2 @0
+  2975 = combine 32 splice 1 with 22617 rotate 1 connect at 5 delete 1,4 @0
+
+==> Step 5: 0 user, 0 sys, 0h0m0s wall (0.17), 0.04 GiB (0.00, 10)
+-->    closed:         102          76   1.3       0 MiB
+--> closemirr:          93          69   1.3       0 MiB
+-->   connect:          93          69   1.3       0 MiB
+-->   combine:          93          69   1.3       0 MiB
+--> provenance:  0.000 GiB  0.000 GiB 0.70
+
+==> Step 6: 0 user, 0 sys, 0h0m0s wall (1.00), 0.04 GiB (0.00, 0)
+-->    closed:         102          76   1.3       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:          93          69   1.3       0 MiB
+-->   combine:          93          69   1.3       0 MiB
+--> provenance:  0.000 GiB  0.000 GiB 0.70
+
+Target trace:
+  2948 = source {dicrumbler-disemitripwire-antiparallel-matched-open-0-r, disemitripwire-dicrumbler-antiparallel-matched-0-open-r}
+Source trace:
+  22654 = source {door-0xd14d32-open-s}
+  32 = connect 22654 at 2 @0
+  35847 = combine 32 splice 0 with 22654 rotate 0 connect at 7 @4
+  2948 = connect 35847 at 1 @2
+
+Target trace:
+  1 = source {wire}
+  24425 = close 1 @0
+Source trace:
+  26 = source {3-split}
+  24443 = close 26 @0
+  24522 = combine 24443 splice 0 with 24443 rotate 0 connect at 2 @0
+  24425 = connect 24522 at 0 @0
+
+Target trace:
+  21926 = source {2st_3-2st_68-parallel-mismatched-0-1-r, 2st_68-2st_3-parallel-mismatched-1-0-s}
+  24525 = close 21926 @0
+Source trace:
+  26 = source {3-split}
+  24443 = close 26 @0
+  22654 = source {door-0xd14d32-open-s}
+  358434 = combine 22654 splice 2 with 24443 rotate 0 connect at 4 @2
+  24525 = connect 358434 at 4 @0
+
+Target trace:
+  5668 = source {2st_69-dilock-parallel-mismatched-0-closed-r, dilock-2st_69-parallel-mismatched-closed-0-s}
+  26497 = close 5668 @0
+Source trace:
+  26 = source {3-split}
+  24443 = close 26 @0
+  22617 = source {door-0xd14d32-closed-s}
+  35267 = combine 22617 splice 0 with 24443 rotate 0 connect at 2 @0
+  26497 = connect 35267 at 3 @0
+
+==> Step 7: 0 user, 0 sys, 0h0m0s wall (0.12), 0.04 GiB (0.000, 0)
+-->    closed:         149         104   1.4       0 MiB
+--> closemirr:          47          31   1.5       0 MiB
+-->   connect:          47          31   1.5       0 MiB
+-->   combine:         140          97   1.4       0 MiB
+--> provenance:  0.000 GiB  0.000 GiB 0.71
+
+==> Step 8: 0 user, 0 sys, 0h0m0s wall (0.93), 0.04 GiB (0.00, 0)
+-->    closed:         149         104   1.4       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:          47          31   1.5       0 MiB
+-->   combine:         140          97   1.4       0 MiB
+--> provenance:  0.000 GiB  0.000 GiB 0.71
+
+==> Step 9: 0 user, 0 sys, 0h0m0s wall (1.52), 0.04 GiB (0.00, 0)
+-->    closed:         150         105   1.4       0 MiB
+--> closemirr:           1           1   1.0       0 MiB
+-->   connect:           1           1   1.0       0 MiB
+-->   combine:         141          98   1.4       0 MiB
+--> provenance:  0.000 GiB  0.000 GiB 0.71
+
+==> Step 10: 0 user, 0 sys, 0h0m0s wall (1.05), 0.04 GiB (0.00, 0)
+-->    closed:         150         105   1.4       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           1           1   1.0       0 MiB
+-->   combine:         141          98   1.4       0 MiB
+--> provenance:  0.000 GiB  0.000 GiB 0.71
+
+==> Step 11: 0 user, 0 sys, 0h0m0s wall (0.84), 0.04 GiB (0.00, 0)
+-->    closed:         150         105   1.4       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:         141          98   1.4       0 MiB
+--> provenance:  0.000 GiB  0.000 GiB 0.71
+
+Target trace:
+  20518 = source {2st_60-2st_63-antiparallel-matched-0-0-s, 2st_63-2st_60-antiparallel-matched-0-0-s}
+  24520 = close 20518 @0
+Source trace:
+  26 = source {3-split}
+  24443 = close 26 @0
+  22654 = source {door-0xd14d32-open-s}
+  358434 = combine 22654 splice 2 with 24443 rotate 0 connect at 4 @2
+  358451 = connect 358434 at 3 delete 2 @0
+  24520 = combine 358451 splice 0 with 24443 rotate 0 connect at 5 @0
+
+Target trace:
+  22543 = source {5-split}
+  34558 = close 22543 @0
+Source trace:
+  26 = source {3-split}
+  24443 = close 26 @0
+  24522 = combine 24443 splice 0 with 24443 rotate 0 connect at 2 @0
+  34558 = combine 24522 splice 0 with 24443 rotate 0 connect at 2 @0
+
+==> Step 12: 0 user, 0 sys, 0h0m0s wall (0.32), 0.04 GiB (0.00, 72)
+-->    closed:        2157        1586   1.4       0 MiB
+--> closemirr:        2007        1496   1.3       0 MiB
+-->   connect:        2007        1496   1.3       0 MiB
+-->   combine:        2007        1496   1.3       0 MiB
+--> provenance:  0.000 GiB  0.000 GiB 0.71
+
+==> Step 13: 0 user, 0 sys, 0h0m0s wall (0.90), 0.04 GiB (0.00, 0)
+-->    closed:        2157        1586   1.4       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:        2007        1496   1.3       0 MiB
+-->   combine:        2007        1496   1.3       0 MiB
+--> provenance:  0.000 GiB  0.000 GiB 0.71
+
+Target trace:
+  2978 = source {2st_14-dicrumbler-antiparallel-matched-0-open-r, dicrumbler-2st_14-antiparallel-matched-open-0-r, dicrumbler-diode-antiparallel-open-0-r, diode-dicrumbler-antiparallel-0-open-r}
+Source trace:
+  22617 = source {door-0xd14d32-closed-s}
+  22654 = source {door-0xd14d32-open-s}
+  32 = connect 22654 at 2 @0
+  35847 = combine 32 splice 0 with 22654 rotate 0 connect at 7 @4
+  36176 = combine 35847 splice 0 with 22617 rotate 0 connect at 10 delete 0,3,8 @2
+  2978 = connect 36176 at 1 @2
+
+==> Step 14: 0 user, 0 sys, 0h0m0s wall (0.33), 0.04 GiB (0.00, 0)
+-->    closed:        3065        2226   1.4       0 MiB
+--> closemirr:         908         683   1.3       0 MiB
+-->   connect:         908         683   1.3       0 MiB
+-->   combine:        2915        2139   1.4       0 MiB
+--> provenance:  0.000 GiB  0.001 GiB 0.76
+
+==> Step 15: 0 user, 0 sys, 0h0m0s wall (1.07), 0.04 GiB (0.00, 0)
+-->    closed:        3065        2226   1.4       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:         908         683   1.3       0 MiB
+-->   combine:        2915        2139   1.4       0 MiB
+--> provenance:  0.000 GiB  0.001 GiB 0.76
+
+Target trace:
+  3005 = source {2st_14-dicrumbler-parallel-matched-0-open-s, dicrumbler-2st_14-parallel-matched-open-0-r, dicrumbler-diode-parallel-open-0-r, diode-dicrumbler-parallel-0-open-s}
+Source trace:
+  22654 = source {door-0xd14d32-open-s}
+  35721 = connect 22654 at 3 @0
+  35733 = combine 35721 splice 1 with 22654 rotate 0 connect at 5 delete 4 @0
+  37670 = combine 35733 splice 1 with 22654 rotate 0 connect at 5 @0
+  36146 = connect 37670 at 3 @0
+  3005 = connect 36146 at 2 @0
+
+==> Step 16: 0 user, 0 sys, 0h0m0s wall (0.18), 0.04 GiB (0.000, 0)
+-->    closed:        3103        2256   1.4       0 MiB
+--> closemirr:          38          32   1.2       0 MiB
+-->   connect:          38          32   1.2       0 MiB
+-->   combine:        2953        2170   1.4       0 MiB
+--> provenance:  0.000 GiB  0.001 GiB 0.75
+
+==> Step 17: 0 user, 0 sys, 0h0m0s wall (1.06), 0.04 GiB (0.00, 0)
+-->    closed:        3103        2256   1.4       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:          38          32   1.2       0 MiB
+-->   combine:        2953        2170   1.4       0 MiB
+--> provenance:  0.000 GiB  0.001 GiB 0.75
+
+==> Step 18: 0 user, 0 sys, 0h0m0s wall (0.88), 0.04 GiB (0.00, 0)
+-->    closed:        3103        2256   1.4       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:        2953        2170   1.4       0 MiB
+--> provenance:  0.000 GiB  0.001 GiB 0.75
+
+Target trace:
+  115 = source {diode-diode-antiparallel-s}
+Source trace:
+  2 = source {diode}
+  26 = source {3-split}
+  24443 = close 26 @0
+  22654 = source {door-0xd14d32-open-s}
+  35721 = connect 22654 at 3 @0
+  24523 = combine 35721 splice 1 with 24443 rotate 0 connect at 3 @1
+  36455 = combine 24523 splice 1 with 22654 rotate 2 connect at 5 @6
+  35730 = connect 36455 at 3 @0
+  115 = combine 35730 splice 1 with 2 rotate 0 connect at 2 delete 1 @0
+
+Target trace:
+  166 = source {2st_13-dicrumbler-antiparallel-matched-1-closed-s, 2st_13-dicrumbler-antiparallel-mismatched-0-closed-s, 2st_14-dicrumbler-antiparallel-mismatched-0-closed-s, 2st_27-dicrumbler-antiparallel-1-closed-s, 2st_3-dicrumbler-antiparallel-mismatched-0-closed-s, dicrumbler-2st_13-antiparallel-matched-closed-1-s, dicrumbler-2st_13-antiparallel-mismatched-closed-0-s, dicrumbler-2st_14-antiparallel-mismatched-closed-0-s, dicrumbler-2st_27-antiparallel-closed-1-s, dicrumbler-2st_3-antiparallel-mismatched-closed-0-s, dicrumbler-disemitripwire-antiparallel-mismatched-closed-0-s, disemitripwire-dicrumbler-antiparallel-mismatched-0-closed-s}
+Source trace:
+  2 = source {diode}
+  26 = source {3-split}
+  24443 = close 26 @0
+  22617 = source {door-0xd14d32-closed-s}
+  34 = connect 22617 at 1 @0
+  25325 = combine 34 splice 0 with 24443 rotate 0 connect at 2 @0
+  362125 = combine 25325 splice 1 with 2 rotate 0 connect at 2 @0
+  166 = combine 362125 splice 0 with 2 rotate 1 connect at 1 @1
+
+Target trace:
+  201 = source {2st_13-dicrumbler-antiparallel-matched-0-open-s, 2st_14-dicrumbler-antiparallel-mismatched-1-open-s, 2st_27-dicrumbler-antiparallel-0-open-s, dicrumbler-2st_13-antiparallel-matched-open-0-s, dicrumbler-2st_14-antiparallel-mismatched-open-1-s, dicrumbler-2st_27-antiparallel-open-0-s, dicrumbler-disemitripwire-antiparallel-mismatched-open-1-s, disemitripwire-dicrumbler-antiparallel-mismatched-1-open-s}
+Source trace:
+  2 = source {diode}
+  26 = source {3-split}
+  24443 = close 26 @0
+  22654 = source {door-0xd14d32-open-s}
+  32 = connect 22654 at 2 @0
+  25306 = combine 32 splice 1 with 24443 rotate 0 connect at 3 @1
+  362131 = combine 25306 splice 1 with 2 rotate 0 connect at 2 @0
+  201 = combine 362131 splice 0 with 2 rotate 1 connect at 1 @1
+
+Target trace:
+  208 = source {2st_13-dicrumbler-parallel-matched-0-open-r, 2st_14-dicrumbler-parallel-mismatched-1-open-r, 2st_27-dicrumbler-parallel-0-open-r, dicrumbler-2st_13-parallel-matched-open-0-s, dicrumbler-2st_14-parallel-mismatched-open-1-s, dicrumbler-2st_27-parallel-open-0-s, dicrumbler-disemitripwire-parallel-mismatched-open-1-s, disemitripwire-dicrumbler-parallel-mismatched-1-open-r}
+Source trace:
+  2 = source {diode}
+  26 = source {3-split}
+  24443 = close 26 @0
+  22654 = source {door-0xd14d32-open-s}
+  32 = connect 22654 at 2 @0
+  25306 = combine 32 splice 1 with 24443 rotate 0 connect at 3 @1
+  362126 = combine 25306 splice 0 with 2 rotate 0 connect at 1 @0
+  208 = combine 362126 splice 1 with 2 rotate 1 connect at 2 @3
+
+Target trace:
+  209 = source {2st_13-dicrumbler-parallel-matched-1-closed-r, 2st_13-dicrumbler-parallel-mismatched-0-closed-r, 2st_14-dicrumbler-parallel-mismatched-0-closed-r, 2st_27-dicrumbler-parallel-1-closed-r, 2st_3-dicrumbler-parallel-mismatched-0-closed-r, dicrumbler-2st_13-parallel-matched-closed-1-s, dicrumbler-2st_13-parallel-mismatched-closed-0-s, dicrumbler-2st_14-parallel-mismatched-closed-0-s, dicrumbler-2st_27-parallel-closed-1-s, dicrumbler-2st_3-parallel-mismatched-closed-0-s, dicrumbler-disemitripwire-parallel-mismatched-closed-0-s, disemitripwire-dicrumbler-parallel-mismatched-0-closed-r}
+Source trace:
+  2 = source {diode}
+  26 = source {3-split}
+  24443 = close 26 @0
+  22617 = source {door-0xd14d32-closed-s}
+  34 = connect 22617 at 1 @0
+  25325 = combine 34 splice 0 with 24443 rotate 0 connect at 2 @0
+  362130 = combine 25325 splice 0 with 2 rotate 0 connect at 1 @0
+  209 = combine 362130 splice 1 with 2 rotate 1 connect at 2 @0
+
+Target trace:
+  2937 = source {2st_14-dicrumbler-antiparallel-matched-0-open-s, dicrumbler-2st_14-antiparallel-matched-open-0-s, dicrumbler-diode-antiparallel-open-0-s, diode-dicrumbler-antiparallel-0-open-s}
+Source trace:
+  2 = source {diode}
+  26 = source {3-split}
+  24443 = close 26 @0
+  22654 = source {door-0xd14d32-open-s}
+  35721 = connect 22654 at 3 @0
+  24523 = combine 35721 splice 1 with 24443 rotate 0 connect at 3 @1
+  36455 = combine 24523 splice 1 with 22654 rotate 2 connect at 5 @6
+  36070 = connect 36455 at 2 @0
+  2937 = combine 36070 splice 1 with 2 rotate 0 connect at 2 delete 1 @0
+
+Target trace:
+  23042 = source {door-d01d52d34-closed-r}
+Source trace:
+  2 = source {diode}
+  26 = source {3-split}
+  24443 = close 26 @0
+  22617 = source {door-0xd14d32-closed-s}
+  35267 = combine 22617 splice 0 with 24443 rotate 0 connect at 2 @0
+  359956 = combine 35267 splice 1 with 2 rotate 1 connect at 2 @3
+  23042 = combine 359956 splice 3 with 2 rotate 0 connect at 4 @0
+
+Target trace:
+  23137 = source {door-d01d25d43-closed-s}
+Source trace:
+  2 = source {diode}
+  26 = source {3-split}
+  24443 = close 26 @0
+  22617 = source {door-0xd14d32-closed-s}
+  35267 = combine 22617 splice 0 with 24443 rotate 0 connect at 2 @0
+  359957 = combine 35267 splice 1 with 2 rotate 0 connect at 2 @0
+  23137 = combine 359957 splice 0 with 2 rotate 1 connect at 1 @1
+
+Target trace:
+  23334 = source {door-d01d25d43-open-s}
+Source trace:
+  2 = source {diode}
+  26 = source {3-split}
+  24443 = close 26 @0
+  22654 = source {door-0xd14d32-open-s}
+  35211 = combine 22654 splice 1 with 24443 rotate 0 connect at 3 @1
+  359953 = combine 35211 splice 0 with 2 rotate 1 connect at 1 @1
+  23334 = combine 359953 splice 0 with 2 rotate 0 connect at 1 @4
+
+Target trace:
+  23365 = source {door-d01d52d34-open-r}
+Source trace:
+  2 = source {diode}
+  26 = source {3-split}
+  24443 = close 26 @0
+  22654 = source {door-0xd14d32-open-s}
+  35211 = combine 22654 splice 1 with 24443 rotate 0 connect at 3 @1
+  359954 = combine 35211 splice 0 with 2 rotate 0 connect at 1 @0
+  23365 = combine 359954 splice 1 with 2 rotate 1 connect at 2 @5
+
+Target trace:
+  3562 = source {2st_59-dicrumbler-antiparallel-matched-0-open-r, 2st_59-dicrumbler-parallel-matched-0-open-s, 2st_71-dicrumbler-noncrossing-matched-0-open-s, dicrumbler-2st_59-antiparallel-matched-open-0-r, dicrumbler-2st_59-parallel-matched-open-0-r, dicrumbler-2st_71-noncrossing-matched-open-0-r, dicrumbler-wire-noncrossing-open-0-r, wire-dicrumbler-noncrossing-0-open-s}
+  26572 = close 3562 delete 3 @0
+Source trace:
+  2 = source {diode}
+  26 = source {3-split}
+  24443 = close 26 @0
+  22654 = source {door-0xd14d32-open-s}
+  358434 = combine 22654 splice 2 with 24443 rotate 0 connect at 4 @2
+  24525 = connect 358434 at 4 @0
+  358729 = combine 24525 splice 0 with 22654 rotate 0 connect at 8 @4
+  358510 = connect 358729 at 4 @0
+  26572 = combine 358510 splice 3 with 2 rotate 0 connect at 4 delete 3 @0
+
+Target trace:
+  3566 = source {2st_59-dicrumbler-antiparallel-matched-0-open-s, 2st_59-dicrumbler-parallel-matched-0-open-r, 2st_71-dicrumbler-noncrossing-matched-0-open-r, dicrumbler-2st_59-antiparallel-matched-open-0-s, dicrumbler-2st_59-parallel-matched-open-0-s, dicrumbler-2st_71-noncrossing-matched-open-0-s, dicrumbler-wire-noncrossing-open-0-s, wire-dicrumbler-noncrossing-0-open-r}
+  26573 = close 3566 delete 2 @1
+Source trace:
+  2 = source {diode}
+  26 = source {3-split}
+  24443 = close 26 @0
+  22654 = source {door-0xd14d32-open-s}
+  35721 = connect 22654 at 3 @0
+  35785 = combine 35721 splice 0 with 22654 rotate 0 connect at 7 @4
+  35961 = connect 35785 at 3 @0
+  358504 = combine 35961 splice 1 with 24443 rotate 0 connect at 3 @1
+  26573 = combine 358504 splice 2 with 2 rotate 0 connect at 3 delete 2 @0
+
+Target trace:
+  22762 = source {6-split}
+  34657 = close 22762 @0
+Source trace:
+  26 = source {3-split}
+  24443 = close 26 @0
+  24522 = combine 24443 splice 0 with 24443 rotate 0 connect at 2 @0
+  34558 = combine 24522 splice 0 with 24443 rotate 0 connect at 2 @0
+  34657 = combine 34558 splice 0 with 24443 rotate 0 connect at 2 @0
+
+==> Step 19: 0 user, 0 sys, 0h0m0s wall (0.38), 0.10 GiB (0.06, 1983)
+-->    closed:       47445       37589   1.3       1 MiB
+--> closemirr:       44342       35680   1.2       1 MiB
+-->   connect:       44342       35680   1.2       1 MiB
+-->   combine:       44342       35680   1.2       1 MiB
+--> provenance:  0.001 GiB  0.001 GiB 0.83
+
+==> Step 20: 0 user, 0 sys, 0h0m0s wall (1.01), 0.10 GiB (0.00, 0)
+-->    closed:       47445       37589   1.3       1 MiB
+--> closemirr:           0           0             1 MiB
+-->   connect:       44342       35680   1.2       1 MiB
+-->   combine:       44342       35680   1.2       1 MiB
+--> provenance:  0.001 GiB  0.001 GiB 0.83
+
+Target trace:
+  2971 = source {2st_13-2st_3-parallel-matched-1-1-r, 2st_13-2st_3-parallel-mismatched-0-1-r, 2st_13-dilock-parallel-matched-1-closed-r, 2st_14-2st_3-parallel-mismatched-0-1-r, 2st_14-dilock-parallel-mismatched-0-closed-r, 2st_27-2st_3-parallel-1-1-r, 2st_27-dilock-parallel-1-closed-r, 2st_3-2st_13-parallel-matched-1-1-s, 2st_3-2st_13-parallel-mismatched-1-0-s, 2st_3-2st_14-parallel-mismatched-1-0-s, 2st_3-2st_27-parallel-1-1-s, 2st_3-2st_3-parallel-mismatched-0-1, 2st_3-disemitripwire-parallel-mismatched-1-0-s, dilock-2st_13-parallel-matched-closed-1-s, dilock-2st_14-parallel-mismatched-closed-0-s, dilock-2st_27-parallel-closed-1-s, dilock-disemitripwire-parallel-mismatched-closed-0-s, disemitripwire-2st_3-parallel-mismatched-0-1-r, disemitripwire-dilock-parallel-mismatched-0-closed-r}
+Source trace:
+  2 = source {diode}
+  26 = source {3-split}
+  24443 = close 26 @0
+  22617 = source {door-0xd14d32-closed-s}
+  35267 = combine 22617 splice 0 with 24443 rotate 0 connect at 2 @0
+  359956 = combine 35267 splice 1 with 2 rotate 1 connect at 2 @3
+  23042 = combine 359956 splice 3 with 2 rotate 0 connect at 4 @0
+  2971 = connect 23042 at 0 @1
+
+Target trace:
+  3004 = source {2st_13-2st_3-antiparallel-matched-1-1-s, 2st_13-2st_3-antiparallel-mismatched-0-1-s, 2st_13-dilock-antiparallel-matched-1-closed-s, 2st_14-2st_3-antiparallel-mismatched-0-1-s, 2st_14-dilock-antiparallel-mismatched-0-closed-s, 2st_27-2st_3-antiparallel-1-1-s, 2st_27-dilock-antiparallel-1-closed-s, 2st_3-2st_13-antiparallel-matched-1-1-s, 2st_3-2st_13-antiparallel-mismatched-1-0-s, 2st_3-2st_14-antiparallel-mismatched-1-0-s, 2st_3-2st_27-antiparallel-1-1-s, 2st_3-2st_3-antiparallel-mismatched-0-1-s, 2st_3-2st_3-antiparallel-mismatched-s, 2st_3-disemitripwire-antiparallel-mismatched-1-0-s, dilock-2st_13-antiparallel-matched-closed-1-s, dilock-2st_14-antiparallel-mismatched-closed-0-s, dilock-2st_27-antiparallel-closed-1-s, dilock-disemitripwire-antiparallel-mismatched-closed-0-s, disemitripwire-2st_3-antiparallel-mismatched-0-1-s, disemitripwire-dilock-antiparallel-mismatched-0-closed-s}
+Source trace:
+  2 = source {diode}
+  26 = source {3-split}
+  24443 = close 26 @0
+  22617 = source {door-0xd14d32-closed-s}
+  35267 = combine 22617 splice 0 with 24443 rotate 0 connect at 2 @0
+  359957 = combine 35267 splice 1 with 2 rotate 0 connect at 2 @0
+  23137 = combine 359957 splice 0 with 2 rotate 1 connect at 1 @1
+  3004 = connect 23137 at 2 @0
+
+==> Step 21: 0 user, 0 sys, 0h0m0s wall (1.12), 0.15 GiB (0.05, 319)
+-->    closed:       67907       53476   1.3       1 MiB
+--> closemirr:       20462       16492   1.2       0 MiB
+-->   connect:       20462       16492   1.2       0 MiB
+-->   combine:       64804       51654   1.3       1 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.84
+
+==> Step 22: 0 user, 0 sys, 0h0m0s wall (1.04), 0.15 GiB (0.00, 0)
+-->    closed:       67907       53476   1.3       1 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:       20462       16492   1.2       0 MiB
+-->   combine:       64804       51654   1.3       1 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.84
+
+Target trace:
+  142 = source {dicrumbler-dicrumbler-antiparallel-mismatched-open-closed-s, dicrumbler-dicrumbler-antiparallel-mismatched-s}
+Source trace:
+  26 = source {3-split}
+  24443 = close 26 @0
+  22617 = source {door-0xd14d32-closed-s}
+  22654 = source {door-0xd14d32-open-s}
+  358434 = combine 22654 splice 2 with 24443 rotate 0 connect at 4 @2
+  358464 = connect 358434 at 1 @0
+  360666 = combine 358464 splice 0 with 22617 rotate 1 connect at 4 @5
+  473226 = combine 360666 splice 1 with 24443 rotate 0 connect at 3 @1
+  585101 = connect 473226 at 1 @5
+  142 = connect 585101 at 1 @0
+
+==> Step 23: 0 user, 0 sys, 0h0m0s wall (0.49), 0.16 GiB (0.01, 28)
+-->    closed:       69020       54279   1.3       1 MiB
+--> closemirr:        1113         871   1.3       0 MiB
+-->   connect:        1113         871   1.3       0 MiB
+-->   combine:       65917       52467   1.3       1 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.83
+
+==> Step 24: 0 user, 0 sys, 0h0m0s wall (0.91), 0.16 GiB (0.00, 0)
+-->    closed:       69020       54279   1.3       1 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:        1113         871   1.3       0 MiB
+-->   combine:       65917       52467   1.3       1 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.83
+
+==> Step 25: 0 user, 0 sys, 0h0m0s wall (0.89), 0.16 GiB (0.00, 0)
+-->    closed:       69020       54279   1.3       1 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:       65917       52467   1.3       1 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.83
+
+Target trace:
+  24390 = source {7-split}
+  35685 = close 24390 @0
+Source trace:
+  26 = source {3-split}
+  24443 = close 26 @0
+  24522 = combine 24443 splice 0 with 24443 rotate 0 connect at 2 @0
+  34558 = combine 24522 splice 0 with 24443 rotate 0 connect at 2 @0
+  34657 = combine 34558 splice 0 with 24443 rotate 0 connect at 2 @0
+  35685 = combine 34657 splice 0 with 24443 rotate 0 connect at 2 @0
+
+==> Step 26: 0 user, 0 sys, 0h0m0s wall (0.53), 1.02 GiB (0.86, 18018)
+-->    closed:      480470      377195   1.3       8 MiB
+--> closemirr:      411450      329275   1.2       8 MiB
+-->   connect:      411450      329275   1.2       8 MiB
+-->   combine:      411450      329275   1.2       8 MiB
+--> provenance:   0.01 GiB   0.01 GiB 0.79
+
+==> Step 27: 0 user, 0 sys, 0h0m0s wall (0.93), 1.02 GiB (0.00, 0)
+-->    closed:      480470      377195   1.3       8 MiB
+--> closemirr:           0           0             8 MiB
+-->   connect:      411450      329275   1.2       8 MiB
+-->   combine:      411450      329275   1.2       8 MiB
+--> provenance:   0.01 GiB   0.01 GiB 0.79
+
+==> Step 28: 0 user, 0 sys, 0h0m0s wall (4.94), 1.51 GiB (0.50, 3107)
+-->    closed:      629610      489974   1.3       8 MiB
+--> closemirr:      149140      119251   1.3       1 MiB
+-->   connect:      149140      119251   1.3       2 MiB
+-->   combine:      560590      443686   1.3       8 MiB
+--> provenance:   0.01 GiB   0.01 GiB 0.80
+
+==> Step 29: 0 user, 0 sys, 0h0m0s wall (0.92), 1.51 GiB (0.00, 0)
+-->    closed:      629610      489974   1.3       8 MiB
+--> closemirr:           0           0             1 MiB
+-->   connect:      149140      119251   1.3       2 MiB
+-->   combine:      560590      443686   1.3       8 MiB
+--> provenance:   0.01 GiB   0.01 GiB 0.80
+
+==> Step 30: 0 user, 0 sys, 0h0m0s wall (2.46), 1.54 GiB (0.03, 221)
+-->    closed:      634081      493081   1.3       8 MiB
+--> closemirr:        4471        3624   1.2       0 MiB
+-->   connect:        4471        3624   1.2       0 MiB
+-->   combine:      565061      446899   1.3       8 MiB
+--> provenance:   0.01 GiB   0.01 GiB 0.80
+
+==> Step 31: 0 user, 0 sys, 0h0m0s wall (1.03), 1.54 GiB (0.00, 0)
+-->    closed:      634081      493081   1.3       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:        4471        3624   1.2       0 MiB
+-->   combine:      565061      446899   1.3       8 MiB
+--> provenance:   0.01 GiB   0.01 GiB 0.80
+
+==> Step 32: 0 user, 0 sys, 0h0m0s wall (0.95), 1.54 GiB (0.00, 0)
+-->    closed:      634081      493081   1.3       8 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:      565061      446899   1.3       8 MiB
+--> provenance:   0.01 GiB   0.01 GiB 0.80
+
+Target trace:
+  24393 = source {8-split}
+  35688 = close 24393 @0
+Source trace:
+  26 = source {3-split}
+  24443 = close 26 @0
+  24522 = combine 24443 splice 0 with 24443 rotate 0 connect at 2 @0
+  34558 = combine 24522 splice 0 with 24443 rotate 0 connect at 2 @0
+  34657 = combine 34558 splice 0 with 24443 rotate 0 connect at 2 @0
+  35685 = combine 34657 splice 0 with 24443 rotate 0 connect at 2 @0
+  35688 = combine 35685 splice 0 with 24443 rotate 0 connect at 2 @0
+
+==> Step 33: 4 user, 3 sys, 0h0m3s wall (1.96), 12.38 GiB (10.84, 211582)
+-->    closed:     5318083     4295641   1.2     128 MiB
+--> closemirr:     4684002     3867542   1.2      64 MiB
+-->   connect:     4684002     3867542   1.2      64 MiB
+-->   combine:     4684002     3867542   1.2      64 MiB
+--> provenance:   0.08 GiB   0.08 GiB 0.95
+
+==> Step 34: 0 user, 0 sys, 0h0m0s wall (0.99), 12.38 GiB (0.00, 0)
+-->    closed:     5318083     4295641   1.2     128 MiB
+--> closemirr:           0           0            64 MiB
+-->   connect:     4684002     3867542   1.2      64 MiB
+-->   combine:     4684002     3867542   1.2      64 MiB
+--> provenance:   0.08 GiB   0.08 GiB 0.95
+
+Target trace:
+  22597 = source {door-0xd14d23-closed-s}
+Source trace:
+  2 = source {diode}
+  26 = source {3-split}
+  24443 = close 26 @0
+  22617 = source {door-0xd14d32-closed-s}
+  22654 = source {door-0xd14d32-open-s}
+  358437 = combine 22654 splice 0 with 24443 rotate 0 connect at 2 @0
+  358461 = connect 358437 at 5 @3
+  359792 = combine 358461 splice 2 with 24443 rotate 0 connect at 4 @2
+  459064 = combine 359792 splice 0 with 24443 rotate 0 connect at 7 @0
+  833133 = combine 459064 splice 1 with 2 rotate 1 connect at 2 @2
+  2774605 = connect 833133 at 5 @2
+  13709817 = combine 2774605 splice 1 with 22617 rotate 4 connect at 5 @5
+  22597 = connect 13709817 at 6 @1
+
+Target trace:
+  22642 = source {door-0xd14d23-open-s}
+Source trace:
+  2 = source {diode}
+  26 = source {3-split}
+  24443 = close 26 @0
+  22654 = source {door-0xd14d32-open-s}
+  358437 = combine 22654 splice 0 with 24443 rotate 0 connect at 2 @0
+  358461 = connect 358437 at 5 @3
+  359792 = combine 358461 splice 2 with 24443 rotate 0 connect at 4 @2
+  459064 = combine 359792 splice 0 with 24443 rotate 0 connect at 7 @0
+  833133 = combine 459064 splice 1 with 2 rotate 1 connect at 2 @2
+  2774605 = connect 833133 at 5 @2
+  13709833 = combine 2774605 splice 1 with 22654 rotate 0 connect at 5 @5
+  22642 = connect 13709833 at 6 @1
+
+==> Step 35: 7 user, 2 sys, 0h0m0s wall (11.88), 22.02 GiB (9.64, 87712)
+-->    closed:     7063799     5691258   1.2     128 MiB
+--> closemirr:     1745716     1446518   1.2      22 MiB
+-->   connect:     1745716     1446518   1.2      32 MiB
+-->   combine:     6429718     5276827   1.2     128 MiB
+--> provenance:   0.11 GiB   0.11 GiB 0.92
+
+==> Step 36: 0 user, 0 sys, 0h0m0s wall (0.50), 22.02 GiB (0.00, 0)
+-->    closed:     7063799     5691258   1.2     128 MiB
+--> closemirr:           0           0            22 MiB
+-->   connect:     1745716     1446518   1.2      32 MiB
+-->   combine:     6429718     5276827   1.2     128 MiB
+--> provenance:   0.11 GiB   0.11 GiB 0.92
+
+Target trace:
+  17287 = source {2st_3-dicrumbler-antiparallel-mismatched-1-open-s, dicrumbler-2st_3-antiparallel-mismatched-open-1-s}
+Source trace:
+  26 = source {3-split}
+  24443 = close 26 @0
+  22617 = source {door-0xd14d32-closed-s}
+  22654 = source {door-0xd14d32-open-s}
+  358434 = combine 22654 splice 2 with 24443 rotate 0 connect at 4 @2
+  358464 = connect 358434 at 1 @0
+  360666 = combine 358464 splice 0 with 22617 rotate 1 connect at 4 @5
+  473226 = combine 360666 splice 1 with 24443 rotate 0 connect at 3 @1
+  585101 = connect 473226 at 1 @5
+  1863668 = combine 585101 splice 1 with 24443 rotate 0 connect at 3 @1
+  7371399 = combine 1863668 splice 1 with 22617 rotate 2 connect at 5 @9
+  38035657 = connect 7371399 at 1 @3
+  17287 = connect 38035657 at 0 delete 0,5 @2
+
+==> Step 37: 1 user, 0 sys, 0h0m0s wall (5.32), 22.73 GiB (0.71, 10996)
+-->    closed:     7126621     5739893   1.2     128 MiB
+--> closemirr:       62822       52049   1.2       0 MiB
+-->   connect:       62822       52049   1.2       1 MiB
+-->   combine:     6492540     5325891   1.2     128 MiB
+--> provenance:   0.11 GiB   0.12 GiB 0.92
+
+==> Step 38: 0 user, 0 sys, 0h0m0s wall (0.92), 22.73 GiB (0.00, 0)
+-->    closed:     7126621     5739893   1.2     128 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:       62822       52049   1.2       1 MiB
+-->   combine:     6492540     5325891   1.2     128 MiB
+--> provenance:   0.11 GiB   0.12 GiB 0.92
+
+==> Step 39: 0 user, 0 sys, 0h0m0s wall (1.87), 22.73 GiB (0.00, 0)
+-->    closed:     7126633     5739901   1.2     128 MiB
+--> closemirr:          12          11   1.1       0 MiB
+-->   connect:          12          11   1.1       0 MiB
+-->   combine:     6492552     5325899   1.2     128 MiB
+--> provenance:   0.11 GiB   0.12 GiB 0.92
+
+==> Step 40: 0 user, 0 sys, 0h0m0s wall (0.94), 22.73 GiB (0.00, 0)
+-->    closed:     7126633     5739901   1.2     128 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:          12          11   1.1       0 MiB
+-->   combine:     6492552     5325899   1.2     128 MiB
+--> provenance:   0.11 GiB   0.12 GiB 0.92
+
+==> Step 41: 0 user, 0 sys, 0h0m0s wall (0.93), 22.73 GiB (0.00, 0)
+-->    closed:     7126633     5739901   1.2     128 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:     6492552     5325899   1.2     128 MiB
+--> provenance:   0.11 GiB   0.12 GiB 0.92
+
+Target trace:
+  2938 = source {2st_3-disemitripwire-parallel-matched-0-0-r, dilock-disemitripwire-parallel-matched-open-0-r, disemitripwire-2st_3-parallel-matched-0-0-s, disemitripwire-dilock-parallel-matched-0-open-s}
+Source trace:
+  2 = source {diode}
+  26 = source {3-split}
+  24443 = close 26 @0
+  22654 = source {door-0xd14d32-open-s}
+  358437 = combine 22654 splice 0 with 24443 rotate 0 connect at 2 @0
+  358461 = connect 358437 at 5 @3
+  359792 = combine 358461 splice 2 with 24443 rotate 0 connect at 4 @2
+  459064 = combine 359792 splice 0 with 24443 rotate 0 connect at 7 @0
+  833133 = combine 459064 splice 1 with 2 rotate 1 connect at 2 @2
+  2774605 = connect 833133 at 5 @2
+  13709833 = combine 2774605 splice 1 with 22654 rotate 0 connect at 5 @5
+  22642 = connect 13709833 at 6 @1
+  2938 = combine 22642 splice 2 with 2 rotate 0 connect at 3 delete 2 @0
+
+Target trace:
+  23915 = source {door-01d25d34-open-s}
+  35184 = close 23915 @2
+Source trace:
+  2 = source {diode}
+  26 = source {3-split}
+  24443 = close 26 @0
+  22654 = source {door-0xd14d32-open-s}
+  358437 = combine 22654 splice 0 with 24443 rotate 0 connect at 2 @0
+  358461 = connect 358437 at 5 @3
+  359792 = combine 358461 splice 2 with 24443 rotate 0 connect at 4 @2
+  459064 = combine 359792 splice 0 with 24443 rotate 0 connect at 7 @0
+  833133 = combine 459064 splice 1 with 2 rotate 1 connect at 2 @2
+  2774605 = connect 833133 at 5 @2
+  13709833 = combine 2774605 splice 1 with 22654 rotate 0 connect at 5 @5
+  22642 = connect 13709833 at 6 @1
+  35184 = combine 22642 splice 2 with 24443 rotate 0 connect at 4 @2
+
+Target trace:
+  23991 = source {door-01d25d34-closed-s}
+  35300 = close 23991 @0
+Source trace:
+  2 = source {diode}
+  26 = source {3-split}
+  24443 = close 26 @0
+  22617 = source {door-0xd14d32-closed-s}
+  22654 = source {door-0xd14d32-open-s}
+  358437 = combine 22654 splice 0 with 24443 rotate 0 connect at 2 @0
+  358461 = connect 358437 at 5 @3
+  359792 = combine 358461 splice 2 with 24443 rotate 0 connect at 4 @2
+  459064 = combine 359792 splice 0 with 24443 rotate 0 connect at 7 @0
+  833133 = combine 459064 splice 1 with 2 rotate 1 connect at 2 @2
+  2774605 = connect 833133 at 5 @2
+  13709817 = combine 2774605 splice 1 with 22617 rotate 4 connect at 5 @5
+  22597 = connect 13709817 at 6 @1
+  35300 = combine 22597 splice 2 with 24443 rotate 0 connect at 4 @2
+
+Target trace:
+  24397 = source {9-split}
+  35692 = close 24397 @0
+Source trace:
+  26 = source {3-split}
+  24443 = close 26 @0
+  24522 = combine 24443 splice 0 with 24443 rotate 0 connect at 2 @0
+  34558 = combine 24522 splice 0 with 24443 rotate 0 connect at 2 @0
+  34657 = combine 34558 splice 0 with 24443 rotate 0 connect at 2 @0
+  35685 = combine 34657 splice 0 with 24443 rotate 0 connect at 2 @0
+  35688 = combine 35685 splice 0 with 24443 rotate 0 connect at 2 @0
+  35692 = combine 35688 splice 0 with 24443 rotate 0 connect at 2 @0
+
+==> Step 42: 41 user, 30 sys, 0h0m8s wall (8.11), 63.32 GiB (40.58, 817730)
+-->    closed:    37331634    29798066   1.3     512 MiB
+--> closemirr:    30205001    24648509   1.2     512 MiB
+-->   connect:    30205001    24648509   1.2     512 MiB
+-->   combine:    30205001    24648509   1.2     512 MiB
+--> provenance:   0.56 GiB   0.57 GiB 0.97
+
+==> Step 43: 0 user, 0 sys, 0h0m0s wall (1.01), 63.32 GiB (0.00, 0)
+-->    closed:    37331634    29798066   1.3     512 MiB
+--> closemirr:           0           0           512 MiB
+-->   connect:    30205001    24648509   1.2     512 MiB
+-->   combine:    30205001    24648509   1.2     512 MiB
+--> provenance:   0.56 GiB   0.57 GiB 0.97
+
+==> Step 44: 64 user, 5 sys, 0h0m2s wall (25.14), 69.88 GiB (6.57, 64034)
+-->    closed:    43649048    34631237   1.3    1024 MiB
+--> closemirr:     6317414     5092830   1.2      77 MiB
+-->   connect:     6317414     5092830   1.2     128 MiB
+-->   combine:    36522415    29570797   1.2     512 MiB
+--> provenance:   0.65 GiB   0.68 GiB 0.95
+
+==> Step 45: 0 user, 0 sys, 0h0m0s wall (0.97), 69.88 GiB (0.00, 0)
+-->    closed:    43649048    34631237   1.3    1024 MiB
+--> closemirr:           0           0            77 MiB
+-->   connect:     6317414     5092830   1.2     128 MiB
+-->   combine:    36522415    29570797   1.2     512 MiB
+--> provenance:   0.65 GiB   0.68 GiB 0.95
+
+Target trace:
+  2972 = source {dicrumbler-disemitripwire-parallel-matched-open-0-r, disemitripwire-dicrumbler-parallel-matched-0-open-s}
+Source trace:
+  2 = source {diode}
+  26 = source {3-split}
+  24443 = close 26 @0
+  22654 = source {door-0xd14d32-open-s}
+  358437 = combine 22654 splice 0 with 24443 rotate 0 connect at 2 @0
+  358461 = connect 358437 at 5 @3
+  359792 = combine 358461 splice 2 with 24443 rotate 0 connect at 4 @2
+  459064 = combine 359792 splice 0 with 24443 rotate 0 connect at 7 @0
+  833133 = combine 459064 splice 1 with 2 rotate 1 connect at 2 @2
+  2774605 = connect 833133 at 5 @2
+  13709833 = combine 2774605 splice 1 with 22654 rotate 0 connect at 5 @5
+  22642 = connect 13709833 at 6 @1
+  51931409 = combine 22642 splice 3 with 22654 rotate 1 connect at 7 @0
+  198787435 = connect 51931409 at 4 @0
+  2972 = connect 198787435 at 2 @0
+
+==> Step 46: 3 user, 1 sys, 0h0m0s wall (5.03), 69.88 GiB (0.00, 3301)
+-->    closed:    43764622    34716174   1.3    1024 MiB
+--> closemirr:      115574       95379   1.2       1 MiB
+-->   connect:      115574       95379   1.2       2 MiB
+-->   combine:    36637989    29657314   1.2     512 MiB
+--> provenance:   0.65 GiB   0.68 GiB 0.95
+
+==> Step 47: 0 user, 0 sys, 0h0m0s wall (0.52), 69.88 GiB (0.00, 0)
+-->    closed:    43764622    34716174   1.3    1024 MiB
+--> closemirr:           0           0             1 MiB
+-->   connect:      115574       95379   1.2       2 MiB
+-->   combine:    36637989    29657314   1.2     512 MiB
+--> provenance:   0.65 GiB   0.68 GiB 0.95
+
+==> Step 48: 0 user, 0 sys, 0h0m0s wall (1.67), 69.88 GiB (0.00, 0)
+-->    closed:    43764625    34716175   1.3    1024 MiB
+--> closemirr:           3           3   1.0       0 MiB
+-->   connect:           3           3   1.0       0 MiB
+-->   combine:    36637992    29657315   1.2     512 MiB
+--> provenance:   0.65 GiB   0.68 GiB 0.95
+
+==> Step 49: 0 user, 0 sys, 0h0m0s wall (0.95), 69.88 GiB (0.00, 0)
+-->    closed:    43764625    34716175   1.3    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           3           3   1.0       0 MiB
+-->   combine:    36637992    29657315   1.2     512 MiB
+--> provenance:   0.65 GiB   0.68 GiB 0.95
+
+==> Step 50: 0 user, 0 sys, 0h0m0s wall (0.99), 69.88 GiB (0.00, 0)
+-->    closed:    43764625    34716175   1.3    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:    36637992    29657315   1.2     512 MiB
+--> provenance:   0.65 GiB   0.68 GiB 0.95
+
+==> Step 51: 15 user, 5 sys, 0h0m4s wall (4.81), 70.11 GiB (0.22, 73744)
+-->    closed:    52027514    38720280   1.3    1024 MiB
+--> closemirr:     8262889     7002274   1.2     128 MiB
+-->   connect:     8262889     7002274   1.2     128 MiB
+-->   combine:     8262889     7002274   1.2     128 MiB
+--> provenance:   0.78 GiB   0.81 GiB 0.96
+
+==> Step 52: 0 user, 0 sys, 0h0m0s wall (0.93), 70.11 GiB (0.00, 0)
+-->    closed:    52027514    38720280   1.3    1024 MiB
+--> closemirr:           0           0           128 MiB
+-->   connect:     8262889     7002274   1.2     128 MiB
+-->   combine:     8262889     7002274   1.2     128 MiB
+--> provenance:   0.78 GiB   0.81 GiB 0.96
+
+==> Step 53: 20 user, 1 sys, 0h0m1s wall (17.58), 70.11 GiB (0.00, 1881)
+-->    closed:    53446913    39427856   1.4    1024 MiB
+--> closemirr:     1419399     1212392   1.2      18 MiB
+-->   connect:     1419399     1212392   1.2      32 MiB
+-->   combine:     9682288     8191215   1.2     128 MiB
+--> provenance:   0.80 GiB   0.83 GiB 0.96
+
+==> Step 54: 0 user, 0 sys, 0h0m0s wall (0.91), 70.11 GiB (0.00, 0)
+-->    closed:    53446913    39427856   1.4    1024 MiB
+--> closemirr:           0           0            18 MiB
+-->   connect:     1419399     1212392   1.2      32 MiB
+-->   combine:     9682288     8191215   1.2     128 MiB
+--> provenance:   0.80 GiB   0.83 GiB 0.96
+
+==> Step 55: 1 user, 0 sys, 0h0m0s wall (2.62), 70.11 GiB (0.00, 183)
+-->    closed:    53479348    39444521   1.4    1024 MiB
+--> closemirr:       32435       27976   1.2       0 MiB
+-->   connect:       32435       27976   1.2       0 MiB
+-->   combine:     9714723     8218107   1.2     128 MiB
+--> provenance:   0.80 GiB   0.83 GiB 0.96
+
+==> Step 56: 0 user, 0 sys, 0h0m0s wall (0.93), 70.11 GiB (0.00, 0)
+-->    closed:    53479348    39444521   1.4    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:       32435       27976   1.2       0 MiB
+-->   combine:     9714723     8218107   1.2     128 MiB
+--> provenance:   0.80 GiB   0.83 GiB 0.96
+
+==> Step 57: 0 user, 0 sys, 0h0m0s wall (1.21), 70.11 GiB (0.00, 0)
+-->    closed:    53479350    39444522   1.4    1024 MiB
+--> closemirr:           2           2   1.0       0 MiB
+-->   connect:           2           2   1.0       0 MiB
+-->   combine:     9714725     8218109   1.2     128 MiB
+--> provenance:   0.80 GiB   0.83 GiB 0.96
+
+==> Step 58: 0 user, 0 sys, 0h0m0s wall (0.94), 70.11 GiB (0.00, 0)
+-->    closed:    53479350    39444522   1.4    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           2           2   1.0       0 MiB
+-->   combine:     9714725     8218109   1.2     128 MiB
+--> provenance:   0.80 GiB   0.83 GiB 0.96
+
+==> Step 59: 0 user, 0 sys, 0h0m0s wall (0.99), 70.11 GiB (0.00, 0)
+-->    closed:    53479350    39444522   1.4    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:     9714725     8218109   1.2     128 MiB
+--> provenance:   0.80 GiB   0.83 GiB 0.96
+
+==> Step 60: 2 user, 2 sys, 0h0m2s wall (1.89), 70.11 GiB (0.00, 3987)
+-->    closed:    54735426    39658672   1.4    1024 MiB
+--> closemirr:     1256076     1143890   1.1      32 MiB
+-->   connect:     1256076     1143890   1.1      32 MiB
+-->   combine:     1256076     1143890   1.1      32 MiB
+--> provenance:   0.82 GiB   0.85 GiB 0.96
+
+==> Step 61: 0 user, 0 sys, 0h0m0s wall (0.91), 70.11 GiB (0.00, 0)
+-->    closed:    54735426    39658672   1.4    1024 MiB
+--> closemirr:           0           0            32 MiB
+-->   connect:     1256076     1143890   1.1      32 MiB
+-->   combine:     1256076     1143890   1.1      32 MiB
+--> provenance:   0.82 GiB   0.85 GiB 0.96
+
+==> Step 62: 3 user, 0 sys, 0h0m0s wall (5.85), 70.11 GiB (0.00, 93)
+-->    closed:    54867898    39693501   1.4    1024 MiB
+--> closemirr:      132472      121826   1.1       1 MiB
+-->   connect:      132472      121826   1.1       2 MiB
+-->   combine:     1388548     1264930   1.1      32 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 63: 0 user, 0 sys, 0h0m0s wall (0.91), 70.11 GiB (0.00, 0)
+-->    closed:    54867898    39693501   1.4    1024 MiB
+--> closemirr:           0           0             1 MiB
+-->   connect:      132472      121826   1.1       2 MiB
+-->   combine:     1388548     1264930   1.1      32 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 64: 0 user, 0 sys, 0h0m0s wall (1.18), 70.11 GiB (0.00, 16)
+-->    closed:    54870438    39694315   1.4    1024 MiB
+--> closemirr:        2540        2348   1.1       0 MiB
+-->   connect:        2540        2348   1.1       0 MiB
+-->   combine:     1391088     1267261   1.1      32 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 65: 0 user, 0 sys, 0h0m0s wall (0.96), 70.11 GiB (0.00, 0)
+-->    closed:    54870438    39694315   1.4    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:        2540        2348   1.1       0 MiB
+-->   combine:     1391088     1267261   1.1      32 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 66: 0 user, 0 sys, 0h0m0s wall (0.98), 70.11 GiB (0.00, 0)
+-->    closed:    54870438    39694315   1.4    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:     1391088     1267261   1.1      32 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 67: 0 user, 1 sys, 0h0m2s wall (1.11), 70.11 GiB (0.00, 87)
+-->    closed:    55072701    39694495   1.4    1024 MiB
+--> closemirr:      202263      189061   1.1       4 MiB
+-->   connect:      202263      189061   1.1       4 MiB
+-->   combine:      202263      189061   1.1       4 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 68: 0 user, 0 sys, 0h0m0s wall (0.93), 70.11 GiB (0.00, 0)
+-->    closed:    55072701    39694495   1.4    1024 MiB
+--> closemirr:           0           0             4 MiB
+-->   connect:      202263      189061   1.1       4 MiB
+-->   combine:      202263      189061   1.1       4 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 69: 0 user, 0 sys, 0h0m0s wall (1.89), 70.11 GiB (0.00, 1)
+-->    closed:    55083819    39694812   1.4    1024 MiB
+--> closemirr:       11118       10400   1.1       0 MiB
+-->   connect:       11118       10400   1.1       0 MiB
+-->   combine:      213381      199441   1.1       4 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 70: 0 user, 0 sys, 0h0m0s wall (0.89), 70.11 GiB (0.00, 0)
+-->    closed:    55083819    39694812   1.4    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:       11118       10400   1.1       0 MiB
+-->   combine:      213381      199441   1.1       4 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 71: 0 user, 0 sys, 0h0m0s wall (1.00), 70.11 GiB (0.00, 0)
+-->    closed:    55083906    39694806   1.4    1024 MiB
+--> closemirr:          87          86   1.0       0 MiB
+-->   connect:          87          86   1.0       0 MiB
+-->   combine:      213468      199525   1.1       4 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 72: 0 user, 0 sys, 0h0m0s wall (0.90), 70.11 GiB (0.00, 0)
+-->    closed:    55083906    39694806   1.4    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:          87          86   1.0       0 MiB
+-->   combine:      213468      199525   1.1       4 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 73: 0 user, 0 sys, 0h0m0s wall (1.00), 70.11 GiB (0.00, 0)
+-->    closed:    55083906    39694806   1.4    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:      213468      199525   1.1       4 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 74: 0 user, 0 sys, 0h0m1s wall (1.04), 70.11 GiB (0.00, 40)
+-->    closed:    55146711    39693021   1.4    1024 MiB
+--> closemirr:       62805       58960   1.1       1 MiB
+-->   connect:       62805       58960   1.1       1 MiB
+-->   combine:       62805       58960   1.1       1 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 75: 0 user, 0 sys, 0h0m0s wall (0.85), 70.11 GiB (0.00, 0)
+-->    closed:    55146711    39693021   1.4    1024 MiB
+--> closemirr:           0           0             1 MiB
+-->   connect:       62805       58960   1.1       1 MiB
+-->   combine:       62805       58960   1.1       1 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 76: 0 user, 0 sys, 0h0m0s wall (1.18), 70.11 GiB (0.00, 0)
+-->    closed:    55148555    39693003   1.4    1024 MiB
+--> closemirr:        1844        1730   1.1       0 MiB
+-->   connect:        1844        1730   1.1       0 MiB
+-->   combine:       64649       60689   1.1       1 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 77: 0 user, 0 sys, 0h0m0s wall (0.98), 70.11 GiB (0.00, 0)
+-->    closed:    55148555    39693003   1.4    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:        1844        1730   1.1       0 MiB
+-->   combine:       64649       60689   1.1       1 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 78: 0 user, 0 sys, 0h0m0s wall (1.00), 70.11 GiB (0.00, 0)
+-->    closed:    55148558    39693004   1.4    1024 MiB
+--> closemirr:           3           3   1.0       0 MiB
+-->   connect:           3           3   1.0       0 MiB
+-->   combine:       64652       60692   1.1       1 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 79: 0 user, 0 sys, 0h0m0s wall (0.94), 70.11 GiB (0.00, 0)
+-->    closed:    55148558    39693004   1.4    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           3           3   1.0       0 MiB
+-->   combine:       64652       60692   1.1       1 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 80: 0 user, 0 sys, 0h0m0s wall (0.96), 70.11 GiB (0.00, 0)
+-->    closed:    55148558    39693004   1.4    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:       64652       60692   1.1       1 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 81: 0 user, 0 sys, 0h0m1s wall (1.00), 70.11 GiB (0.00, 27)
+-->    closed:    55173028    39694850   1.4    1024 MiB
+--> closemirr:       24470       23352   1.0       0 MiB
+-->   connect:       24470       23352   1.0       0 MiB
+-->   combine:       24470       23352   1.0       0 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 82: 0 user, 0 sys, 0h0m0s wall (0.88), 70.11 GiB (0.00, 0)
+-->    closed:    55173028    39694850   1.4    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:       24470       23352   1.0       0 MiB
+-->   combine:       24470       23352   1.0       0 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 83: 0 user, 0 sys, 0h0m0s wall (1.04), 70.11 GiB (0.00, 0)
+-->    closed:    55173974    39694990   1.4    1024 MiB
+--> closemirr:         946         878   1.1       0 MiB
+-->   connect:         946         878   1.1       0 MiB
+-->   combine:       25416       24229   1.0       0 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 84: 0 user, 0 sys, 0h0m0s wall (0.91), 70.11 GiB (0.00, 0)
+-->    closed:    55173974    39694990   1.4    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:         946         878   1.1       0 MiB
+-->   combine:       25416       24229   1.0       0 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 85: 0 user, 0 sys, 0h0m0s wall (0.62), 70.11 GiB (0.00, 0)
+-->    closed:    55173974    39694990   1.4    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:       25416       24229   1.0       0 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 86: 0 user, 0 sys, 0h0m1s wall (1.00), 70.11 GiB (0.00, 0)
+-->    closed:    55183770    39694627   1.4    1024 MiB
+--> closemirr:        9796        9406   1.0       0 MiB
+-->   connect:        9796        9406   1.0       0 MiB
+-->   combine:        9796        9406   1.0       0 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 87: 0 user, 0 sys, 0h0m0s wall (0.94), 70.11 GiB (0.00, 0)
+-->    closed:    55183770    39694627   1.4    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:        9796        9406   1.0       0 MiB
+-->   combine:        9796        9406   1.0       0 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 88: 0 user, 0 sys, 0h0m0s wall (1.00), 70.11 GiB (0.00, 0)
+-->    closed:    55184079    39694577   1.4    1024 MiB
+--> closemirr:         309         289   1.1       0 MiB
+-->   connect:         309         289   1.1       0 MiB
+-->   combine:       10105        9695   1.0       0 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 89: 0 user, 0 sys, 0h0m0s wall (0.91), 70.11 GiB (0.00, 0)
+-->    closed:    55184079    39694577   1.4    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:         309         289   1.1       0 MiB
+-->   combine:       10105        9695   1.0       0 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 90: 0 user, 0 sys, 0h0m0s wall (0.73), 70.11 GiB (0.00, 0)
+-->    closed:    55184079    39694577   1.4    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:       10105        9695   1.0       0 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 91: 0 user, 0 sys, 0h0m1s wall (1.00), 70.11 GiB (0.00, 0)
+-->    closed:    55186953    39694370   1.4    1024 MiB
+--> closemirr:        2874        2837   1.0       0 MiB
+-->   connect:        2874        2837   1.0       0 MiB
+-->   combine:        2874        2837   1.0       0 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 92: 0 user, 0 sys, 0h0m0s wall (0.82), 70.11 GiB (0.00, 0)
+-->    closed:    55186953    39694370   1.4    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:        2874        2837   1.0       0 MiB
+-->   combine:        2874        2837   1.0       0 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 93: 0 user, 0 sys, 0h0m0s wall (1.00), 70.11 GiB (0.00, 0)
+-->    closed:    55187081    39694347   1.4    1024 MiB
+--> closemirr:         128         124   1.0       0 MiB
+-->   connect:         128         124   1.0       0 MiB
+-->   combine:        3002        2961   1.0       0 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 94: 0 user, 0 sys, 0h0m0s wall (1.00), 70.11 GiB (0.00, 0)
+-->    closed:    55187081    39694347   1.4    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:         128         124   1.0       0 MiB
+-->   combine:        3002        2961   1.0       0 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 95: 0 user, 0 sys, 0h0m0s wall (0.99), 70.11 GiB (0.00, 0)
+-->    closed:    55187081    39694347   1.4    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:        3002        2961   1.0       0 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 96: 0 user, 0 sys, 0h0m0s wall (1.00), 70.11 GiB (0.00, 0)
+-->    closed:    55188065    39694196   1.4    1024 MiB
+--> closemirr:         984         975   1.0       0 MiB
+-->   connect:         984         975   1.0       0 MiB
+-->   combine:         984         975   1.0       0 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 97: 0 user, 0 sys, 0h0m0s wall (0.88), 70.11 GiB (0.00, 0)
+-->    closed:    55188065    39694196   1.4    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:         984         975   1.0       0 MiB
+-->   combine:         984         975   1.0       0 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 98: 0 user, 0 sys, 0h0m0s wall (1.00), 70.11 GiB (0.00, 0)
+-->    closed:    55188077    39694190   1.4    1024 MiB
+--> closemirr:          12           9   1.3       0 MiB
+-->   connect:          12           9   1.3       0 MiB
+-->   combine:         996         984   1.0       0 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 99: 0 user, 0 sys, 0h0m0s wall (0.88), 70.11 GiB (0.00, 0)
+-->    closed:    55188077    39694190   1.4    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:          12           9   1.3       0 MiB
+-->   combine:         996         984   1.0       0 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 100: 0 user, 0 sys, 0h0m0s wall (1.00), 70.11 GiB (0.00, 0)
+-->    closed:    55188077    39694190   1.4    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:         996         984   1.0       0 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> Step 101: 0 user, 0 sys, 0h0m0s wall (0.99), 70.11 GiB (0.00, 0)
+-->    closed:    55188077    39694190   1.4    1024 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:           0           0             0 MiB
+--> provenance:   0.82 GiB   0.86 GiB 0.96
+
+==> REPORT COMPLETED
+--> 163 targets found:
+   2st_13-2st_3-antiparallel-matched-1-1-s (3004)
+   2st_13-2st_3-antiparallel-mismatched-0-1-s (3004)
+   2st_13-2st_3-parallel-matched-1-1-r (2971)
+   2st_13-2st_3-parallel-mismatched-0-1-r (2971)
+   2st_13-dicrumbler-antiparallel-matched-0-open-s (201)
+   2st_13-dicrumbler-antiparallel-matched-1-closed-s (166)
+   2st_13-dicrumbler-antiparallel-mismatched-0-closed-s (166)
+   2st_13-dicrumbler-parallel-matched-0-open-r (208)
+   2st_13-dicrumbler-parallel-matched-1-closed-r (209)
+   2st_13-dicrumbler-parallel-mismatched-0-closed-r (209)
+   2st_13-dilock-antiparallel-matched-1-closed-s (3004)
+   2st_13-dilock-parallel-matched-1-closed-r (2971)
+   2st_14-2st_3-antiparallel-mismatched-0-1-s (3004)
+   2st_14-2st_3-parallel-mismatched-0-1-r (2971)
+   2st_14-dicrumbler-antiparallel-matched-0-open-r (2978)
+   2st_14-dicrumbler-antiparallel-matched-0-open-s (2937)
+   2st_14-dicrumbler-antiparallel-mismatched-0-closed-s (166)
+   2st_14-dicrumbler-antiparallel-mismatched-1-open-s (201)
+   2st_14-dicrumbler-parallel-matched-0-open-r (2975)
+   2st_14-dicrumbler-parallel-matched-0-open-s (3005)
+   2st_14-dicrumbler-parallel-mismatched-0-closed-r (209)
+   2st_14-dicrumbler-parallel-mismatched-1-open-r (208)
+   2st_14-dilock-antiparallel-mismatched-0-closed-s (3004)
+   2st_14-dilock-parallel-mismatched-0-closed-r (2971)
+   2st_27-2st_3-antiparallel-1-1-s (3004)
+   2st_27-2st_3-parallel-1-1-r (2971)
+   2st_27-dicrumbler-antiparallel-0-open-s (201)
+   2st_27-dicrumbler-antiparallel-1-closed-s (166)
+   2st_27-dicrumbler-parallel-0-open-r (208)
+   2st_27-dicrumbler-parallel-1-closed-r (209)
+   2st_27-dilock-antiparallel-1-closed-s (3004)
+   2st_27-dilock-parallel-1-closed-r (2971)
+   2st_3-2st_13-antiparallel-matched-1-1-s (3004)
+   2st_3-2st_13-antiparallel-mismatched-1-0-s (3004)
+   2st_3-2st_13-parallel-matched-1-1-s (2971)
+   2st_3-2st_13-parallel-mismatched-1-0-s (2971)
+   2st_3-2st_14-antiparallel-mismatched-1-0-s (3004)
+   2st_3-2st_14-parallel-mismatched-1-0-s (2971)
+   2st_3-2st_27-antiparallel-1-1-s (3004)
+   2st_3-2st_27-parallel-1-1-s (2971)
+   2st_3-2st_3-antiparallel-mismatched-0-1-s (3004)
+   2st_3-2st_3-antiparallel-mismatched-s (3004)
+   2st_3-2st_3-parallel-mismatched-0-1 (2971)
+   2st_3-2st_68-parallel-mismatched-0-1-r [closed] (24525)
+   2st_3-dicrumbler-antiparallel-mismatched-0-closed-s (166)
+   2st_3-dicrumbler-antiparallel-mismatched-1-open-s (17287)
+   2st_3-dicrumbler-parallel-mismatched-0-closed-r (209)
+   2st_3-disemitripwire-antiparallel-matched-0-0-r (2969)
+   2st_3-disemitripwire-antiparallel-mismatched-1-0-s (3004)
+   2st_3-disemitripwire-parallel-matched-0-0-r (2938)
+   2st_3-disemitripwire-parallel-mismatched-1-0-s (2971)
+   2st_59-dicrumbler-antiparallel-matched-0-open-r [closed] (26572)
+   2st_59-dicrumbler-antiparallel-matched-0-open-s [closed] (26573)
+   2st_59-dicrumbler-parallel-matched-0-open-r [closed] (26573)
+   2st_59-dicrumbler-parallel-matched-0-open-s [closed] (26572)
+   2st_60-2st_63-antiparallel-matched-0-0-s [closed] (24520)
+   2st_60-dicrumbler-antiparallel-matched-1-closed-s [closed] (25325)
+   2st_60-dilock-parallel-matched-0-open-r [closed] (24523)
+   2st_63-2st_60-antiparallel-matched-0-0-s [closed] (24520)
+   2st_68-2st_3-parallel-mismatched-1-0-s [closed] (24525)
+   2st_69-dilock-parallel-mismatched-0-closed-r [closed] (26497)
+   2st_71-dicrumbler-noncrossing-matched-0-open-r [closed] (26573)
+   2st_71-dicrumbler-noncrossing-matched-0-open-s [closed] (26572)
+   4-split [closed] (24522)
+   5-split [closed] (34558)
+   6-split [closed] (34657)
+   7-split [closed] (35685)
+   8-split [closed] (35688)
+   9-split [closed] (35692)
+   dicrumbler (10)
+   dicrumbler-2st_13-antiparallel-matched-closed-1-s (166)
+   dicrumbler-2st_13-antiparallel-matched-open-0-s (201)
+   dicrumbler-2st_13-antiparallel-mismatched-closed-0-s (166)
+   dicrumbler-2st_13-parallel-matched-closed-1-s (209)
+   dicrumbler-2st_13-parallel-matched-open-0-s (208)
+   dicrumbler-2st_13-parallel-mismatched-closed-0-s (209)
+   dicrumbler-2st_14-antiparallel-matched-open-0-r (2978)
+   dicrumbler-2st_14-antiparallel-matched-open-0-s (2937)
+   dicrumbler-2st_14-antiparallel-mismatched-closed-0-s (166)
+   dicrumbler-2st_14-antiparallel-mismatched-open-1-s (201)
+   dicrumbler-2st_14-parallel-matched-open-0-r (3005)
+   dicrumbler-2st_14-parallel-matched-open-0-s (2975)
+   dicrumbler-2st_14-parallel-mismatched-closed-0-s (209)
+   dicrumbler-2st_14-parallel-mismatched-open-1-s (208)
+   dicrumbler-2st_27-antiparallel-closed-1-s (166)
+   dicrumbler-2st_27-antiparallel-open-0-s (201)
+   dicrumbler-2st_27-parallel-closed-1-s (209)
+   dicrumbler-2st_27-parallel-open-0-s (208)
+   dicrumbler-2st_3-antiparallel-mismatched-closed-0-s (166)
+   dicrumbler-2st_3-antiparallel-mismatched-open-1-s (17287)
+   dicrumbler-2st_3-parallel-mismatched-closed-0-s (209)
+   dicrumbler-2st_59-antiparallel-matched-open-0-r [closed] (26572)
+   dicrumbler-2st_59-antiparallel-matched-open-0-s [closed] (26573)
+   dicrumbler-2st_59-parallel-matched-open-0-r [closed] (26572)
+   dicrumbler-2st_59-parallel-matched-open-0-s [closed] (26573)
+   dicrumbler-2st_60-antiparallel-matched-closed-1-s [closed] (25325)
+   dicrumbler-2st_71-noncrossing-matched-open-0-r [closed] (26572)
+   dicrumbler-2st_71-noncrossing-matched-open-0-s [closed] (26573)
+   dicrumbler-dicrumbler-antiparallel-mismatched-open-closed-s (142)
+   dicrumbler-dicrumbler-antiparallel-mismatched-s (142)
+   dicrumbler-diode-antiparallel-open-0-r (2978)
+   dicrumbler-diode-antiparallel-open-0-s (2937)
+   dicrumbler-diode-parallel-open-0-r (3005)
+   dicrumbler-diode-parallel-open-0-s (2975)
+   dicrumbler-disemitripwire-antiparallel-matched-open-0-r (2948)
+   dicrumbler-disemitripwire-antiparallel-mismatched-closed-0-s (166)
+   dicrumbler-disemitripwire-antiparallel-mismatched-open-1-s (201)
+   dicrumbler-disemitripwire-parallel-matched-open-0-r (2972)
+   dicrumbler-disemitripwire-parallel-mismatched-closed-0-s (209)
+   dicrumbler-disemitripwire-parallel-mismatched-open-1-s (208)
+   dicrumbler-one-way-tripwire-antiparallel-open-0-s [closed] (25306)
+   dicrumbler-open (10)
+   dicrumbler-wire-noncrossing-open-0-r [closed] (26572)
+   dicrumbler-wire-noncrossing-open-0-s [closed] (26573)
+   dilock-2st_13-antiparallel-matched-closed-1-s (3004)
+   dilock-2st_13-parallel-matched-closed-1-s (2971)
+   dilock-2st_14-antiparallel-mismatched-closed-0-s (3004)
+   dilock-2st_14-parallel-mismatched-closed-0-s (2971)
+   dilock-2st_27-antiparallel-closed-1-s (3004)
+   dilock-2st_27-parallel-closed-1-s (2971)
+   dilock-2st_60-parallel-matched-open-0-s [closed] (24523)
+   dilock-2st_69-parallel-mismatched-closed-0-s [closed] (26497)
+   dilock-disemitripwire-antiparallel-matched-open-0-r (2969)
+   dilock-disemitripwire-antiparallel-mismatched-closed-0-s (3004)
+   dilock-disemitripwire-parallel-matched-open-0-r (2938)
+   dilock-disemitripwire-parallel-mismatched-closed-0-s (2971)
+   diode-dicrumbler-antiparallel-0-open-r (2978)
+   diode-dicrumbler-antiparallel-0-open-s (2937)
+   diode-dicrumbler-parallel-0-open-r (2975)
+   diode-dicrumbler-parallel-0-open-s (3005)
+   diode-diode-antiparallel-r (113)
+   diode-diode-antiparallel-s (115)
+   diode-diode-parallel (114)
+   directed-self-closing-door-0-s (32)
+   directed-self-closing-door-1-s (34)
+   disemitripwire-2st_3-antiparallel-matched-0-0-r (2969)
+   disemitripwire-2st_3-antiparallel-mismatched-0-1-s (3004)
+   disemitripwire-2st_3-parallel-matched-0-0-s (2938)
+   disemitripwire-2st_3-parallel-mismatched-0-1-r (2971)
+   disemitripwire-dicrumbler-antiparallel-matched-0-open-r (2948)
+   disemitripwire-dicrumbler-antiparallel-mismatched-0-closed-s (166)
+   disemitripwire-dicrumbler-antiparallel-mismatched-1-open-s (201)
+   disemitripwire-dicrumbler-parallel-matched-0-open-s (2972)
+   disemitripwire-dicrumbler-parallel-mismatched-0-closed-r (209)
+   disemitripwire-dicrumbler-parallel-mismatched-1-open-r (208)
+   disemitripwire-dilock-antiparallel-matched-0-open-r (2969)
+   disemitripwire-dilock-antiparallel-mismatched-0-closed-s (3004)
+   disemitripwire-dilock-parallel-matched-0-open-s (2938)
+   disemitripwire-dilock-parallel-mismatched-0-closed-r (2971)
+   door-01d25d34-closed-s [closed] (35300)
+   door-01d25d34-open-s [closed] (35184)
+   door-01d25d43-closed-s [closed] (35267)
+   door-01d25d43-open-s [closed] (35211)
+   door-0xd14d23-closed-s (22597)
+   door-0xd14d23-open-s (22642)
+   door-d01d25d43-closed-s (23137)
+   door-d01d25d43-open-s (23334)
+   door-d01d52d34-closed-r (23042)
+   door-d01d52d34-open-r (23365)
+   one-way-tripwire-dicrumbler-antiparallel-0-open-s [closed] (25306)
+   wire [closed] (24425)
+   wire-dicrumbler-noncrossing-0-open-r [closed] (26573)
+   wire-dicrumbler-noncrossing-0-open-s [closed] (26572)
+--> 112 gadgets mentioned: 1 2 10 26 32 34 111 113 114 115 142 166 201 208 209 414 2937 2938 2948 2969 2971 2972 2975 2978 3004 3005 3562 3566 5387 5640 5668 17287 20518 21926 22543 22597 22617 22642 22654 22762 23042 23137 23334 23365 23915 23968 23991 24053 24390 24393 24397 24425 24443 24520 24522 24523 24525 25306 25325 26497 26572 26573 34558 34657 35184 35211 35267 35300 35685 35688 35692 35721 35730 35733 35785 35847 35961 36070 36146 36176 36455 37670 358434 358437 358451 358461 358464 358504 358510 358729 359792 359953 359954 359956 359957 360666 362125 362126 362130 362131 459064 473226 585101 833133 1863668 2774605 7371399 13709817 13709833 38035657 51931409 198787435

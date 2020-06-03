@@ -1,0 +1,39 @@
+rule report
+  command = toggles-report.exe --db-path $database --threads 64 --skip-mirror ${gadget} diode 3-split | tee ${gadget}-split.txt && toggles-report.exe --db-path $database --threads 64 --skip-mirror ${gadget}-r diode 3-split | tee ${gadget}r-split.txt && toggles-report.exe --db-path $database --threads 64 --skip-mirror ${gadget}-s diode 3-split | tee ${gadget}s-split.txt && toggles-report.exe --db-path $database --threads 64 --skip-mirror ${gadget} diode | tee ${gadget}.txt && toggles-report.exe --db-path $database --threads 64 --skip-mirror ${gadget}-r diode | tee ${gadget}r.txt && toggles-report.exe --db-path $database --threads 64 --skip-mirror ${gadget}-s diode | tee ${gadget}s.txt
+  pool = console
+build door-0xd12d34-split.txt door-0xd12d34r-split.txt door-0xd12d34s-split.txt door-0xd12d34.txt door-0xd12d34r.txt door-0xd12d34s.txt : report /data/ssd0/door-0xd12d34.mdb/data.mdb
+  gadget = door-0xd12d34
+  database = /data/ssd0/door-0xd12d34.mdb
+build door-0xd12d43-split.txt door-0xd12d43r-split.txt door-0xd12d43s-split.txt door-0xd12d43.txt door-0xd12d43r.txt door-0xd12d43s.txt : report /data/ssd1/door-0xd12d43.mdb/data.mdb
+  gadget = door-0xd12d43
+  database = /data/ssd1/door-0xd12d43.mdb
+build door-0xd32d14-split.txt door-0xd32d14r-split.txt door-0xd32d14s-split.txt door-0xd32d14.txt door-0xd32d14r.txt door-0xd32d14s.txt : report /data/ssd1/door-0xd32d14.mdb/data.mdb
+  gadget = door-0xd32d14
+  database = /data/ssd1/door-0xd32d14.mdb
+build door-d03d21d54-split.txt door-d03d21d54r-split.txt door-d03d21d54s-split.txt door-d03d21d54.txt door-d03d21d54r.txt door-d03d21d54s.txt : report /data/ssd1/door-d03d21d54.mdb/data.mdb
+  gadget = door-d03d21d54
+  database = /data/ssd1/door-d03d21d54.mdb
+build door-0xd14d23-split.txt door-0xd14d23r-split.txt door-0xd14d23s-split.txt door-0xd14d23.txt door-0xd14d23r.txt door-0xd14d23s.txt : report /data/ssd2/door-0xd14d23.mdb/data.mdb
+  gadget = door-0xd14d23
+  database = /data/ssd2/door-0xd14d23.mdb
+build door-0xd21d34-split.txt door-0xd21d34r-split.txt door-0xd21d34s-split.txt door-0xd21d34.txt door-0xd21d34r.txt door-0xd21d34s.txt : report /data/ssd2/door-0xd21d34.mdb/data.mdb
+  gadget = door-0xd21d34
+  database = /data/ssd2/door-0xd21d34.mdb
+build door-d03d12d45-split.txt door-d03d12d45r-split.txt door-d03d12d45s-split.txt door-d03d12d45.txt door-d03d12d45r.txt door-d03d12d45s.txt : report /data/ssd2/door-d03d12d45.mdb/data.mdb
+  gadget = door-d03d12d45
+  database = /data/ssd2/door-d03d12d45.mdb
+build door-0xd14d32-split.txt door-0xd14d32r-split.txt door-0xd14d32s-split.txt door-0xd14d32.txt door-0xd14d32r.txt door-0xd14d32s.txt : report /data/ssd3/door-0xd14d32.mdb/data.mdb
+  gadget = door-0xd14d32
+  database = /data/ssd3/door-0xd14d32.mdb
+build door-0xd21d43-split.txt door-0xd21d43r-split.txt door-0xd21d43s-split.txt door-0xd21d43.txt door-0xd21d43r.txt door-0xd21d43s.txt : report /data/ssd4/door-0xd21d43.mdb/data.mdb
+  gadget = door-0xd21d43
+  database = /data/ssd4/door-0xd21d43.mdb
+build door-d03d12d54-split.txt door-d03d12d54r-split.txt door-d03d12d54s-split.txt door-d03d12d54.txt door-d03d12d54r.txt door-d03d12d54s.txt : report /data/ssd4/door-d03d12d54.mdb/data.mdb
+  gadget = door-d03d12d54
+  database = /data/ssd4/door-d03d12d54.mdb
+build door-0xd23d14-split.txt door-0xd23d14r-split.txt door-0xd23d14s-split.txt door-0xd23d14.txt door-0xd23d14r.txt door-0xd23d14s.txt : report /data/ssd5/door-0xd23d14.mdb/data.mdb
+  gadget = door-0xd23d14
+  database = /data/ssd5/door-0xd23d14.mdb
+build door-d03d21d45-split.txt door-d03d21d45r-split.txt door-d03d21d45s-split.txt door-d03d21d45.txt door-d03d21d45r.txt door-d03d21d45s.txt : report /data/ssd5/door-d03d21d45.mdb/data.mdb
+  gadget = door-d03d21d45
+  database = /data/ssd5/door-d03d21d45.mdb

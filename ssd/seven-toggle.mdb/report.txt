@@ -1,0 +1,3365 @@
+Report on /data/ssd/seven-toggle.mdb/ started at 2020-03-14 12:56:01 EDT
+Database ID 162344105b186509, created on inconsolable at 2020-03-13 14:31:02 EDT
+Source spec: 3-split seven-toggle-noncrossing-matched seven-toggle-noncrossing-mismatched
+
+==> Step 1: 0 user, 0 sys, 0h0m0s wall (1.89), 2.93 GiB (0.00, 0)
+-->    closed:          17          17   1.0       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:          17          17   1.0       0 MiB
+-->   combine:          17          17   1.0       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.53
+
+Target trace:
+  1 = source {wire}
+Source trace:
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  1 = connect 5126294 at 2 @0
+
+Target trace:
+  3 = source {toggle}
+Source trace:
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+
+Target trace:
+  1105667 = source {2st_39-1}
+  5129147 = close 1105667 @1
+Source trace:
+  10307 = source {seven-toggle-noncrossing-matched-closed-0-r, toggle-seven-noncrossing-matched-0-closed-s}
+  5126359 = close 10307 @3
+  5129147 = connect 5126359 at 3 @1
+
+==> Step 2: 0 user, 0 sys, 0h0m0s wall (0.11), 2.93 GiB (0.00, 0)
+-->    closed:          20          20   1.0       0 MiB
+--> closemirr:           3           3   1.0       0 MiB
+-->   connect:           3           3   1.0       0 MiB
+-->   combine:          20          20   1.0       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.52
+
+==> Step 3: 0 user, 0 sys, 0h0m0s wall (0.99), 2.93 GiB (0.00, 0)
+-->    closed:          20          20   1.0       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           3           3   1.0       0 MiB
+-->   combine:          20          20   1.0       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.52
+
+==> Step 4: 0 user, 0 sys, 0h0m0s wall (0.98), 2.93 GiB (0.00, 0)
+-->    closed:          20          20   1.0       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:          20          20   1.0       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.52
+
+Target trace:
+  207 = source {4-split}
+Source trace:
+  13 = source {3-split}
+  207 = combine 13 splice 0 with 13 rotate 0 connect at 2 @0
+
+==> Step 5: 0 user, 0 sys, 0h0m0s wall (0.60), 2.93 GiB (0.00, 0)
+-->    closed:         579          22  26.3       0 MiB
+--> closemirr:         559           2 279.5       0 MiB
+-->   connect:         559           2 279.5       0 MiB
+-->   combine:         559           2 279.5       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.90
+
+==> Step 6: 0 user, 0 sys, 0h0m0s wall (0.92), 2.93 GiB (0.00, 0)
+-->    closed:         579          22  26.3       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:         559           2 279.5       0 MiB
+-->   combine:         559           2 279.5       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.90
+
+Target trace:
+  127 = source {l3s3_42-0-s, l3s3_42-1-r}
+Source trace:
+  13 = source {3-split}
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  5131555 = combine 5126692 splice 2 with 13 rotate 0 connect at 4 @2
+  127 = connect 5131555 at 4 @2
+
+Target trace:
+  128 = source {l3s3_42-0-r, l3s3_42-1-s}
+Source trace:
+  13 = source {3-split}
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  5131556 = combine 5126294 splice 1 with 13 rotate 0 connect at 3 @0
+  128 = connect 5131556 at 0 @1
+
+Target trace:
+  205 = source {wire-wire-noncrossing}
+Source trace:
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  5131588 = combine 5126548 splice 2 with 5126294 rotate 0 connect at 5 @0
+  205 = connect 5131588 at 4 @0
+
+Target trace:
+  1110707 = source {2st_39-2st_59-parallel-matched-1-1-s, 2st_59-2st_39-parallel-matched-1-1-r}
+  5129192 = close 1110707 @0
+Source trace:
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  5131587 = combine 5126533 splice 0 with 5126402 rotate 0 connect at 3 @0
+  5129192 = connect 5131587 at 2 @0
+
+Target trace:
+  1106461 = source {2st_28-2st_59-antiparallel-matched-1-1-s, 2st_28-2st_59-parallel-matched-1-1-s, 2st_28-2st_71-noncrossing-matched-1-1-s, 2st_28-wire-noncrossing-1-1-s, 2st_35-2st_59-antiparallel-mismatched-0-1-s, 2st_35-2st_59-parallel-mismatched-0-1-s, 2st_35-2st_71-noncrossing-mismatched-0-1-s, 2st_35-wire-noncrossing-0-0-s, 2st_41-2st_59-noncrossing-matched-1-1-r, 2st_41-2st_59-noncrossing-mismatched-0-1-s, 2st_41-2st_71-noncrossing-matched-1-1-r, 2st_41-2st_71-noncrossing-mismatched-0-1-s, 2st_41-wire-noncrossing-1-1, 2st_49-2st_59-antiparallel-matched-1-1-s, 2st_49-2st_59-parallel-matched-1-1-s, 2st_49-2st_71-noncrossing-matched-1-1-s, 2st_49-wire-noncrossing-1-1-s, 2st_51-2st_59-antiparallel-matched-1-1-s, 2st_51-2st_59-parallel-matched-1-1-s, 2st_51-2st_71-noncrossing-matched-1-1-s, 2st_51-wire-noncrossing-1-1-s, 2st_56-2st_59-antiparallel-mismatched-0-1-s, 2st_56-2st_59-parallel-mismatched-0-1-s, 2st_56-2st_71-noncrossing-mismatched-0-1-s, 2st_56-wire-noncrossing-0-0-s, 2st_59-2st_28-antiparallel-matched-1-1-s, 2st_59-2st_28-parallel-matched-1-1-r, 2st_59-2st_35-antiparallel-mismatched-1-0-s, 2st_59-2st_35-parallel-mismatched-1-0-r, 2st_59-2st_41-noncrossing-matched-1-1-s, 2st_59-2st_41-noncrossing-mismatched-1-0-r, 2st_59-2st_49-antiparallel-matched-1-1-s, 2st_59-2st_49-parallel-matched-1-1-r, 2st_59-2st_51-antiparallel-matched-1-1-s, 2st_59-2st_51-parallel-matched-1-1-r, 2st_59-2st_56-antiparallel-mismatched-1-0-s, 2st_59-2st_56-parallel-mismatched-1-0-r, 2st_59-2st_62-antiparallel-mismatched-1-0-s, 2st_59-2st_62-parallel-mismatched-1-0-r, 2st_59-2st_63-antiparallel-matched-1-1-s, 2st_59-2st_63-parallel-matched-1-1-r, 2st_59-seven-antiparallel-mismatched-1-closed-s, 2st_59-seven-parallel-mismatched-1-closed-r, 2st_59-shortcut-antiparallel-mismatched-1-closed-s, 2st_59-shortcut-parallel-mismatched-1-closed-r, 2st_62-2st_59-antiparallel-mismatched-0-1-s, 2st_62-2st_59-parallel-mismatched-0-1-s, 2st_62-2st_71-noncrossing-mismatched-0-1-s, 2st_62-wire-noncrossing-0-0-s, 2st_63-2st_59-antiparallel-matched-1-1-s, 2st_63-2st_59-parallel-matched-1-1-s, 2st_63-2st_71-noncrossing-matched-1-1-s, 2st_63-wire-noncrossing-1-1-s, 2st_71-2st_28-noncrossing-matched-1-1-r, 2st_71-2st_35-noncrossing-mismatched-1-0-r, 2st_71-2st_41-noncrossing-matched-1-1-s, 2st_71-2st_41-noncrossing-mismatched-1-0-r, 2st_71-2st_49-noncrossing-matched-1-1-r, 2st_71-2st_51-noncrossing-matched-1-1-r, 2st_71-2st_56-noncrossing-mismatched-1-0-r, 2st_71-2st_62-noncrossing-mismatched-1-0-r, 2st_71-2st_63-noncrossing-matched-1-1-r, 2st_71-seven-noncrossing-mismatched-1-closed-r, 2st_71-shortcut-noncrossing-mismatched-1-closed-r, seven-2st_59-antiparallel-mismatched-closed-1-s, seven-2st_59-parallel-mismatched-closed-1-s, seven-2st_71-noncrossing-mismatched-closed-1-s, seven-wire-noncrossing-closed-0-s, shortcut-2st_59-antiparallel-mismatched-closed-1-s, shortcut-2st_59-parallel-mismatched-closed-1-s, shortcut-2st_71-noncrossing-mismatched-closed-1-s, shortcut-wire-noncrossing-closed-0-s, wire-2st_28-noncrossing-1-1-r, wire-2st_35-noncrossing-0-0-r, wire-2st_41-noncrossing-0-0, wire-2st_49-noncrossing-1-1-r, wire-2st_51-noncrossing-1-1-r, wire-2st_56-noncrossing-0-0-r, wire-2st_62-noncrossing-0-0-r, wire-2st_63-noncrossing-1-1-r, wire-seven-noncrossing-0-closed-r, wire-shortcut-noncrossing-0-closed-r}
+  5129194 = close 1106461 @0
+Source trace:
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10343 = source {seven-toggle-noncrossing-matched-closed-0-s, toggle-seven-noncrossing-matched-0-closed-r}
+  5126602 = close 10343 @0
+  5131592 = combine 5126602 splice 0 with 5126402 rotate 0 connect at 3 @0
+  5129194 = connect 5131592 at 2 @0
+
+==> Step 7: 0 user, 0 sys, 0h0m0s wall (0.24), 2.93 GiB (0.00, 0)
+-->    closed:         622          26  23.9       0 MiB
+--> closemirr:          43           5   8.6       0 MiB
+-->   connect:          43           5   8.6       0 MiB
+-->   combine:         602           6 100.3       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.90
+
+==> Step 8: 0 user, 0 sys, 0h0m0s wall (1.01), 2.93 GiB (0.00, 0)
+-->    closed:         622          26  23.9       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:          43           5   8.6       0 MiB
+-->   combine:         602           6 100.3       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.90
+
+==> Step 9: 0 user, 0 sys, 0h0m0s wall (0.99), 2.93 GiB (0.00, 0)
+-->    closed:         622          26  23.9       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:         602           6 100.3       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.90
+
+Target trace:
+  16839 = source {5-split}
+Source trace:
+  13 = source {3-split}
+  207 = combine 13 splice 0 with 13 rotate 0 connect at 2 @0
+  16839 = combine 207 splice 0 with 13 rotate 0 connect at 2 @0
+
+Target trace:
+  11273 = source {2st_74-toggle-noncrossing-mismatched-0-1-s, toggle-2st_74-noncrossing-mismatched-1-0-r}
+  5127972 = close 11273 @0
+Source trace:
+  13 = source {3-split}
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  5131555 = combine 5126692 splice 2 with 13 rotate 0 connect at 4 @2
+  127 = connect 5131555 at 4 @2
+  5127972 = combine 127 splice 1 with 13 rotate 0 connect at 3 @1
+
+Target trace:
+  10815 = source {2st_68-toggle-noncrossing-matched-0-0-s, toggle-2st_68-noncrossing-matched-0-0-r}
+  5128022 = close 10815 @2
+Source trace:
+  13 = source {3-split}
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  5131556 = combine 5126294 splice 1 with 13 rotate 0 connect at 3 @0
+  128 = connect 5131556 at 0 @1
+  5128022 = combine 128 splice 0 with 13 rotate 0 connect at 5 @0
+
+==> Step 10: 0 user, 0 sys, 0h0m0s wall (0.87), 2.93 GiB (0.00, 0)
+-->    closed:       11703          29 403.6       0 MiB
+--> closemirr:       11081           4   big       0 MiB
+-->   connect:       11081           4   big       0 MiB
+-->   combine:       11081           4   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.91
+
+==> Step 11: 0 user, 0 sys, 0h0m0s wall (0.96), 2.93 GiB (0.00, 0)
+-->    closed:       11703          29 403.6       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:       11081           4   big       0 MiB
+-->   combine:       11081           4   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.91
+
+Target trace:
+  130 = source {l3s3_44-2-r}
+Source trace:
+  13 = source {3-split}
+  10343 = source {seven-toggle-noncrossing-matched-closed-0-s, toggle-seven-noncrossing-matched-0-closed-r}
+  5126602 = close 10343 @0
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5131570 = combine 5126351 splice 2 with 13 rotate 0 connect at 4 @0
+  5132070 = connect 5131570 at 1 @0
+  5132549 = combine 5132070 splice 1 with 5126602 rotate 1 connect at 4 @4
+  130 = connect 5132549 at 4 @0
+
+Target trace:
+  132 = source {l3s3_44-2-s}
+Source trace:
+  13 = source {3-split}
+  10307 = source {seven-toggle-noncrossing-matched-closed-0-r, toggle-seven-noncrossing-matched-0-closed-s}
+  5126359 = close 10307 @3
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  5131572 = combine 5126294 splice 0 with 13 rotate 0 connect at 6 @0
+  5132068 = connect 5131572 at 1 @0
+  5132562 = combine 5132068 splice 0 with 5126359 rotate 1 connect at 3 @4
+  132 = connect 5132562 at 0 @2
+
+Target trace:
+  133 = source {l3s3_44-0-r}
+Source trace:
+  13 = source {3-split}
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  5131565 = combine 5126533 splice 0 with 13 rotate 0 connect at 2 @0
+  5132069 = connect 5131565 at 4 @0
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  5132565 = combine 5132069 splice 0 with 5126548 rotate 3 connect at 3 @1
+  133 = connect 5132565 at 1 @2
+
+Target trace:
+  134 = source {l3s3_44-1-r}
+Source trace:
+  13 = source {3-split}
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5131570 = combine 5126351 splice 2 with 13 rotate 0 connect at 4 @0
+  5132070 = connect 5131570 at 1 @0
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  5132566 = combine 5132070 splice 1 with 5126548 rotate 3 connect at 4 @2
+  134 = connect 5132566 at 1 @2
+
+Target trace:
+  139 = source {l3s3_44-0-s}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  5131574 = combine 5126692 splice 0 with 13 rotate 0 connect at 2 @0
+  5132067 = connect 5131574 at 1 @0
+  5132555 = combine 5132067 splice 0 with 5126402 rotate 0 connect at 3 @0
+  139 = connect 5132555 at 4 @1
+
+Target trace:
+  140 = source {l3s3_44-1-s}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  5131572 = combine 5126294 splice 0 with 13 rotate 0 connect at 6 @0
+  5132068 = connect 5131572 at 1 @0
+  5132559 = combine 5132068 splice 0 with 5126402 rotate 0 connect at 3 @0
+  140 = connect 5132559 at 4 @0
+
+Target trace:
+  230 = source {toggle-wire-noncrossing-1-1, wire-toggle-noncrossing-0-0}
+Source trace:
+  10343 = source {seven-toggle-noncrossing-matched-closed-0-s, toggle-seven-noncrossing-matched-0-closed-r}
+  5126602 = close 10343 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  5131588 = combine 5126548 splice 2 with 5126294 rotate 0 connect at 5 @0
+  205 = connect 5131588 at 4 @0
+  5133185 = combine 205 splice 0 with 5126602 rotate 1 connect at 3 @4
+  230 = connect 5133185 at 3 @0
+
+Target trace:
+  236 = source {toggle-wire-noncrossing-0-0, wire-toggle-noncrossing-1-1}
+Source trace:
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  5131588 = combine 5126548 splice 2 with 5126294 rotate 0 connect at 5 @0
+  205 = connect 5131588 at 4 @0
+  5133184 = combine 205 splice 0 with 5126692 rotate 0 connect at 3 @4
+  236 = connect 5133184 at 3 @0
+
+Target trace:
+  1105671 = source {l3s3_30-2-s}
+Source trace:
+  13 = source {3-split}
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  5131521 = combine 3 splice 0 with 5126548 rotate 0 connect at 3 @0
+  5132167 = combine 5131521 splice 1 with 13 rotate 0 connect at 3 @0
+  1105671 = connect 5132167 at 0 @1
+
+Target trace:
+  1105672 = source {l3s3_30-2-r}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131516 = combine 3 splice 0 with 5126402 rotate 3 connect at 3 @1
+  5132163 = combine 5131516 splice 0 with 13 rotate 0 connect at 2 @0
+  1105672 = connect 5132163 at 1 @1
+
+Target trace:
+  1110345 = source {2st_56-2st_68-parallel-mismatched-0-1-s, 2st_68-2st_56-parallel-mismatched-1-0-r}
+  5129189 = close 1110345 @3
+Source trace:
+  13 = source {3-split}
+  10343 = source {seven-toggle-noncrossing-matched-closed-0-s, toggle-seven-noncrossing-matched-0-closed-r}
+  5126602 = close 10343 @0
+  5131563 = combine 5126602 splice 0 with 13 rotate 0 connect at 2 @0
+  5133265 = combine 5131563 splice 2 with 13 rotate 0 connect at 4 @0
+  5129189 = connect 5133265 at 1 @0
+
+Target trace:
+  1109710 = source {2st_60-2st_62-parallel-mismatched-1-0-s, 2st_62-2st_60-parallel-mismatched-0-1-r}
+  5129190 = close 1109710 @3
+Source trace:
+  13 = source {3-split}
+  10307 = source {seven-toggle-noncrossing-matched-closed-0-r, toggle-seven-noncrossing-matched-0-closed-s}
+  5126359 = close 10307 @3
+  5131567 = combine 5126359 splice 0 with 13 rotate 0 connect at 2 @0
+  5133267 = combine 5131567 splice 0 with 13 rotate 0 connect at 7 @0
+  5129190 = connect 5133267 at 1 @0
+
+==> Step 12: 0 user, 0 sys, 0h0m0s wall (0.23), 2.93 GiB (0.00, 0)
+-->    closed:       11892          36 330.3       0 MiB
+--> closemirr:         189           8  23.6       0 MiB
+-->   connect:         189           8  23.6       0 MiB
+-->   combine:       11270          11   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.91
+
+==> Step 13: 0 user, 0 sys, 0h0m0s wall (1.01), 2.93 GiB (0.00, 0)
+-->    closed:       11892          36 330.3       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:         189           8  23.6       0 MiB
+-->   combine:       11270          11   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.91
+
+==> Step 14: 0 user, 0 sys, 0h0m0s wall (1.02), 2.93 GiB (0.00, 0)
+-->    closed:       11892          36 330.3       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:       11270          11   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.91
+
+Target trace:
+  19580 = source {6-split}
+Source trace:
+  13 = source {3-split}
+  207 = combine 13 splice 0 with 13 rotate 0 connect at 2 @0
+  16839 = combine 207 splice 0 with 13 rotate 0 connect at 2 @0
+  19580 = combine 16839 splice 0 with 13 rotate 0 connect at 2 @0
+
+==> Step 15: 0 user, 0 sys, 0h0m0s wall (1.19), 2.93 GiB (0.00, 0)
+-->    closed:       95499          37   big       0 MiB
+--> closemirr:       83607           2   big       0 MiB
+-->   connect:       83607           2   big       0 MiB
+-->   combine:       83607           2   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.92
+
+==> Step 16: 0 user, 0 sys, 0h0m0s wall (1.02), 2.93 GiB (0.00, 0)
+-->    closed:       95499          37   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:       83607           2   big       0 MiB
+-->   combine:       83607           2   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.92
+
+Target trace:
+  34 = source {l3s3_28-2}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  5132355 = combine 5131509 splice 1 with 5126692 rotate 1 connect at 4 @4
+  5143194 = connect 5132355 at 1 @0
+  5143919 = combine 5143194 splice 1 with 5126402 rotate 0 connect at 4 @1
+  34 = connect 5143919 at 0 @2
+
+Target trace:
+  35 = source {l3s3_29-1-r}
+Source trace:
+  13 = source {3-split}
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  5131574 = combine 5126692 splice 0 with 13 rotate 0 connect at 2 @0
+  5132067 = connect 5131574 at 1 @0
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  5132554 = combine 5132067 splice 0 with 5126548 rotate 3 connect at 3 @1
+  5143204 = connect 5132554 at 1 @2
+  5143952 = combine 5143204 splice 1 with 5126294 rotate 0 connect at 4 @1
+  35 = connect 5143952 at 0 @0
+
+Target trace:
+  36 = source {l3s3_29-0-r}
+Source trace:
+  13 = source {3-split}
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  5131572 = combine 5126294 splice 0 with 13 rotate 0 connect at 6 @0
+  5132068 = connect 5131572 at 1 @0
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  5132547 = combine 5132068 splice 0 with 5126548 rotate 3 connect at 3 @1
+  5143201 = connect 5132547 at 1 @2
+  5143950 = combine 5143201 splice 1 with 5126692 rotate 1 connect at 4 @0
+  36 = connect 5143950 at 1 @0
+
+Target trace:
+  37 = source {l3s3_28-1}
+Source trace:
+  13 = source {3-split}
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+
+Target trace:
+  38 = source {l3s3_28-0}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  5132380 = combine 5131509 splice 0 with 5126533 rotate 1 connect at 3 @4
+  5143197 = connect 5132380 at 3 @0
+  5143922 = combine 5143197 splice 0 with 5126402 rotate 3 connect at 6 @0
+  38 = connect 5143922 at 0 @1
+
+Target trace:
+  39 = source {l3s3_29-1-s}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  5131565 = combine 5126533 splice 0 with 13 rotate 0 connect at 2 @0
+  5132069 = connect 5131565 at 4 @0
+  5132569 = combine 5132069 splice 0 with 5126402 rotate 0 connect at 3 @0
+  5143200 = connect 5132569 at 4 @1
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  5143960 = combine 5143200 splice 0 with 5126548 rotate 2 connect at 6 @1
+  39 = connect 5143960 at 0 @2
+
+Target trace:
+  40 = source {l3s3_29-2-r}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10343 = source {seven-toggle-noncrossing-matched-closed-0-s, toggle-seven-noncrossing-matched-0-closed-r}
+  5126602 = close 10343 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  5131572 = combine 5126294 splice 0 with 13 rotate 0 connect at 6 @0
+  5132068 = connect 5131572 at 1 @0
+  5132563 = combine 5132068 splice 0 with 5126602 rotate 1 connect at 3 @4
+  5143203 = connect 5132563 at 3 @0
+  5143961 = combine 5143203 splice 0 with 5126402 rotate 3 connect at 6 @0
+  40 = connect 5143961 at 0 @1
+
+Target trace:
+  41 = source {l3s3_29-0-s}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10307 = source {seven-toggle-noncrossing-matched-closed-0-r, toggle-seven-noncrossing-matched-0-closed-s}
+  5126359 = close 10307 @3
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5131570 = combine 5126351 splice 2 with 13 rotate 0 connect at 4 @0
+  5132070 = connect 5131570 at 1 @0
+  5132552 = combine 5132070 splice 1 with 5126402 rotate 0 connect at 4 @1
+  5143202 = connect 5132552 at 4 @0
+  5143958 = combine 5143202 splice 0 with 5126359 rotate 1 connect at 3 @3
+  41 = connect 5143958 at 1 @0
+
+Target trace:
+  42 = source {l3s3_29-2-s}
+Source trace:
+  13 = source {3-split}
+  10307 = source {seven-toggle-noncrossing-matched-closed-0-r, toggle-seven-noncrossing-matched-0-closed-s}
+  5126359 = close 10307 @3
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5131570 = combine 5126351 splice 2 with 13 rotate 0 connect at 4 @0
+  5132070 = connect 5131570 at 1 @0
+  5132553 = combine 5132070 splice 1 with 5126359 rotate 1 connect at 4 @4
+  5143199 = connect 5132553 at 1 @0
+  5143957 = combine 5143199 splice 1 with 5126294 rotate 0 connect at 4 @1
+  42 = connect 5143957 at 0 @2
+
+==> Step 17: 0 user, 0 sys, 0h0m0s wall (0.46), 2.93 GiB (0.00, 0)
+-->    closed:       96334          38   big       0 MiB
+--> closemirr:         835           2 417.5       0 MiB
+-->   connect:         835           2 417.5       0 MiB
+-->   combine:       84442           3   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.92
+
+==> Step 18: 0 user, 0 sys, 0h0m0s wall (1.00), 2.93 GiB (0.00, 0)
+-->    closed:       96334          38   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:         835           2 417.5       0 MiB
+-->   combine:       84442           3   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.92
+
+==> Step 19: 0 user, 0 sys, 0h0m0s wall (1.51), 2.93 GiB (0.00, 0)
+-->    closed:       96341          38   big       0 MiB
+--> closemirr:           7           1   7.0       0 MiB
+-->   connect:           7           1   7.0       0 MiB
+-->   combine:       84449           3   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.92
+
+==> Step 20: 0 user, 0 sys, 0h0m0s wall (1.00), 2.93 GiB (0.00, 0)
+-->    closed:       96341          38   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           7           1   7.0       0 MiB
+-->   combine:       84449           3   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.92
+
+==> Step 21: 0 user, 0 sys, 0h0m0s wall (0.97), 2.93 GiB (0.00, 0)
+-->    closed:       96341          38   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:       84449           3   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.92
+
+==> Step 22: 0 user, 0 sys, 0h0m0s wall (1.35), 2.93 GiB (0.00, 0)
+-->    closed:      291615          38   big       0 MiB
+--> closemirr:      195274           1   big       0 MiB
+-->   connect:      195274           1   big       0 MiB
+-->   combine:      195274           1   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.95
+
+==> Step 23: 0 user, 0 sys, 0h0m0s wall (0.98), 2.93 GiB (0.00, 0)
+-->    closed:      291615          38   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:      195274           1   big       0 MiB
+-->   combine:      195274           1   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.95
+
+==> Step 24: 0 user, 0 sys, 0h0m0s wall (1.12), 2.93 GiB (0.00, 0)
+-->    closed:      293865          38   big       0 MiB
+--> closemirr:        2250           1   big       0 MiB
+-->   connect:        2250           1   big       0 MiB
+-->   combine:      197524           1   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.95
+
+==> Step 25: 0 user, 0 sys, 0h0m0s wall (0.97), 2.93 GiB (0.00, 0)
+-->    closed:      293865          38   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:        2250           1   big       0 MiB
+-->   combine:      197524           1   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.95
+
+==> Step 26: 0 user, 0 sys, 0h0m0s wall (1.35), 2.93 GiB (0.00, 0)
+-->    closed:      293867          38   big       0 MiB
+--> closemirr:           2           1   2.0       0 MiB
+-->   connect:           2           1   2.0       0 MiB
+-->   combine:      197526           1   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.95
+
+==> Step 27: 0 user, 0 sys, 0h0m0s wall (1.01), 2.93 GiB (0.00, 0)
+-->    closed:      293867          38   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           2           1   2.0       0 MiB
+-->   combine:      197526           1   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.95
+
+==> Step 28: 0 user, 0 sys, 0h0m0s wall (0.94), 2.93 GiB (0.00, 0)
+-->    closed:      293867          38   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:      197526           1   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.95
+
+==> Step 29: 0 user, 0 sys, 0h0m0s wall (1.35), 2.93 GiB (0.00, 0)
+-->    closed:      812572          38   big       0 MiB
+--> closemirr:      518705           1   big       0 MiB
+-->   connect:      518705           1   big       0 MiB
+-->   combine:      518705           1   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.92
+
+==> Step 30: 0 user, 0 sys, 0h0m0s wall (1.00), 2.93 GiB (0.00, 0)
+-->    closed:      812572          38   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:      518705           1   big       0 MiB
+-->   combine:      518705           1   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.92
+
+Target trace:
+  1105670 = source {l3s3_17-1, l3s3_21-1, l3s3_25-1, l3s3_32-2}
+Source trace:
+  13 = source {3-split}
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  5143712 = combine 5143193 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5358854 = combine 5143712 splice 3 with 13 rotate 0 connect at 5 @3
+  5423592 = connect 5358854 at 5 @2
+  5528744 = combine 5423592 splice 0 with 13 rotate 0 connect at 2 @0
+  1105670 = connect 5528744 at 0 @1
+
+==> Step 31: 0 user, 0 sys, 0h0m0s wall (0.53), 2.93 GiB (0.00, 0)
+-->    closed:      817283          38   big       0 MiB
+--> closemirr:        4711           2   big       0 MiB
+-->   connect:        4711           2   big       0 MiB
+-->   combine:      523416           2   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.92
+
+==> Step 32: 0 user, 0 sys, 0h0m0s wall (0.99), 2.93 GiB (0.00, 0)
+-->    closed:      817283          38   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:        4711           2   big       0 MiB
+-->   combine:      523416           2   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.92
+
+==> Step 33: 0 user, 0 sys, 0h0m0s wall (1.27), 2.93 GiB (0.00, 0)
+-->    closed:      817287          38   big       0 MiB
+--> closemirr:           4           1   4.0       0 MiB
+-->   connect:           4           1   4.0       0 MiB
+-->   combine:      523420           2   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.92
+
+==> Step 34: 0 user, 0 sys, 0h0m0s wall (0.99), 2.93 GiB (0.00, 0)
+-->    closed:      817287          38   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           4           1   4.0       0 MiB
+-->   combine:      523420           2   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.92
+
+==> Step 35: 0 user, 0 sys, 0h0m0s wall (0.98), 2.93 GiB (0.00, 0)
+-->    closed:      817287          38   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:      523420           2   big       0 MiB
+--> provenance:   0.00 GiB   0.00 GiB 0.92
+
+==> Step 36: 0 user, 0 sys, 0h0m0s wall (1.40), 2.93 GiB (0.00, 0)
+-->    closed:     1796809          38   big       0 MiB
+--> closemirr:      979522           1   big       0 MiB
+-->   connect:      979522           1   big       0 MiB
+-->   combine:      979522           1   big       0 MiB
+--> provenance:   0.01 GiB   0.01 GiB 0.89
+
+==> Step 37: 0 user, 0 sys, 0h0m0s wall (0.97), 2.93 GiB (0.00, 0)
+-->    closed:     1796809          38   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:      979522           1   big       0 MiB
+-->   combine:      979522           1   big       0 MiB
+--> provenance:   0.01 GiB   0.01 GiB 0.89
+
+Target trace:
+  45 = source {l3s3_8-0-s, s3l3_5-0-s}
+Source trace:
+  13 = source {3-split}
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5316059 = combine 37 splice 1 with 5126351 rotate 1 connect at 4 @3
+  5439555 = combine 5316059 splice 2 with 13 rotate 0 connect at 4 @2
+  5944464 = connect 5439555 at 1 @2
+  5967831 = combine 5944464 splice 0 with 13 rotate 0 connect at 6 @0
+  45 = connect 5967831 at 4 @0
+
+Target trace:
+  47 = source {l3s3_8-1-s, s3l3_5-1-s}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  5132380 = combine 5131509 splice 0 with 5126533 rotate 1 connect at 3 @4
+  5143197 = connect 5132380 at 3 @0
+  5143922 = combine 5143197 splice 0 with 5126402 rotate 3 connect at 6 @0
+  38 = connect 5143922 at 0 @1
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5403325 = combine 38 splice 0 with 5126351 rotate 1 connect at 3 @0
+  5494162 = combine 5403325 splice 0 with 13 rotate 0 connect at 2 @0
+  5945143 = connect 5494162 at 1 @0
+  5967841 = combine 5945143 splice 0 with 13 rotate 0 connect at 6 @0
+  47 = connect 5967841 at 1 @1
+
+Target trace:
+  53 = source {l3s3_8-1-r, s3l3_5-1-r}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  5132355 = combine 5131509 splice 1 with 5126692 rotate 1 connect at 4 @4
+  5143194 = connect 5132355 at 1 @0
+  5143919 = combine 5143194 splice 1 with 5126402 rotate 0 connect at 4 @1
+  34 = connect 5143919 at 0 @2
+  5406306 = combine 34 splice 0 with 5126294 rotate 2 connect at 3 @0
+  5567357 = combine 5406306 splice 1 with 13 rotate 0 connect at 3 @1
+  5945138 = connect 5567357 at 1 @3
+  5960339 = combine 5945138 splice 1 with 13 rotate 0 connect at 3 @1
+  53 = connect 5960339 at 1 @2
+
+Target trace:
+  56 = source {l3s3_8-0-r, s3l3_5-0-r}
+Source trace:
+  13 = source {3-split}
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5390936 = combine 37 splice 1 with 5126294 rotate 2 connect at 4 @1
+  5699195 = combine 5390936 splice 2 with 13 rotate 0 connect at 4 @2
+  5944475 = connect 5699195 at 1 @2
+  5971687 = combine 5944475 splice 2 with 13 rotate 0 connect at 4 @2
+  56 = connect 5971687 at 4 @2
+
+Target trace:
+  59 = source {l3s3_8-2-r, s3l3_5-2-r}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  5132355 = combine 5131509 splice 1 with 5126692 rotate 1 connect at 4 @4
+  5143194 = connect 5132355 at 1 @0
+  5143919 = combine 5143194 splice 1 with 5126402 rotate 0 connect at 4 @1
+  34 = connect 5143919 at 0 @2
+  5303819 = combine 34 splice 0 with 5126692 rotate 3 connect at 3 @1
+  5782123 = combine 5303819 splice 0 with 13 rotate 0 connect at 2 @0
+  5945132 = connect 5782123 at 1 @0
+  6009777 = combine 5945132 splice 1 with 13 rotate 0 connect at 3 @1
+  59 = connect 6009777 at 4 @0
+
+Target trace:
+  61 = source {l3s3_8-2-s, s3l3_5-2-s}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  5132355 = combine 5131509 splice 1 with 5126692 rotate 1 connect at 4 @4
+  5143194 = connect 5132355 at 1 @0
+  5143919 = combine 5143194 splice 1 with 5126402 rotate 0 connect at 4 @1
+  34 = connect 5143919 at 0 @2
+  5353411 = combine 34 splice 0 with 5126533 rotate 3 connect at 3 @1
+  5494163 = combine 5353411 splice 0 with 13 rotate 0 connect at 7 @0
+  5945135 = connect 5494163 at 1 @0
+  6025049 = combine 5945135 splice 1 with 13 rotate 0 connect at 3 @1
+  61 = connect 6025049 at 1 @2
+
+==> Step 38: 0 user, 0 sys, 0h0m0s wall (0.71), 2.93 GiB (0.00, 0)
+-->    closed:     1802433          44   big       0 MiB
+--> closemirr:        5624           7 803.4       0 MiB
+-->   connect:        5624           7 803.4       0 MiB
+-->   combine:      985146           7   big       0 MiB
+--> provenance:   0.01 GiB   0.01 GiB 0.89
+
+==> Step 39: 0 user, 0 sys, 0h0m0s wall (1.00), 2.93 GiB (0.00, 0)
+-->    closed:     1802433          44   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:        5624           7 803.4       0 MiB
+-->   combine:      985146           7   big       0 MiB
+--> provenance:   0.01 GiB   0.01 GiB 0.89
+
+==> Step 40: 0 user, 0 sys, 0h0m0s wall (1.25), 2.93 GiB (0.00, 0)
+-->    closed:     1802457          44   big       0 MiB
+--> closemirr:          24           1  24.0       0 MiB
+-->   connect:          24           1  24.0       0 MiB
+-->   combine:      985170           7   big       0 MiB
+--> provenance:   0.01 GiB   0.01 GiB 0.89
+
+==> Step 41: 0 user, 0 sys, 0h0m0s wall (0.95), 2.93 GiB (0.00, 0)
+-->    closed:     1802457          44   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:          24           1  24.0       0 MiB
+-->   combine:      985170           7   big       0 MiB
+--> provenance:   0.01 GiB   0.01 GiB 0.89
+
+==> Step 42: 0 user, 0 sys, 0h0m0s wall (0.99), 2.93 GiB (0.00, 0)
+-->    closed:     1802457          44   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:      985170           7   big       0 MiB
+--> provenance:   0.01 GiB   0.01 GiB 0.89
+
+==> Step 43: 0 user, 0 sys, 0h0m0s wall (1.50), 2.93 GiB (0.00, 0)
+-->    closed:     3357069          44   big       0 MiB
+--> closemirr:     1554612           1   big       0 MiB
+-->   connect:     1554612           1   big       0 MiB
+-->   combine:     1554612           1   big       0 MiB
+--> provenance:   0.01 GiB   0.02 GiB 0.93
+
+==> Step 44: 0 user, 0 sys, 0h0m0s wall (0.98), 2.93 GiB (0.00, 0)
+-->    closed:     3357069          44   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:     1554612           1   big       0 MiB
+-->   combine:     1554612           1   big       0 MiB
+--> provenance:   0.01 GiB   0.02 GiB 0.93
+
+Target trace:
+  19 = source {l3s3_11-1-s, l3s3_4-1-s, l3s3_9-1-s}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10307 = source {seven-toggle-noncrossing-matched-closed-0-r, toggle-seven-noncrossing-matched-0-closed-s}
+  5126359 = close 10307 @3
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  5132380 = combine 5131509 splice 0 with 5126533 rotate 1 connect at 3 @4
+  5143197 = connect 5132380 at 3 @0
+  5143922 = combine 5143197 splice 0 with 5126402 rotate 3 connect at 6 @0
+  38 = connect 5143922 at 0 @1
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5403325 = combine 38 splice 0 with 5126351 rotate 1 connect at 3 @0
+  5494162 = combine 5403325 splice 0 with 13 rotate 0 connect at 2 @0
+  5945143 = connect 5494162 at 1 @0
+  5967841 = combine 5945143 splice 0 with 13 rotate 0 connect at 6 @0
+  47 = connect 5967841 at 1 @1
+  8214891 = combine 47 splice 1 with 5126359 rotate 1 connect at 4 @4
+  19 = connect 8214891 at 1 @0
+
+Target trace:
+  21 = source {l3s3_11-0-s, l3s3_4-0-s, l3s3_9-0-s}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5316059 = combine 37 splice 1 with 5126351 rotate 1 connect at 4 @3
+  5439555 = combine 5316059 splice 2 with 13 rotate 0 connect at 4 @2
+  5944464 = connect 5439555 at 1 @2
+  5967831 = combine 5944464 splice 0 with 13 rotate 0 connect at 6 @0
+  45 = connect 5967831 at 4 @0
+  8099720 = combine 45 splice 0 with 5126402 rotate 3 connect at 6 @3
+  21 = connect 8099720 at 1 @0
+
+Target trace:
+  22 = source {l3s3_11-0-r, l3s3_4-0-r, l3s3_9-0-r}
+Source trace:
+  13 = source {3-split}
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5390936 = combine 37 splice 1 with 5126294 rotate 2 connect at 4 @1
+  5699195 = combine 5390936 splice 2 with 13 rotate 0 connect at 4 @2
+  5944475 = connect 5699195 at 1 @2
+  5971687 = combine 5944475 splice 2 with 13 rotate 0 connect at 4 @2
+  56 = connect 5971687 at 4 @2
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  7389307 = combine 56 splice 0 with 5126548 rotate 2 connect at 6 @1
+  22 = connect 7389307 at 1 @0
+
+Target trace:
+  23 = source {l3s3_11-1-r, l3s3_4-1-r, l3s3_9-1-r}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10343 = source {seven-toggle-noncrossing-matched-closed-0-s, toggle-seven-noncrossing-matched-0-closed-r}
+  5126602 = close 10343 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  5132355 = combine 5131509 splice 1 with 5126692 rotate 1 connect at 4 @4
+  5143194 = connect 5132355 at 1 @0
+  5143919 = combine 5143194 splice 1 with 5126402 rotate 0 connect at 4 @1
+  34 = connect 5143919 at 0 @2
+  5406306 = combine 34 splice 0 with 5126294 rotate 2 connect at 3 @0
+  5567357 = combine 5406306 splice 1 with 13 rotate 0 connect at 3 @1
+  5945138 = connect 5567357 at 1 @3
+  5960339 = combine 5945138 splice 1 with 13 rotate 0 connect at 3 @1
+  53 = connect 5960339 at 1 @2
+  7947727 = combine 53 splice 0 with 5126602 rotate 0 connect at 6 @3
+  23 = connect 7947727 at 4 @0
+
+Target trace:
+  221 = source {lock-toggle-noncrossing-matched-open-0-r, lock-toggle-noncrossing-mismatched-open-1-s, toggle-lock-noncrossing-matched-0-open-s, toggle-lock-noncrossing-mismatched-1-open-r}
+Source trace:
+  13 = source {3-split}
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5317588 = combine 37 splice 1 with 5126692 rotate 3 connect at 4 @2
+  5644474 = combine 5317588 splice 3 with 13 rotate 0 connect at 5 @3
+  5944407 = connect 5644474 at 1 @0
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  6227680 = combine 5944407 splice 2 with 5126548 rotate 3 connect at 5 @0
+  6929507 = connect 6227680 at 4 @0
+  6934078 = combine 6929507 splice 0 with 5126548 rotate 2 connect at 7 @1
+  221 = connect 6934078 at 1 @0
+
+Target trace:
+  222 = source {lock-toggle-noncrossing-matched-closed-1-r, lock-toggle-noncrossing-mismatched-closed-0-s, toggle-lock-noncrossing-matched-1-closed-s, toggle-lock-noncrossing-mismatched-0-closed-r}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10343 = source {seven-toggle-noncrossing-matched-closed-0-s, toggle-seven-noncrossing-matched-0-closed-r}
+  5126602 = close 10343 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  5132380 = combine 5131509 splice 0 with 5126533 rotate 1 connect at 3 @4
+  5143197 = connect 5132380 at 3 @0
+  5143922 = combine 5143197 splice 0 with 5126402 rotate 3 connect at 6 @0
+  38 = connect 5143922 at 0 @1
+  5401777 = combine 38 splice 0 with 5126294 rotate 2 connect at 3 @0
+  5717458 = combine 5401777 splice 0 with 13 rotate 0 connect at 7 @0
+  5944402 = connect 5717458 at 1 @2
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  6756880 = combine 5944402 splice 0 with 5126548 rotate 3 connect at 3 @1
+  6932230 = connect 6756880 at 1 @3
+  7304278 = combine 6932230 splice 1 with 5126602 rotate 1 connect at 4 @4
+  222 = connect 7304278 at 5 @1
+
+Target trace:
+  223 = source {lock-toggle-noncrossing-matched-open-0-s, lock-toggle-noncrossing-mismatched-open-1-r, toggle-lock-noncrossing-matched-0-open-r, toggle-lock-noncrossing-mismatched-1-open-s}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5262147 = combine 37 splice 1 with 5126402 rotate 1 connect at 4 @2
+  5737771 = combine 5262147 splice 2 with 13 rotate 0 connect at 4 @2
+  5944396 = connect 5737771 at 5 @3
+  6144066 = combine 5944396 splice 0 with 5126402 rotate 3 connect at 7 @3
+  6933480 = connect 6144066 at 2 @0
+  7765052 = combine 6933480 splice 0 with 5126294 rotate 2 connect at 7 @1
+  223 = connect 7765052 at 1 @0
+
+Target trace:
+  224 = source {lock-toggle-noncrossing-matched-closed-1-s, lock-toggle-noncrossing-mismatched-closed-0-r, toggle-lock-noncrossing-matched-1-closed-r, toggle-lock-noncrossing-mismatched-0-closed-s}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10307 = source {seven-toggle-noncrossing-matched-closed-0-r, toggle-seven-noncrossing-matched-0-closed-s}
+  5126359 = close 10307 @3
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  5132355 = combine 5131509 splice 1 with 5126692 rotate 1 connect at 4 @4
+  5143194 = connect 5132355 at 1 @0
+  5143919 = combine 5143194 splice 1 with 5126402 rotate 0 connect at 4 @1
+  34 = connect 5143919 at 0 @2
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5247596 = combine 34 splice 0 with 5126351 rotate 1 connect at 3 @2
+  5701228 = combine 5247596 splice 0 with 13 rotate 0 connect at 2 @0
+  5944394 = connect 5701228 at 1 @2
+  6745258 = combine 5944394 splice 0 with 5126402 rotate 0 connect at 3 @0
+  6932985 = connect 6745258 at 5 @1
+  7201637 = combine 6932985 splice 0 with 5126359 rotate 0 connect at 7 @3
+  224 = connect 7201637 at 2 @0
+
+Target trace:
+  1105674 = source {l3s3_18-1-s, l3s3_20-1-r}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  5132380 = combine 5131509 splice 0 with 5126533 rotate 1 connect at 3 @4
+  5143197 = connect 5132380 at 3 @0
+  5143922 = combine 5143197 splice 0 with 5126402 rotate 3 connect at 6 @0
+  38 = connect 5143922 at 0 @1
+  5401777 = combine 38 splice 0 with 5126294 rotate 2 connect at 3 @0
+  5717458 = combine 5401777 splice 0 with 13 rotate 0 connect at 7 @0
+  5944402 = connect 5717458 at 1 @2
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  6756880 = combine 5944402 splice 0 with 5126548 rotate 3 connect at 3 @1
+  6932230 = connect 6756880 at 1 @3
+  7159131 = combine 6932230 splice 0 with 13 rotate 0 connect at 2 @0
+  1105674 = connect 7159131 at 1 @1
+
+Target trace:
+  1105677 = source {l3s3_18-2-s, l3s3_20-2-r}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10307 = source {seven-toggle-noncrossing-matched-closed-0-r, toggle-seven-noncrossing-matched-0-closed-s}
+  5126359 = close 10307 @3
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  5132355 = combine 5131509 splice 1 with 5126692 rotate 1 connect at 4 @4
+  5143194 = connect 5132355 at 1 @0
+  5143919 = combine 5143194 splice 1 with 5126402 rotate 0 connect at 4 @1
+  34 = connect 5143919 at 0 @2
+  5413972 = combine 34 splice 0 with 5126359 rotate 2 connect at 3 @2
+  5717459 = combine 5413972 splice 1 with 13 rotate 0 connect at 3 @1
+  5944406 = connect 5717459 at 5 @0
+  6664486 = combine 5944406 splice 2 with 5126402 rotate 0 connect at 5 @2
+  6929875 = connect 6664486 at 5 @3
+  7498958 = combine 6929875 splice 1 with 13 rotate 0 connect at 3 @1
+  1105677 = connect 7498958 at 1 @2
+
+Target trace:
+  1105679 = source {l3s3_18-2-r, l3s3_20-2-s}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  5132355 = combine 5131509 splice 1 with 5126692 rotate 1 connect at 4 @4
+  5143194 = connect 5132355 at 1 @0
+  5143919 = combine 5143194 splice 1 with 5126402 rotate 0 connect at 4 @1
+  34 = connect 5143919 at 0 @2
+  5353411 = combine 34 splice 0 with 5126533 rotate 3 connect at 3 @1
+  5776113 = combine 5353411 splice 1 with 13 rotate 0 connect at 3 @1
+  5944393 = connect 5776113 at 1 @3
+  6737570 = combine 5944393 splice 0 with 5126402 rotate 3 connect at 7 @0
+  6930626 = connect 6737570 at 5 @2
+  7134657 = combine 6930626 splice 2 with 13 rotate 0 connect at 4 @2
+  1105679 = connect 7134657 at 1 @1
+
+Target trace:
+  1105680 = source {l3s3_18-1-r, l3s3_20-1-s}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  5132355 = combine 5131509 splice 1 with 5126692 rotate 1 connect at 4 @4
+  5143194 = connect 5132355 at 1 @0
+  5143919 = combine 5143194 splice 1 with 5126402 rotate 0 connect at 4 @1
+  34 = connect 5143919 at 0 @2
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5247596 = combine 34 splice 0 with 5126351 rotate 1 connect at 3 @2
+  5701228 = combine 5247596 splice 0 with 13 rotate 0 connect at 2 @0
+  5944394 = connect 5701228 at 1 @2
+  6745258 = combine 5944394 splice 0 with 5126402 rotate 0 connect at 3 @0
+  6932985 = connect 6745258 at 5 @1
+  7110287 = combine 6932985 splice 0 with 13 rotate 0 connect at 6 @0
+  1105680 = connect 7110287 at 1 @2
+
+Target trace:
+  1108900 = source {2st_51-2st_56-antiparallel-mismatched-1-0-r, 2st_56-2st_51-antiparallel-mismatched-0-1-r}
+  5129181 = close 1108900 @1
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5131595 = combine 5126402 splice 2 with 5126351 rotate 0 connect at 5 @0
+  5132077 = connect 5131595 at 1 @0
+  5133346 = combine 5132077 splice 0 with 5126692 rotate 1 connect at 3 @3
+  5143254 = connect 5133346 at 3 @0
+  5143648 = combine 5143254 splice 0 with 13 rotate 0 connect at 6 @0
+  5226969 = connect 5143648 at 4 @1
+  5307590 = combine 5226969 splice 0 with 13 rotate 0 connect at 5 @0
+  5447572 = combine 5307590 splice 0 with 13 rotate 0 connect at 6 @0
+  6443679 = combine 5447572 splice 1 with 5126533 rotate 2 connect at 4 @4
+  6932779 = connect 6443679 at 6 @0
+  7631762 = combine 6932779 splice 1 with 13 rotate 0 connect at 3 @1
+  5129181 = connect 7631762 at 5 @1
+
+Target trace:
+  1109292 = source {2st_39-2st_56-parallel-mismatched-1-0-r, 2st_56-2st_39-parallel-mismatched-0-1-s}
+  5129182 = close 1109292 @1
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5131595 = combine 5126402 splice 2 with 5126351 rotate 0 connect at 5 @0
+  5132077 = connect 5131595 at 1 @0
+  5133346 = combine 5132077 splice 0 with 5126692 rotate 1 connect at 3 @3
+  5143254 = connect 5133346 at 3 @0
+  5143648 = combine 5143254 splice 0 with 13 rotate 0 connect at 6 @0
+  5226969 = connect 5143648 at 4 @1
+  5307590 = combine 5226969 splice 0 with 13 rotate 0 connect at 5 @0
+  5447572 = combine 5307590 splice 0 with 13 rotate 0 connect at 6 @0
+  6750284 = combine 5447572 splice 1 with 5126692 rotate 1 connect at 4 @4
+  6932915 = connect 6750284 at 6 @2
+  7031291 = combine 6932915 splice 0 with 13 rotate 0 connect at 2 @0
+  5129182 = connect 7031291 at 5 @1
+
+Target trace:
+  1108774 = source {2st_39-2st_41-noncrossing-matched-1-1-r, 2st_41-2st_39-noncrossing-matched-1-1-s}
+  5129184 = close 1108774 @1
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10343 = source {seven-toggle-noncrossing-matched-closed-0-s, toggle-seven-noncrossing-matched-0-closed-r}
+  5126602 = close 10343 @0
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5131595 = combine 5126402 splice 2 with 5126351 rotate 0 connect at 5 @0
+  5132077 = connect 5131595 at 1 @0
+  5133346 = combine 5132077 splice 0 with 5126692 rotate 1 connect at 3 @3
+  5143254 = connect 5133346 at 3 @0
+  5143648 = combine 5143254 splice 0 with 13 rotate 0 connect at 6 @0
+  5226969 = connect 5143648 at 4 @1
+  5307590 = combine 5226969 splice 0 with 13 rotate 0 connect at 5 @0
+  5447572 = combine 5307590 splice 0 with 13 rotate 0 connect at 6 @0
+  6133390 = combine 5447572 splice 2 with 5126602 rotate 1 connect at 5 @0
+  6930726 = connect 6133390 at 1 @3
+  7104395 = combine 6930726 splice 1 with 13 rotate 0 connect at 3 @1
+  5129184 = connect 7104395 at 5 @1
+
+==> Step 45: 0 user, 0 sys, 0h0m0s wall (0.91), 2.93 GiB (0.00, 0)
+-->    closed:     3364193          52   big       0 MiB
+--> closemirr:        7124           9 791.6       0 MiB
+-->   connect:        7124           9 791.6       0 MiB
+-->   combine:     1561736           9   big       0 MiB
+--> provenance:   0.01 GiB   0.02 GiB 0.93
+
+==> Step 46: 0 user, 0 sys, 0h0m0s wall (0.88), 2.93 GiB (0.00, 0)
+-->    closed:     3364193          52   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:        7124           9 791.6       0 MiB
+-->   combine:     1561736           9   big       0 MiB
+--> provenance:   0.01 GiB   0.02 GiB 0.93
+
+==> Step 47: 0 user, 0 sys, 0h0m0s wall (1.19), 2.93 GiB (0.00, 0)
+-->    closed:     3364245          52   big       0 MiB
+--> closemirr:          52           1  52.0       0 MiB
+-->   connect:          52           1  52.0       0 MiB
+-->   combine:     1561788           9   big       0 MiB
+--> provenance:   0.01 GiB   0.02 GiB 0.93
+
+==> Step 48: 0 user, 0 sys, 0h0m0s wall (0.98), 2.93 GiB (0.00, 0)
+-->    closed:     3364245          52   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:          52           1  52.0       0 MiB
+-->   combine:     1561788           9   big       0 MiB
+--> provenance:   0.01 GiB   0.02 GiB 0.93
+
+==> Step 49: 0 user, 0 sys, 0h0m0s wall (1.01), 2.93 GiB (0.00, 0)
+-->    closed:     3364245          52   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:     1561788           9   big       0 MiB
+--> provenance:   0.01 GiB   0.02 GiB 0.93
+
+==> Step 50: 0 user, 0 sys, 0h0m0s wall (1.43), 2.93 GiB (0.00, 0)
+-->    closed:     4799576          52   big       0 MiB
+--> closemirr:     1435331           1   big       0 MiB
+-->   connect:     1435331           1   big       0 MiB
+-->   combine:     1435331           1   big       0 MiB
+--> provenance:   0.02 GiB   0.02 GiB 0.92
+
+==> Step 51: 0 user, 0 sys, 0h0m0s wall (0.97), 2.93 GiB (0.00, 0)
+-->    closed:     4799576          52   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:     1435331           1   big       0 MiB
+-->   combine:     1435331           1   big       0 MiB
+--> provenance:   0.02 GiB   0.02 GiB 0.92
+
+Target trace:
+  3171 = source {locking-2-toggle-antiparallel-open-r}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  5132380 = combine 5131509 splice 0 with 5126533 rotate 1 connect at 3 @4
+  5143197 = connect 5132380 at 3 @0
+  5143922 = combine 5143197 splice 0 with 5126402 rotate 3 connect at 6 @0
+  38 = connect 5143922 at 0 @1
+  5401777 = combine 38 splice 0 with 5126294 rotate 2 connect at 3 @0
+  5717458 = combine 5401777 splice 0 with 13 rotate 0 connect at 7 @0
+  5944402 = connect 5717458 at 1 @2
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  6756880 = combine 5944402 splice 0 with 5126548 rotate 3 connect at 3 @1
+  6932230 = connect 6756880 at 1 @3
+  7189598 = combine 6932230 splice 2 with 5126533 rotate 2 connect at 5 @4
+  8489285 = connect 7189598 at 3 @0
+  8507096 = combine 8489285 splice 2 with 5126402 rotate 0 connect at 5 @2
+  3171 = connect 8507096 at 5 @1
+
+Target trace:
+  3172 = source {locking-2-toggle-antiparallel-locked-s}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10343 = source {seven-toggle-noncrossing-matched-closed-0-s, toggle-seven-noncrossing-matched-0-closed-r}
+  5126602 = close 10343 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  5132355 = combine 5131509 splice 1 with 5126692 rotate 1 connect at 4 @4
+  5143194 = connect 5132355 at 1 @0
+  5143919 = combine 5143194 splice 1 with 5126402 rotate 0 connect at 4 @1
+  34 = connect 5143919 at 0 @2
+  5353411 = combine 34 splice 0 with 5126533 rotate 3 connect at 3 @1
+  5776113 = combine 5353411 splice 1 with 13 rotate 0 connect at 3 @1
+  5944393 = connect 5776113 at 1 @3
+  6737570 = combine 5944393 splice 0 with 5126402 rotate 3 connect at 7 @0
+  6930626 = connect 6737570 at 5 @2
+  6988695 = combine 6930626 splice 2 with 5126602 rotate 0 connect at 5 @0
+  8492956 = connect 6988695 at 1 @0
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  8602138 = combine 8492956 splice 2 with 5126351 rotate 0 connect at 5 @2
+  3172 = connect 8602138 at 5 @3
+
+Target trace:
+  3174 = source {locking-2-toggle-parallel-top}
+Source trace:
+  13 = source {3-split}
+  10307 = source {seven-toggle-noncrossing-matched-closed-0-r, toggle-seven-noncrossing-matched-0-closed-s}
+  5126359 = close 10307 @3
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5317588 = combine 37 splice 1 with 5126692 rotate 3 connect at 4 @2
+  5644474 = combine 5317588 splice 3 with 13 rotate 0 connect at 5 @3
+  5944407 = connect 5644474 at 1 @0
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  6227680 = combine 5944407 splice 2 with 5126548 rotate 3 connect at 5 @0
+  6929507 = connect 6227680 at 4 @0
+  7419784 = combine 6929507 splice 0 with 5126359 rotate 1 connect at 7 @3
+  8492812 = connect 7419784 at 5 @0
+  8495897 = combine 8492812 splice 2 with 5126548 rotate 3 connect at 5 @3
+  3174 = connect 8495897 at 1 @1
+
+Target trace:
+  3175 = source {locking-2-toggle-antiparallel-locked-r}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5317588 = combine 37 splice 1 with 5126692 rotate 3 connect at 4 @2
+  5644474 = combine 5317588 splice 3 with 13 rotate 0 connect at 5 @3
+  5944407 = connect 5644474 at 1 @0
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  6227680 = combine 5944407 splice 2 with 5126548 rotate 3 connect at 5 @0
+  6929507 = connect 6227680 at 4 @0
+  6964662 = combine 6929507 splice 0 with 5126402 rotate 0 connect at 7 @3
+  8494121 = connect 6964662 at 5 @3
+  8765141 = combine 8494121 splice 0 with 5126692 rotate 3 connect at 7 @3
+  3175 = connect 8765141 at 5 @2
+
+Target trace:
+  3178 = source {locking-2-toggle-parallel-open}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5317588 = combine 37 splice 1 with 5126692 rotate 3 connect at 4 @2
+  5644474 = combine 5317588 splice 3 with 13 rotate 0 connect at 5 @3
+  5944407 = connect 5644474 at 1 @0
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  6227680 = combine 5944407 splice 2 with 5126548 rotate 3 connect at 5 @0
+  6929507 = connect 6227680 at 4 @0
+  6934078 = combine 6929507 splice 0 with 5126548 rotate 2 connect at 7 @1
+  221 = connect 6934078 at 1 @0
+  8563097 = combine 221 splice 0 with 5126402 rotate 0 connect at 3 @0
+  3178 = connect 8563097 at 5 @1
+
+Target trace:
+  3179 = source {locking-2-toggle-parallel-bottom}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10343 = source {seven-toggle-noncrossing-matched-closed-0-s, toggle-seven-noncrossing-matched-0-closed-r}
+  5126602 = close 10343 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  5132380 = combine 5131509 splice 0 with 5126533 rotate 1 connect at 3 @4
+  5143197 = connect 5132380 at 3 @0
+  5143922 = combine 5143197 splice 0 with 5126402 rotate 3 connect at 6 @0
+  38 = connect 5143922 at 0 @1
+  5360343 = combine 38 splice 0 with 5126602 rotate 0 connect at 3 @0
+  5715462 = combine 5360343 splice 0 with 13 rotate 0 connect at 7 @0
+  5944389 = connect 5715462 at 1 @0
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  6074782 = combine 5944389 splice 2 with 5126548 rotate 3 connect at 5 @3
+  6933763 = connect 6074782 at 1 @1
+  7086134 = combine 6933763 splice 0 with 5126533 rotate 2 connect at 7 @1
+  8489818 = connect 7086134 at 1 @0
+  8714543 = combine 8489818 splice 0 with 5126402 rotate 0 connect at 3 @0
+  3179 = connect 8714543 at 5 @1
+
+Target trace:
+  3180 = source {locking-2-toggle-antiparallel-open-s}
+Source trace:
+  13 = source {3-split}
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5317588 = combine 37 splice 1 with 5126692 rotate 3 connect at 4 @2
+  5644474 = combine 5317588 splice 3 with 13 rotate 0 connect at 5 @3
+  5944407 = connect 5644474 at 1 @0
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  6227680 = combine 5944407 splice 2 with 5126548 rotate 3 connect at 5 @0
+  6929507 = connect 6227680 at 4 @0
+  7073951 = combine 6929507 splice 0 with 5126351 rotate 0 connect at 3 @0
+  8489176 = connect 7073951 at 5 @0
+  8906090 = combine 8489176 splice 0 with 5126548 rotate 3 connect at 3 @1
+  3180 = connect 8906090 at 1 @1
+
+Target trace:
+  1105676 = source {l3s3_9-2-s}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10307 = source {seven-toggle-noncrossing-matched-closed-0-r, toggle-seven-noncrossing-matched-0-closed-s}
+  5126359 = close 10307 @3
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  5132380 = combine 5131509 splice 0 with 5126533 rotate 1 connect at 3 @4
+  5143197 = connect 5132380 at 3 @0
+  5143922 = combine 5143197 splice 0 with 5126402 rotate 3 connect at 6 @0
+  38 = connect 5143922 at 0 @1
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5403325 = combine 38 splice 0 with 5126351 rotate 1 connect at 3 @0
+  5494162 = combine 5403325 splice 0 with 13 rotate 0 connect at 2 @0
+  5945143 = connect 5494162 at 1 @0
+  5967841 = combine 5945143 splice 0 with 13 rotate 0 connect at 6 @0
+  47 = connect 5967841 at 1 @1
+  8214891 = combine 47 splice 1 with 5126359 rotate 1 connect at 4 @4
+  19 = connect 8214891 at 1 @0
+  8888969 = combine 19 splice 1 with 5126294 rotate 1 connect at 4 @2
+  1105676 = connect 8888969 at 1 @0
+
+Target trace:
+  1105678 = source {l3s3_9-2-r}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10343 = source {seven-toggle-noncrossing-matched-closed-0-s, toggle-seven-noncrossing-matched-0-closed-r}
+  5126602 = close 10343 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  5132355 = combine 5131509 splice 1 with 5126692 rotate 1 connect at 4 @4
+  5143194 = connect 5132355 at 1 @0
+  5143919 = combine 5143194 splice 1 with 5126402 rotate 0 connect at 4 @1
+  34 = connect 5143919 at 0 @2
+  5406306 = combine 34 splice 0 with 5126294 rotate 2 connect at 3 @0
+  5567357 = combine 5406306 splice 1 with 13 rotate 0 connect at 3 @1
+  5945138 = connect 5567357 at 1 @3
+  5960339 = combine 5945138 splice 1 with 13 rotate 0 connect at 3 @1
+  53 = connect 5960339 at 1 @2
+  7947727 = combine 53 splice 0 with 5126602 rotate 0 connect at 6 @3
+  23 = connect 7947727 at 4 @0
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  8759426 = combine 23 splice 0 with 5126351 rotate 1 connect at 6 @3
+  1105678 = connect 8759426 at 1 @0
+
+Target trace:
+  1105681 = source {l3s3_4-2-r}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10343 = source {seven-toggle-noncrossing-matched-closed-0-s, toggle-seven-noncrossing-matched-0-closed-r}
+  5126602 = close 10343 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  5132355 = combine 5131509 splice 1 with 5126692 rotate 1 connect at 4 @4
+  5143194 = connect 5132355 at 1 @0
+  5143919 = combine 5143194 splice 1 with 5126402 rotate 0 connect at 4 @1
+  34 = connect 5143919 at 0 @2
+  5406306 = combine 34 splice 0 with 5126294 rotate 2 connect at 3 @0
+  5567357 = combine 5406306 splice 1 with 13 rotate 0 connect at 3 @1
+  5945138 = connect 5567357 at 1 @3
+  5960339 = combine 5945138 splice 1 with 13 rotate 0 connect at 3 @1
+  53 = connect 5960339 at 1 @2
+  7947727 = combine 53 splice 0 with 5126602 rotate 0 connect at 6 @3
+  23 = connect 7947727 at 4 @0
+  8793489 = combine 23 splice 1 with 5126602 rotate 3 connect at 4 @2
+  1105681 = connect 8793489 at 0 @0
+
+Target trace:
+  1105682 = source {l3s3_4-2-s}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10307 = source {seven-toggle-noncrossing-matched-closed-0-r, toggle-seven-noncrossing-matched-0-closed-s}
+  5126359 = close 10307 @3
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  5132380 = combine 5131509 splice 0 with 5126533 rotate 1 connect at 3 @4
+  5143197 = connect 5132380 at 3 @0
+  5143922 = combine 5143197 splice 0 with 5126402 rotate 3 connect at 6 @0
+  38 = connect 5143922 at 0 @1
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5403325 = combine 38 splice 0 with 5126351 rotate 1 connect at 3 @0
+  5494162 = combine 5403325 splice 0 with 13 rotate 0 connect at 2 @0
+  5945143 = connect 5494162 at 1 @0
+  5967841 = combine 5945143 splice 0 with 13 rotate 0 connect at 6 @0
+  47 = connect 5967841 at 1 @1
+  8214891 = combine 47 splice 1 with 5126359 rotate 1 connect at 4 @4
+  19 = connect 8214891 at 1 @0
+  8596387 = combine 19 splice 0 with 5126533 rotate 3 connect at 6 @0
+  1105682 = connect 8596387 at 0 @1
+
+==> Step 52: 0 user, 0 sys, 0h0m0s wall (0.93), 2.93 GiB (0.00, 0)
+-->    closed:     4806855          54   big       0 MiB
+--> closemirr:        7279           7   big       0 MiB
+-->   connect:        7279           7   big       0 MiB
+-->   combine:     1442610           7   big       0 MiB
+--> provenance:   0.02 GiB   0.02 GiB 0.92
+
+==> Step 53: 0 user, 0 sys, 0h0m0s wall (0.93), 2.93 GiB (0.00, 0)
+-->    closed:     4806855          54   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:        7279           7   big       0 MiB
+-->   combine:     1442610           7   big       0 MiB
+--> provenance:   0.02 GiB   0.02 GiB 0.92
+
+==> Step 54: 0 user, 0 sys, 0h0m0s wall (1.11), 2.93 GiB (0.00, 0)
+-->    closed:     4806885          54   big       0 MiB
+--> closemirr:          30           1  30.0       0 MiB
+-->   connect:          30           1  30.0       0 MiB
+-->   combine:     1442640           7   big       0 MiB
+--> provenance:   0.02 GiB   0.02 GiB 0.92
+
+==> Step 55: 0 user, 0 sys, 0h0m0s wall (0.94), 2.93 GiB (0.00, 0)
+-->    closed:     4806885          54   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:          30           1  30.0       0 MiB
+-->   combine:     1442640           7   big       0 MiB
+--> provenance:   0.02 GiB   0.02 GiB 0.92
+
+==> Step 56: 0 user, 0 sys, 0h0m0s wall (1.00), 2.93 GiB (0.00, 0)
+-->    closed:     4806885          54   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:     1442640           7   big       0 MiB
+--> provenance:   0.02 GiB   0.02 GiB 0.92
+
+==> Step 57: 0 user, 0 sys, 0h0m0s wall (1.39), 2.95 GiB (0.02, 0)
+-->    closed:     5783939       16226 356.5       0 MiB
+--> closemirr:      977054       16173  60.4       0 MiB
+-->   connect:      977054       16173  60.4       0 MiB
+-->   combine:      977054       16173  60.4       0 MiB
+--> provenance:   0.03 GiB   0.03 GiB 0.91
+
+==> Step 58: 0 user, 0 sys, 0h0m0s wall (0.98), 2.95 GiB (0.00, 0)
+-->    closed:     5783939       16226 356.5       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:      977054       16173  60.4       0 MiB
+-->   combine:      977054       16173  60.4       0 MiB
+--> provenance:   0.03 GiB   0.03 GiB 0.91
+
+Target trace:
+  1109162 = source {2st_36-2st_60-noncrossing-matched-1-1-s, 2st_60-2st_36-noncrossing-matched-1-1-r}
+  5129185 = close 1109162 @0
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10307 = source {seven-toggle-noncrossing-matched-closed-0-r, toggle-seven-noncrossing-matched-0-closed-s}
+  5126359 = close 10307 @3
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  5132355 = combine 5131509 splice 1 with 5126692 rotate 1 connect at 4 @4
+  5143194 = connect 5132355 at 1 @0
+  5143919 = combine 5143194 splice 1 with 5126402 rotate 0 connect at 4 @1
+  34 = connect 5143919 at 0 @2
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5247596 = combine 34 splice 0 with 5126351 rotate 1 connect at 3 @2
+  5701228 = combine 5247596 splice 0 with 13 rotate 0 connect at 2 @0
+  5944394 = connect 5701228 at 1 @2
+  6745258 = combine 5944394 splice 0 with 5126402 rotate 0 connect at 3 @0
+  6932985 = connect 6745258 at 5 @1
+  7201637 = combine 6932985 splice 0 with 5126359 rotate 0 connect at 7 @3
+  224 = connect 7201637 at 2 @0
+  8669450 = combine 224 splice 0 with 13 rotate 0 connect at 6 @0
+  10605675 = combine 8669450 splice 2 with 13 rotate 0 connect at 4 @0
+  5129185 = connect 10605675 at 1 @0
+
+==> Step 59: 0 user, 0 sys, 0h0m0s wall (0.42), 2.95 GiB (0.00, 0)
+-->    closed:     5793338       16233 356.9       0 MiB
+--> closemirr:        9399          11 854.5       0 MiB
+-->   connect:        9399          11 854.5       0 MiB
+-->   combine:      986453       16181  61.0       0 MiB
+--> provenance:   0.03 GiB   0.03 GiB 0.91
+
+==> Step 60: 0 user, 0 sys, 0h0m0s wall (0.99), 2.95 GiB (0.00, 0)
+-->    closed:     5793338       16233 356.9       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:        9399          11 854.5       0 MiB
+-->   combine:      986453       16181  61.0       0 MiB
+--> provenance:   0.03 GiB   0.03 GiB 0.91
+
+Target trace:
+  5121091 = source {l3s3_17-2-s, l3s3_21-2-r}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10343 = source {seven-toggle-noncrossing-matched-closed-0-s, toggle-seven-noncrossing-matched-0-closed-r}
+  5126602 = close 10343 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  5132380 = combine 5131509 splice 0 with 5126533 rotate 1 connect at 3 @4
+  5143197 = connect 5132380 at 3 @0
+  5143922 = combine 5143197 splice 0 with 5126402 rotate 3 connect at 6 @0
+  38 = connect 5143922 at 0 @1
+  5401777 = combine 38 splice 0 with 5126294 rotate 2 connect at 3 @0
+  5717458 = combine 5401777 splice 0 with 13 rotate 0 connect at 7 @0
+  5944402 = connect 5717458 at 1 @2
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  6756880 = combine 5944402 splice 0 with 5126548 rotate 3 connect at 3 @1
+  6932230 = connect 6756880 at 1 @3
+  7304278 = combine 6932230 splice 1 with 5126602 rotate 1 connect at 4 @4
+  222 = connect 7304278 at 5 @1
+  9253528 = combine 222 splice 1 with 13 rotate 0 connect at 3 @1
+  11217507 = combine 9253528 splice 1 with 5126533 rotate 1 connect at 4 @6
+  11307200 = connect 11217507 at 4 @0
+  5121091 = connect 11307200 at 0 @2
+
+Target trace:
+  5121092 = source {l3s3_17-2-r, l3s3_21-2-s}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10343 = source {seven-toggle-noncrossing-matched-closed-0-s, toggle-seven-noncrossing-matched-0-closed-r}
+  5126602 = close 10343 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  5132380 = combine 5131509 splice 0 with 5126533 rotate 1 connect at 3 @4
+  5143197 = connect 5132380 at 3 @0
+  5143922 = combine 5143197 splice 0 with 5126402 rotate 3 connect at 6 @0
+  38 = connect 5143922 at 0 @1
+  5401777 = combine 38 splice 0 with 5126294 rotate 2 connect at 3 @0
+  5717458 = combine 5401777 splice 0 with 13 rotate 0 connect at 7 @0
+  5944402 = connect 5717458 at 1 @2
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  6756880 = combine 5944402 splice 0 with 5126548 rotate 3 connect at 3 @1
+  6932230 = connect 6756880 at 1 @3
+  7304278 = combine 6932230 splice 1 with 5126602 rotate 1 connect at 4 @4
+  222 = connect 7304278 at 5 @1
+  8557311 = combine 222 splice 0 with 13 rotate 0 connect at 2 @0
+  10707434 = combine 8557311 splice 0 with 5126692 rotate 1 connect at 3 @3
+  11306601 = connect 10707434 at 3 @0
+  5121092 = connect 11306601 at 0 @2
+
+==> Step 61: 0 user, 0 sys, 0h0m0s wall (0.43), 2.95 GiB (0.00, 0)
+-->    closed:     5793380       16235 356.8       0 MiB
+--> closemirr:          42           4  10.5       0 MiB
+-->   connect:          42           4  10.5       0 MiB
+-->   combine:      986495       16183  61.0       0 MiB
+--> provenance:   0.03 GiB   0.03 GiB 0.91
+
+==> Step 62: 0 user, 0 sys, 0h0m0s wall (1.01), 2.95 GiB (0.00, 0)
+-->    closed:     5793380       16235 356.8       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:          42           4  10.5       0 MiB
+-->   combine:      986495       16183  61.0       0 MiB
+--> provenance:   0.03 GiB   0.03 GiB 0.91
+
+==> Step 63: 0 user, 0 sys, 0h0m0s wall (0.99), 2.95 GiB (0.00, 0)
+-->    closed:     5793380       16235 356.8       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:      986495       16183  61.0       0 MiB
+--> provenance:   0.03 GiB   0.03 GiB 0.91
+
+==> Step 64: 0 user, 0 sys, 0h0m0s wall (1.46), 3.03 GiB (0.08, 0)
+-->    closed:     7501440       22262 337.0       0 MiB
+--> closemirr:     1708060       10363 164.8       0 MiB
+-->   connect:     1708060       10363 164.8       0 MiB
+-->   combine:     1708060       10363 164.8       0 MiB
+--> provenance:   0.03 GiB   0.04 GiB 0.92
+
+==> Step 65: 0 user, 0 sys, 0h0m0s wall (1.01), 3.03 GiB (0.00, 0)
+-->    closed:     7501440       22262 337.0       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:     1708060       10363 164.8       0 MiB
+-->   combine:     1708060       10363 164.8       0 MiB
+--> provenance:   0.03 GiB   0.04 GiB 0.92
+
+Target trace:
+  1105683 = source {l3s3_11-2-r}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10343 = source {seven-toggle-noncrossing-matched-closed-0-s, toggle-seven-noncrossing-matched-0-closed-r}
+  5126602 = close 10343 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  5132355 = combine 5131509 splice 1 with 5126692 rotate 1 connect at 4 @4
+  5143194 = connect 5132355 at 1 @0
+  5143919 = combine 5143194 splice 1 with 5126402 rotate 0 connect at 4 @1
+  34 = connect 5143919 at 0 @2
+  5406306 = combine 34 splice 0 with 5126294 rotate 2 connect at 3 @0
+  5567357 = combine 5406306 splice 1 with 13 rotate 0 connect at 3 @1
+  5945138 = connect 5567357 at 1 @3
+  5960339 = combine 5945138 splice 1 with 13 rotate 0 connect at 3 @1
+  53 = connect 5960339 at 1 @2
+  7947727 = combine 53 splice 0 with 5126602 rotate 0 connect at 6 @3
+  23 = connect 7947727 at 4 @0
+  8793489 = combine 23 splice 1 with 5126602 rotate 3 connect at 4 @2
+  10967286 = combine 8793489 splice 1 with 13 rotate 0 connect at 3 @1
+  11307019 = connect 10967286 at 1 @3
+  11643441 = combine 11307019 splice 0 with 13 rotate 0 connect at 2 @0
+  1105683 = connect 11643441 at 1 @1
+
+Target trace:
+  1105684 = source {l3s3_11-2-s}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10307 = source {seven-toggle-noncrossing-matched-closed-0-r, toggle-seven-noncrossing-matched-0-closed-s}
+  5126359 = close 10307 @3
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  5132380 = combine 5131509 splice 0 with 5126533 rotate 1 connect at 3 @4
+  5143197 = connect 5132380 at 3 @0
+  5143922 = combine 5143197 splice 0 with 5126402 rotate 3 connect at 6 @0
+  38 = connect 5143922 at 0 @1
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5403325 = combine 38 splice 0 with 5126351 rotate 1 connect at 3 @0
+  5494162 = combine 5403325 splice 0 with 13 rotate 0 connect at 2 @0
+  5945143 = connect 5494162 at 1 @0
+  5967841 = combine 5945143 splice 0 with 13 rotate 0 connect at 6 @0
+  47 = connect 5967841 at 1 @1
+  8214891 = combine 47 splice 1 with 5126359 rotate 1 connect at 4 @4
+  19 = connect 8214891 at 1 @0
+  9505578 = combine 19 splice 1 with 13 rotate 0 connect at 3 @1
+  10857060 = combine 9505578 splice 1 with 5126533 rotate 1 connect at 4 @0
+  11313170 = connect 10857060 at 3 @0
+  12081913 = combine 11313170 splice 1 with 13 rotate 0 connect at 3 @1
+  1105684 = connect 12081913 at 4 @2
+
+Target trace:
+  1105685 = source {l3s3_42-2-s}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10307 = source {seven-toggle-noncrossing-matched-closed-0-r, toggle-seven-noncrossing-matched-0-closed-s}
+  5126359 = close 10307 @3
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  5132380 = combine 5131509 splice 0 with 5126533 rotate 1 connect at 3 @4
+  5143197 = connect 5132380 at 3 @0
+  5143922 = combine 5143197 splice 0 with 5126402 rotate 3 connect at 6 @0
+  38 = connect 5143922 at 0 @1
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5403325 = combine 38 splice 0 with 5126351 rotate 1 connect at 3 @0
+  5494162 = combine 5403325 splice 0 with 13 rotate 0 connect at 2 @0
+  5945143 = connect 5494162 at 1 @0
+  5967841 = combine 5945143 splice 0 with 13 rotate 0 connect at 6 @0
+  47 = connect 5967841 at 1 @1
+  8214891 = combine 47 splice 1 with 5126359 rotate 1 connect at 4 @4
+  19 = connect 8214891 at 1 @0
+  9757616 = combine 19 splice 0 with 13 rotate 0 connect at 5 @0
+  10537737 = combine 9757616 splice 1 with 5126351 rotate 0 connect at 4 @1
+  11307518 = connect 10537737 at 2 @0
+  11507074 = combine 11307518 splice 1 with 13 rotate 0 connect at 3 @0
+  1105685 = connect 11507074 at 0 @0
+
+Target trace:
+  1105686 = source {l3s3_42-2-r}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10343 = source {seven-toggle-noncrossing-matched-closed-0-s, toggle-seven-noncrossing-matched-0-closed-r}
+  5126602 = close 10343 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  5132355 = combine 5131509 splice 1 with 5126692 rotate 1 connect at 4 @4
+  5143194 = connect 5132355 at 1 @0
+  5143919 = combine 5143194 splice 1 with 5126402 rotate 0 connect at 4 @1
+  34 = connect 5143919 at 0 @2
+  5406306 = combine 34 splice 0 with 5126294 rotate 2 connect at 3 @0
+  5567357 = combine 5406306 splice 1 with 13 rotate 0 connect at 3 @1
+  5945138 = connect 5567357 at 1 @3
+  5960339 = combine 5945138 splice 1 with 13 rotate 0 connect at 3 @1
+  53 = connect 5960339 at 1 @2
+  7947727 = combine 53 splice 0 with 5126602 rotate 0 connect at 6 @3
+  23 = connect 7947727 at 4 @0
+  9505585 = combine 23 splice 0 with 5126402 rotate 0 connect at 3 @0
+  10546866 = combine 9505585 splice 2 with 13 rotate 0 connect at 4 @0
+  11307158 = connect 10546866 at 3 @0
+  11376009 = combine 11307158 splice 1 with 13 rotate 0 connect at 3 @0
+  1105686 = connect 11376009 at 0 @2
+
+Target trace:
+  10544 = source {lock-seven-noncrossing-matched-open-closed-r, seven-lock-noncrossing-matched-closed-open-s}
+  5126354 = close 10544 @0
+Source trace:
+  13 = source {3-split}
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5317588 = combine 37 splice 1 with 5126692 rotate 3 connect at 4 @2
+  5644474 = combine 5317588 splice 3 with 13 rotate 0 connect at 5 @3
+  5944407 = connect 5644474 at 1 @0
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  6227680 = combine 5944407 splice 2 with 5126548 rotate 3 connect at 5 @0
+  6929507 = connect 6227680 at 4 @0
+  6934078 = combine 6929507 splice 0 with 5126548 rotate 2 connect at 7 @1
+  221 = connect 6934078 at 1 @0
+  8574222 = combine 221 splice 2 with 13 rotate 0 connect at 4 @0
+  10854727 = combine 8574222 splice 3 with 5126351 rotate 2 connect at 6 @0
+  11310474 = connect 10854727 at 2 @0
+  11507143 = combine 11310474 splice 0 with 13 rotate 0 connect at 7 @0
+  5126354 = connect 11507143 at 5 @1
+
+Target trace:
+  10518 = source {lock-seven-noncrossing-matched-open-closed-s, seven-lock-noncrossing-matched-closed-open-r}
+  5126450 = close 10518 @0
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5262147 = combine 37 splice 1 with 5126402 rotate 1 connect at 4 @2
+  5737771 = combine 5262147 splice 2 with 13 rotate 0 connect at 4 @2
+  5944396 = connect 5737771 at 5 @3
+  6144066 = combine 5944396 splice 0 with 5126402 rotate 3 connect at 7 @3
+  6933480 = connect 6144066 at 2 @0
+  7765052 = combine 6933480 splice 0 with 5126294 rotate 2 connect at 7 @1
+  223 = connect 7765052 at 1 @0
+  9807915 = combine 223 splice 0 with 13 rotate 0 connect at 6 @0
+  10998836 = combine 9807915 splice 1 with 5126692 rotate 1 connect at 4 @4
+  11311990 = connect 10998836 at 3 @0
+  11524282 = combine 11311990 splice 3 with 13 rotate 0 connect at 5 @0
+  5126450 = connect 11524282 at 2 @0
+
+Target trace:
+  10231 = source {lock-seven-noncrossing-matched-closed-open-r, seven-lock-noncrossing-matched-open-closed-s}
+  5126640 = close 10231 @3
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10343 = source {seven-toggle-noncrossing-matched-closed-0-s, toggle-seven-noncrossing-matched-0-closed-r}
+  5126602 = close 10343 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  5132380 = combine 5131509 splice 0 with 5126533 rotate 1 connect at 3 @4
+  5143197 = connect 5132380 at 3 @0
+  5143922 = combine 5143197 splice 0 with 5126402 rotate 3 connect at 6 @0
+  38 = connect 5143922 at 0 @1
+  5401777 = combine 38 splice 0 with 5126294 rotate 2 connect at 3 @0
+  5717458 = combine 5401777 splice 0 with 13 rotate 0 connect at 7 @0
+  5944402 = connect 5717458 at 1 @2
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  6756880 = combine 5944402 splice 0 with 5126548 rotate 3 connect at 3 @1
+  6932230 = connect 6756880 at 1 @3
+  7304278 = combine 6932230 splice 1 with 5126602 rotate 1 connect at 4 @4
+  222 = connect 7304278 at 5 @1
+  8557311 = combine 222 splice 0 with 13 rotate 0 connect at 2 @0
+  10802761 = combine 8557311 splice 0 with 5126351 rotate 3 connect at 3 @1
+  11312896 = connect 10802761 at 1 @0
+  11984906 = combine 11312896 splice 0 with 13 rotate 0 connect at 2 @0
+  5126640 = connect 11984906 at 1 @3
+
+Target trace:
+  10110 = source {lock-seven-noncrossing-matched-closed-open-s, seven-lock-noncrossing-matched-open-closed-r}
+  5126646 = close 10110 @0
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10307 = source {seven-toggle-noncrossing-matched-closed-0-r, toggle-seven-noncrossing-matched-0-closed-s}
+  5126359 = close 10307 @3
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  5132355 = combine 5131509 splice 1 with 5126692 rotate 1 connect at 4 @4
+  5143194 = connect 5132355 at 1 @0
+  5143919 = combine 5143194 splice 1 with 5126402 rotate 0 connect at 4 @1
+  34 = connect 5143919 at 0 @2
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5247596 = combine 34 splice 0 with 5126351 rotate 1 connect at 3 @2
+  5701228 = combine 5247596 splice 0 with 13 rotate 0 connect at 2 @0
+  5944394 = connect 5701228 at 1 @2
+  6745258 = combine 5944394 splice 0 with 5126402 rotate 0 connect at 3 @0
+  6932985 = connect 6745258 at 5 @1
+  7201637 = combine 6932985 splice 0 with 5126359 rotate 0 connect at 7 @3
+  224 = connect 7201637 at 2 @0
+  9074296 = combine 224 splice 0 with 13 rotate 0 connect at 2 @0
+  10683161 = combine 9074296 splice 1 with 5126294 rotate 0 connect at 4 @1
+  11312229 = connect 10683161 at 6 @1
+  11956573 = combine 11312229 splice 0 with 13 rotate 0 connect at 7 @0
+  5126646 = connect 11956573 at 5 @0
+
+Target trace:
+  1108614 = source {2st_36-2st_39-noncrossing-matched-1-1-r, 2st_39-2st_36-noncrossing-matched-1-1-s}
+  5129171 = close 1108614 @1
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10343 = source {seven-toggle-noncrossing-matched-closed-0-s, toggle-seven-noncrossing-matched-0-closed-r}
+  5126602 = close 10343 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  5132380 = combine 5131509 splice 0 with 5126533 rotate 1 connect at 3 @4
+  5143197 = connect 5132380 at 3 @0
+  5143922 = combine 5143197 splice 0 with 5126402 rotate 3 connect at 6 @0
+  38 = connect 5143922 at 0 @1
+  5401777 = combine 38 splice 0 with 5126294 rotate 2 connect at 3 @0
+  5717458 = combine 5401777 splice 0 with 13 rotate 0 connect at 7 @0
+  5944402 = connect 5717458 at 1 @2
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  6756880 = combine 5944402 splice 0 with 5126548 rotate 3 connect at 3 @1
+  6932230 = connect 6756880 at 1 @3
+  7304278 = combine 6932230 splice 1 with 5126602 rotate 1 connect at 4 @4
+  222 = connect 7304278 at 5 @1
+  9253528 = combine 222 splice 1 with 13 rotate 0 connect at 3 @1
+  10756728 = combine 9253528 splice 1 with 5126692 rotate 1 connect at 4 @6
+  11306184 = connect 10756728 at 1 @0
+  11358986 = combine 11306184 splice 1 with 13 rotate 0 connect at 3 @1
+  5129171 = connect 11358986 at 5 @1
+
+Target trace:
+  1108701 = source {2st_36-2st_39-noncrossing-matched-1-1-s, 2st_39-2st_36-noncrossing-matched-1-1-r}
+  5129173 = close 1108701 @1
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10307 = source {seven-toggle-noncrossing-matched-closed-0-r, toggle-seven-noncrossing-matched-0-closed-s}
+  5126359 = close 10307 @3
+  10343 = source {seven-toggle-noncrossing-matched-closed-0-s, toggle-seven-noncrossing-matched-0-closed-r}
+  5126602 = close 10343 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  5132355 = combine 5131509 splice 1 with 5126692 rotate 1 connect at 4 @4
+  5143194 = connect 5132355 at 1 @0
+  5143919 = combine 5143194 splice 1 with 5126402 rotate 0 connect at 4 @1
+  34 = connect 5143919 at 0 @2
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5247596 = combine 34 splice 0 with 5126351 rotate 1 connect at 3 @2
+  5701228 = combine 5247596 splice 0 with 13 rotate 0 connect at 2 @0
+  5944394 = connect 5701228 at 1 @2
+  6745258 = combine 5944394 splice 0 with 5126402 rotate 0 connect at 3 @0
+  6932985 = connect 6745258 at 5 @1
+  7201637 = combine 6932985 splice 0 with 5126359 rotate 0 connect at 7 @3
+  224 = connect 7201637 at 2 @0
+  8669450 = combine 224 splice 0 with 13 rotate 0 connect at 6 @0
+  10532541 = combine 8669450 splice 1 with 5126602 rotate 3 connect at 4 @2
+  11305318 = connect 10532541 at 1 @0
+  11330694 = combine 11305318 splice 0 with 13 rotate 0 connect at 2 @0
+  5129173 = connect 11330694 at 5 @1
+
+==> Step 66: 0 user, 0 sys, 0h0m0s wall (0.33), 3.03 GiB (0.00, 0)
+-->    closed:     7513910       22265 337.5       0 MiB
+--> closemirr:       12470          16 779.4       0 MiB
+-->   connect:       12470          16 779.4       0 MiB
+-->   combine:     1720530       10376 165.8       0 MiB
+--> provenance:   0.03 GiB   0.04 GiB 0.92
+
+==> Step 67: 0 user, 0 sys, 0h0m0s wall (0.98), 3.03 GiB (0.00, 0)
+-->    closed:     7513910       22265 337.5       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:       12470          16 779.4       0 MiB
+-->   combine:     1720530       10376 165.8       0 MiB
+--> provenance:   0.03 GiB   0.04 GiB 0.92
+
+==> Step 68: 0 user, 0 sys, 0h0m0s wall (1.19), 3.03 GiB (0.00, 0)
+-->    closed:     7513960       22265 337.5       0 MiB
+--> closemirr:          50           1  50.0       0 MiB
+-->   connect:          50           1  50.0       0 MiB
+-->   combine:     1720580       10376 165.8       0 MiB
+--> provenance:   0.03 GiB   0.04 GiB 0.92
+
+==> Step 69: 0 user, 0 sys, 0h0m0s wall (0.95), 3.03 GiB (0.00, 0)
+-->    closed:     7513960       22265 337.5       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:          50           1  50.0       0 MiB
+-->   combine:     1720580       10376 165.8       0 MiB
+--> provenance:   0.03 GiB   0.04 GiB 0.92
+
+==> Step 70: 0 user, 0 sys, 0h0m0s wall (0.99), 3.03 GiB (0.00, 0)
+-->    closed:     7513960       22265 337.5       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:     1720580       10376 165.8       0 MiB
+--> provenance:   0.03 GiB   0.04 GiB 0.92
+
+==> Step 71: 1 user, 0 sys, 0h0m1s wall (1.46), 3.13 GiB (0.10, 0)
+-->    closed:     9853282        9707   big       0 MiB
+--> closemirr:     2339322       12561 186.2       0 MiB
+-->   connect:     2339322       12561 186.2       0 MiB
+-->   combine:     2339322       12561 186.2       0 MiB
+--> provenance:   0.04 GiB   0.05 GiB 0.90
+
+==> Step 72: 0 user, 0 sys, 0h0m0s wall (0.99), 3.13 GiB (0.00, 0)
+-->    closed:     9853282        9707   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:     2339322       12561 186.2       0 MiB
+-->   combine:     2339322       12561 186.2       0 MiB
+--> provenance:   0.04 GiB   0.05 GiB 0.90
+
+==> Step 73: 0 user, 0 sys, 0h0m0s wall (2.21), 3.13 GiB (0.00, 0)
+-->    closed:     9871050        9702   big       0 MiB
+--> closemirr:       17768           7   big       0 MiB
+-->   connect:       17768           7   big       0 MiB
+-->   combine:     2357090       12565 187.6       0 MiB
+--> provenance:   0.04 GiB   0.05 GiB 0.90
+
+==> Step 74: 0 user, 0 sys, 0h0m0s wall (0.97), 3.13 GiB (0.00, 0)
+-->    closed:     9871050        9702   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:       17768           7   big       0 MiB
+-->   combine:     2357090       12565 187.6       0 MiB
+--> provenance:   0.04 GiB   0.05 GiB 0.90
+
+==> Step 75: 0 user, 0 sys, 0h0m0s wall (1.23), 3.13 GiB (0.00, 0)
+-->    closed:     9871219        9702   big       0 MiB
+--> closemirr:         169           1 169.0       0 MiB
+-->   connect:         169           1 169.0       0 MiB
+-->   combine:     2357259       12565 187.6       0 MiB
+--> provenance:   0.04 GiB   0.05 GiB 0.90
+
+==> Step 76: 0 user, 0 sys, 0h0m0s wall (0.97), 3.13 GiB (0.00, 0)
+-->    closed:     9871219        9702   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:         169           1 169.0       0 MiB
+-->   combine:     2357259       12565 187.6       0 MiB
+--> provenance:   0.04 GiB   0.05 GiB 0.90
+
+==> Step 77: 0 user, 0 sys, 0h0m0s wall (1.00), 3.13 GiB (0.00, 0)
+-->    closed:     9871219        9702   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:     2357259       12565 187.6       0 MiB
+--> provenance:   0.04 GiB   0.05 GiB 0.90
+
+==> Step 78: 1 user, 0 sys, 0h0m1s wall (1.50), 3.22 GiB (0.09, 0)
+-->    closed:    13058479          63   big       0 MiB
+--> closemirr:     3187260        9640 330.6       0 MiB
+-->   connect:     3187260        9640 330.6       0 MiB
+-->   combine:     3187260        9640 330.6       0 MiB
+--> provenance:   0.06 GiB   0.06 GiB 0.90
+
+==> Step 79: 0 user, 0 sys, 0h0m0s wall (0.99), 3.22 GiB (0.00, 0)
+-->    closed:    13058479          63   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:     3187260        9640 330.6       0 MiB
+-->   combine:     3187260        9640 330.6       0 MiB
+--> provenance:   0.06 GiB   0.06 GiB 0.90
+
+Target trace:
+  46 = source {l3s3_7-2-r}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10343 = source {seven-toggle-noncrossing-matched-closed-0-s, toggle-seven-noncrossing-matched-0-closed-r}
+  5126602 = close 10343 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  5132355 = combine 5131509 splice 1 with 5126692 rotate 1 connect at 4 @4
+  5143194 = connect 5132355 at 1 @0
+  5143919 = combine 5143194 splice 1 with 5126402 rotate 0 connect at 4 @1
+  34 = connect 5143919 at 0 @2
+  5406306 = combine 34 splice 0 with 5126294 rotate 2 connect at 3 @0
+  5567357 = combine 5406306 splice 1 with 13 rotate 0 connect at 3 @1
+  5945138 = connect 5567357 at 1 @3
+  5960339 = combine 5945138 splice 1 with 13 rotate 0 connect at 3 @1
+  53 = connect 5960339 at 1 @2
+  7947727 = combine 53 splice 0 with 5126602 rotate 0 connect at 6 @3
+  23 = connect 7947727 at 4 @0
+  9399172 = combine 23 splice 0 with 13 rotate 0 connect at 5 @0
+  10543818 = combine 9399172 splice 0 with 5126402 rotate 0 connect at 3 @0
+  11307328 = connect 10543818 at 0 @2
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  11541480 = combine 11307328 splice 1 with 5126548 rotate 3 connect at 4 @2
+  12775995 = connect 11541480 at 1 @0
+  13715356 = combine 12775995 splice 0 with 13 rotate 0 connect at 6 @0
+  15039450 = connect 13715356 at 1 @0
+  16668736 = combine 15039450 splice 0 with 5126351 rotate 3 connect at 3 @1
+  46 = connect 16668736 at 0 @2
+
+Target trace:
+  51 = source {l3s3_7-2-s}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10307 = source {seven-toggle-noncrossing-matched-closed-0-r, toggle-seven-noncrossing-matched-0-closed-s}
+  5126359 = close 10307 @3
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  5132380 = combine 5131509 splice 0 with 5126533 rotate 1 connect at 3 @4
+  5143197 = connect 5132380 at 3 @0
+  5143922 = combine 5143197 splice 0 with 5126402 rotate 3 connect at 6 @0
+  38 = connect 5143922 at 0 @1
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5403325 = combine 38 splice 0 with 5126351 rotate 1 connect at 3 @0
+  5494162 = combine 5403325 splice 0 with 13 rotate 0 connect at 2 @0
+  5945143 = connect 5494162 at 1 @0
+  5967841 = combine 5945143 splice 0 with 13 rotate 0 connect at 6 @0
+  47 = connect 5967841 at 1 @1
+  8214891 = combine 47 splice 1 with 5126359 rotate 1 connect at 4 @4
+  19 = connect 8214891 at 1 @0
+  8748187 = combine 19 splice 0 with 5126359 rotate 2 connect at 3 @2
+  10795829 = combine 8748187 splice 1 with 13 rotate 0 connect at 3 @1
+  11312811 = connect 10795829 at 5 @0
+  11393217 = combine 11312811 splice 0 with 5126351 rotate 3 connect at 3 @1
+  12779719 = connect 11393217 at 0 @3
+  14355751 = combine 12779719 splice 1 with 13 rotate 0 connect at 3 @1
+  15045748 = connect 14355751 at 4 @0
+  16215606 = combine 15045748 splice 0 with 5126294 rotate 0 connect at 3 @0
+  51 = connect 16215606 at 0 @0
+
+Target trace:
+  54 = source {l3s3_7-0-r}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5390936 = combine 37 splice 1 with 5126294 rotate 2 connect at 4 @1
+  5699195 = combine 5390936 splice 2 with 13 rotate 0 connect at 4 @2
+  5944475 = connect 5699195 at 1 @2
+  5971687 = combine 5944475 splice 2 with 13 rotate 0 connect at 4 @2
+  56 = connect 5971687 at 4 @2
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  7389307 = combine 56 splice 0 with 5126548 rotate 2 connect at 6 @1
+  22 = connect 7389307 at 1 @0
+  9919835 = combine 22 splice 1 with 5126548 rotate 2 connect at 4 @3
+  11210437 = combine 9919835 splice 2 with 13 rotate 0 connect at 4 @2
+  11310805 = connect 11210437 at 1 @0
+  12155918 = combine 11310805 splice 0 with 5126402 rotate 0 connect at 3 @3
+  12781454 = connect 12155918 at 2 @0
+  14259422 = combine 12781454 splice 2 with 5126692 rotate 0 connect at 5 @0
+  15046032 = connect 14259422 at 4 @0
+  16632103 = combine 15046032 splice 2 with 13 rotate 0 connect at 4 @0
+  54 = connect 16632103 at 3 @0
+
+Target trace:
+  67 = source {l3s3_7-1-s}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10307 = source {seven-toggle-noncrossing-matched-closed-0-r, toggle-seven-noncrossing-matched-0-closed-s}
+  5126359 = close 10307 @3
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10343 = source {seven-toggle-noncrossing-matched-closed-0-s, toggle-seven-noncrossing-matched-0-closed-r}
+  5126602 = close 10343 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  5132380 = combine 5131509 splice 0 with 5126533 rotate 1 connect at 3 @4
+  5143197 = connect 5132380 at 3 @0
+  5143922 = combine 5143197 splice 0 with 5126402 rotate 3 connect at 6 @0
+  38 = connect 5143922 at 0 @1
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5403325 = combine 38 splice 0 with 5126351 rotate 1 connect at 3 @0
+  5494162 = combine 5403325 splice 0 with 13 rotate 0 connect at 2 @0
+  5945143 = connect 5494162 at 1 @0
+  5967841 = combine 5945143 splice 0 with 13 rotate 0 connect at 6 @0
+  47 = connect 5967841 at 1 @1
+  8214891 = combine 47 splice 1 with 5126359 rotate 1 connect at 4 @4
+  19 = connect 8214891 at 1 @0
+  9096732 = combine 19 splice 0 with 5126402 rotate 1 connect at 3 @1
+  10571657 = combine 9096732 splice 2 with 13 rotate 0 connect at 4 @2
+  11309517 = connect 10571657 at 5 @3
+  11603706 = combine 11309517 splice 2 with 5126294 rotate 2 connect at 5 @0
+  12777178 = connect 11603706 at 1 @0
+  14355745 = combine 12777178 splice 2 with 13 rotate 0 connect at 4 @2
+  15046786 = connect 14355745 at 4 @2
+  16485727 = combine 15046786 splice 1 with 5126602 rotate 1 connect at 4 @0
+  67 = connect 16485727 at 2 @0
+
+Target trace:
+  70 = source {l3s3_7-1-r}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10307 = source {seven-toggle-noncrossing-matched-closed-0-r, toggle-seven-noncrossing-matched-0-closed-s}
+  5126359 = close 10307 @3
+  10343 = source {seven-toggle-noncrossing-matched-closed-0-s, toggle-seven-noncrossing-matched-0-closed-r}
+  5126602 = close 10343 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  5132355 = combine 5131509 splice 1 with 5126692 rotate 1 connect at 4 @4
+  5143194 = connect 5132355 at 1 @0
+  5143919 = combine 5143194 splice 1 with 5126402 rotate 0 connect at 4 @1
+  34 = connect 5143919 at 0 @2
+  5406306 = combine 34 splice 0 with 5126294 rotate 2 connect at 3 @0
+  5567357 = combine 5406306 splice 1 with 13 rotate 0 connect at 3 @1
+  5945138 = connect 5567357 at 1 @3
+  5960339 = combine 5945138 splice 1 with 13 rotate 0 connect at 3 @1
+  53 = connect 5960339 at 1 @2
+  7947727 = combine 53 splice 0 with 5126602 rotate 0 connect at 6 @3
+  23 = connect 7947727 at 4 @0
+  9399172 = combine 23 splice 0 with 13 rotate 0 connect at 5 @0
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  10522441 = combine 9399172 splice 1 with 5126548 rotate 3 connect at 4 @2
+  11305500 = connect 10522441 at 1 @0
+  11763129 = combine 11305500 splice 1 with 5126351 rotate 1 connect at 4 @3
+  12775895 = connect 11763129 at 0 @1
+  13601235 = combine 12775895 splice 2 with 5126359 rotate 1 connect at 5 @0
+  15045194 = connect 13601235 at 1 @0
+  16461106 = combine 15045194 splice 1 with 13 rotate 0 connect at 3 @1
+  70 = connect 16461106 at 1 @2
+
+Target trace:
+  81 = source {l3s3_7-0-s}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5316059 = combine 37 splice 1 with 5126351 rotate 1 connect at 4 @3
+  5439555 = combine 5316059 splice 2 with 13 rotate 0 connect at 4 @2
+  5944464 = connect 5439555 at 1 @2
+  5967831 = combine 5944464 splice 0 with 13 rotate 0 connect at 6 @0
+  45 = connect 5967831 at 4 @0
+  8099720 = combine 45 splice 0 with 5126402 rotate 3 connect at 6 @3
+  21 = connect 8099720 at 1 @0
+  9102371 = combine 21 splice 0 with 5126402 rotate 1 connect at 3 @3
+  10731450 = combine 9102371 splice 0 with 13 rotate 0 connect at 2 @0
+  11310397 = connect 10731450 at 5 @2
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  11990759 = combine 11310397 splice 0 with 5126548 rotate 1 connect at 7 @3
+  12782367 = connect 11990759 at 2 @0
+  13802960 = combine 12782367 splice 0 with 5126533 rotate 1 connect at 7 @3
+  15035838 = connect 13802960 at 2 @0
+  16191089 = combine 15035838 splice 2 with 13 rotate 0 connect at 4 @0
+  81 = connect 16191089 at 3 @0
+
+Target trace:
+  129 = source {l3s3_16-1-s, l3s3_19-1-r}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10307 = source {seven-toggle-noncrossing-matched-closed-0-r, toggle-seven-noncrossing-matched-0-closed-s}
+  5126359 = close 10307 @3
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  5132380 = combine 5131509 splice 0 with 5126533 rotate 1 connect at 3 @4
+  5143197 = connect 5132380 at 3 @0
+  5143922 = combine 5143197 splice 0 with 5126402 rotate 3 connect at 6 @0
+  38 = connect 5143922 at 0 @1
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5403325 = combine 38 splice 0 with 5126351 rotate 1 connect at 3 @0
+  5494162 = combine 5403325 splice 0 with 13 rotate 0 connect at 2 @0
+  5945143 = connect 5494162 at 1 @0
+  5967841 = combine 5945143 splice 0 with 13 rotate 0 connect at 6 @0
+  47 = connect 5967841 at 1 @1
+  8214891 = combine 47 splice 1 with 5126359 rotate 1 connect at 4 @4
+  19 = connect 8214891 at 1 @0
+  9595557 = combine 19 splice 0 with 5126533 rotate 2 connect at 6 @1
+  10697541 = combine 9595557 splice 2 with 13 rotate 0 connect at 4 @2
+  11309375 = connect 10697541 at 5 @3
+  11951064 = combine 11309375 splice 0 with 5126402 rotate 0 connect at 3 @0
+  12775802 = connect 11951064 at 5 @1
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  14030991 = combine 12775802 splice 2 with 5126548 rotate 2 connect at 5 @0
+  15035216 = connect 14030991 at 1 @1
+  16473171 = combine 15035216 splice 0 with 13 rotate 0 connect at 6 @0
+  129 = connect 16473171 at 4 @1
+
+Target trace:
+  131 = source {l3s3_16-2-r, l3s3_19-2-s}
+Source trace:
+  13 = source {3-split}
+  10307 = source {seven-toggle-noncrossing-matched-closed-0-r, toggle-seven-noncrossing-matched-0-closed-s}
+  5126359 = close 10307 @3
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5390936 = combine 37 splice 1 with 5126294 rotate 2 connect at 4 @1
+  5699195 = combine 5390936 splice 2 with 13 rotate 0 connect at 4 @2
+  5944475 = connect 5699195 at 1 @2
+  5971687 = combine 5944475 splice 2 with 13 rotate 0 connect at 4 @2
+  56 = connect 5971687 at 4 @2
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  7389307 = combine 56 splice 0 with 5126548 rotate 2 connect at 6 @1
+  22 = connect 7389307 at 1 @0
+  9393584 = combine 22 splice 0 with 5126548 rotate 1 connect at 6 @3
+  10540746 = combine 9393584 splice 1 with 13 rotate 0 connect at 3 @0
+  11309129 = connect 10540746 at 2 @0
+  11444613 = combine 11309129 splice 0 with 5126294 rotate 1 connect at 7 @3
+  12775993 = connect 11444613 at 2 @0
+  14215506 = combine 12775993 splice 1 with 5126359 rotate 1 connect at 4 @0
+  15036581 = connect 14215506 at 0 @3
+  16276646 = combine 15036581 splice 0 with 13 rotate 0 connect at 2 @0
+  131 = connect 16276646 at 4 @0
+
+Target trace:
+  135 = source {l3s3_16-0-r, l3s3_19-0-s}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5390936 = combine 37 splice 1 with 5126294 rotate 2 connect at 4 @1
+  5699195 = combine 5390936 splice 2 with 13 rotate 0 connect at 4 @2
+  5944475 = connect 5699195 at 1 @2
+  5971687 = combine 5944475 splice 2 with 13 rotate 0 connect at 4 @2
+  56 = connect 5971687 at 4 @2
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  7389307 = combine 56 splice 0 with 5126548 rotate 2 connect at 6 @1
+  22 = connect 7389307 at 1 @0
+  9393584 = combine 22 splice 0 with 5126548 rotate 1 connect at 6 @3
+  10540746 = combine 9393584 splice 1 with 13 rotate 0 connect at 3 @0
+  11309129 = connect 10540746 at 2 @0
+  11444613 = combine 11309129 splice 0 with 5126294 rotate 1 connect at 7 @3
+  12775993 = connect 11444613 at 2 @0
+  14953088 = combine 12775993 splice 0 with 5126402 rotate 1 connect at 3 @0
+  15049487 = connect 14953088 at 2 @0
+  16252234 = combine 15049487 splice 0 with 13 rotate 0 connect at 6 @0
+  135 = connect 16252234 at 4 @1
+
+Target trace:
+  136 = source {l3s3_16-1-r, l3s3_19-1-s}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10343 = source {seven-toggle-noncrossing-matched-closed-0-s, toggle-seven-noncrossing-matched-0-closed-r}
+  5126602 = close 10343 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  5132380 = combine 5131509 splice 0 with 5126533 rotate 1 connect at 3 @4
+  5143197 = connect 5132380 at 3 @0
+  5143922 = combine 5143197 splice 0 with 5126402 rotate 3 connect at 6 @0
+  38 = connect 5143922 at 0 @1
+  5401777 = combine 38 splice 0 with 5126294 rotate 2 connect at 3 @0
+  5717458 = combine 5401777 splice 0 with 13 rotate 0 connect at 7 @0
+  5944402 = connect 5717458 at 1 @2
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  6756880 = combine 5944402 splice 0 with 5126548 rotate 3 connect at 3 @1
+  6932230 = connect 6756880 at 1 @3
+  7304278 = combine 6932230 splice 1 with 5126602 rotate 1 connect at 4 @4
+  222 = connect 7304278 at 5 @1
+  8557311 = combine 222 splice 0 with 13 rotate 0 connect at 2 @0
+  10802761 = combine 8557311 splice 0 with 5126351 rotate 3 connect at 3 @1
+  11312896 = connect 10802761 at 1 @0
+  11984906 = combine 11312896 splice 0 with 13 rotate 0 connect at 2 @0
+  5126640 = connect 11984906 at 1 @3
+  13881776 = combine 5126640 splice 0 with 13 rotate 0 connect at 2 @0
+  15044372 = connect 13881776 at 4 @0
+  16141798 = combine 15044372 splice 0 with 5126402 rotate 0 connect at 3 @0
+  136 = connect 16141798 at 4 @1
+
+Target trace:
+  137 = source {l3s3_16-0-s, l3s3_19-0-r}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5316059 = combine 37 splice 1 with 5126351 rotate 1 connect at 4 @3
+  5439555 = combine 5316059 splice 2 with 13 rotate 0 connect at 4 @2
+  5944464 = connect 5439555 at 1 @2
+  5967831 = combine 5944464 splice 0 with 13 rotate 0 connect at 6 @0
+  45 = connect 5967831 at 4 @0
+  8099720 = combine 45 splice 0 with 5126402 rotate 3 connect at 6 @3
+  21 = connect 8099720 at 1 @0
+  9382418 = combine 21 splice 0 with 13 rotate 0 connect at 2 @0
+  10780643 = combine 9382418 splice 0 with 5126402 rotate 0 connect at 3 @3
+  11306397 = connect 10780643 at 2 @0
+  11501586 = combine 11306397 splice 0 with 5126351 rotate 3 connect at 7 @3
+  12780450 = connect 11501586 at 2 @0
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  14302924 = combine 12780450 splice 1 with 5126548 rotate 2 connect at 4 @3
+  15049051 = connect 14302924 at 3 @3
+  16632104 = combine 15049051 splice 2 with 13 rotate 0 connect at 4 @0
+  137 = connect 16632104 at 3 @0
+
+Target trace:
+  138 = source {l3s3_16-2-s, l3s3_19-2-r}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10343 = source {seven-toggle-noncrossing-matched-closed-0-s, toggle-seven-noncrossing-matched-0-closed-r}
+  5126602 = close 10343 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5316059 = combine 37 splice 1 with 5126351 rotate 1 connect at 4 @3
+  5439555 = combine 5316059 splice 2 with 13 rotate 0 connect at 4 @2
+  5944464 = connect 5439555 at 1 @2
+  5967831 = combine 5944464 splice 0 with 13 rotate 0 connect at 6 @0
+  45 = connect 5967831 at 4 @0
+  8099720 = combine 45 splice 0 with 5126402 rotate 3 connect at 6 @3
+  21 = connect 8099720 at 1 @0
+  9382418 = combine 21 splice 0 with 13 rotate 0 connect at 2 @0
+  10780643 = combine 9382418 splice 0 with 5126402 rotate 0 connect at 3 @3
+  11306397 = connect 10780643 at 2 @0
+  11501586 = combine 11306397 splice 0 with 5126351 rotate 3 connect at 7 @3
+  12780450 = connect 11501586 at 2 @0
+  15006356 = combine 12780450 splice 0 with 5126602 rotate 1 connect at 3 @4
+  15040462 = connect 15006356 at 4 @0
+  17061549 = combine 15040462 splice 0 with 13 rotate 0 connect at 2 @0
+  138 = connect 17061549 at 1 @0
+
+Target trace:
+  148 = source {l3s3_1-2-r}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5262147 = combine 37 splice 1 with 5126402 rotate 1 connect at 4 @2
+  5737771 = combine 5262147 splice 2 with 13 rotate 0 connect at 4 @2
+  5944396 = connect 5737771 at 5 @3
+  6144066 = combine 5944396 splice 0 with 5126402 rotate 3 connect at 7 @3
+  6933480 = connect 6144066 at 2 @0
+  7765052 = combine 6933480 splice 0 with 5126294 rotate 2 connect at 7 @1
+  223 = connect 7765052 at 1 @0
+  9807915 = combine 223 splice 0 with 13 rotate 0 connect at 6 @0
+  10633982 = combine 9807915 splice 1 with 5126533 rotate 0 connect at 4 @4
+  11308882 = connect 10633982 at 3 @0
+  11491363 = combine 11308882 splice 0 with 5126402 rotate 3 connect at 8 @0
+  12775040 = connect 11491363 at 0 @1
+  14136421 = combine 12775040 splice 0 with 13 rotate 0 connect at 2 @0
+  15032802 = connect 14136421 at 5 @0
+  16399534 = combine 15032802 splice 2 with 13 rotate 0 connect at 4 @0
+  148 = connect 16399534 at 3 @0
+
+Target trace:
+  149 = source {l3s3_1-0-r}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5262147 = combine 37 splice 1 with 5126402 rotate 1 connect at 4 @2
+  5737771 = combine 5262147 splice 2 with 13 rotate 0 connect at 4 @2
+  5944396 = connect 5737771 at 5 @3
+  6144066 = combine 5944396 splice 0 with 5126402 rotate 3 connect at 7 @3
+  6933480 = connect 6144066 at 2 @0
+  7765052 = combine 6933480 splice 0 with 5126294 rotate 2 connect at 7 @1
+  223 = connect 7765052 at 1 @0
+  9807915 = combine 223 splice 0 with 13 rotate 0 connect at 6 @0
+  10998836 = combine 9807915 splice 1 with 5126692 rotate 1 connect at 4 @4
+  11311990 = connect 10998836 at 3 @0
+  11616254 = combine 11311990 splice 3 with 5126294 rotate 0 connect at 6 @0
+  12773322 = connect 11616254 at 3 @0
+  13759149 = combine 12773322 splice 3 with 13 rotate 0 connect at 5 @0
+  15039326 = connect 13759149 at 2 @0
+  16362661 = combine 15039326 splice 0 with 13 rotate 0 connect at 6 @0
+  149 = connect 16362661 at 1 @0
+
+Target trace:
+  155 = source {l3s3_1-1-s}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10343 = source {seven-toggle-noncrossing-matched-closed-0-s, toggle-seven-noncrossing-matched-0-closed-r}
+  5126602 = close 10343 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  5132380 = combine 5131509 splice 0 with 5126533 rotate 1 connect at 3 @4
+  5143197 = connect 5132380 at 3 @0
+  5143922 = combine 5143197 splice 0 with 5126402 rotate 3 connect at 6 @0
+  38 = connect 5143922 at 0 @1
+  5401777 = combine 38 splice 0 with 5126294 rotate 2 connect at 3 @0
+  5717458 = combine 5401777 splice 0 with 13 rotate 0 connect at 7 @0
+  5944402 = connect 5717458 at 1 @2
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  6756880 = combine 5944402 splice 0 with 5126548 rotate 3 connect at 3 @1
+  6932230 = connect 6756880 at 1 @3
+  7304278 = combine 6932230 splice 1 with 5126602 rotate 1 connect at 4 @4
+  222 = connect 7304278 at 5 @1
+  8557311 = combine 222 splice 0 with 13 rotate 0 connect at 2 @0
+  10701383 = combine 8557311 splice 0 with 5126692 rotate 0 connect at 3 @3
+  11310473 = connect 10701383 at 5 @4
+  12413454 = combine 11310473 splice 0 with 5126351 rotate 3 connect at 3 @1
+  12781569 = connect 12413454 at 1 @0
+  14101461 = combine 12781569 splice 1 with 13 rotate 0 connect at 3 @1
+  15042397 = connect 14101461 at 5 @3
+  16362662 = combine 15042397 splice 0 with 13 rotate 0 connect at 6 @0
+  155 = connect 16362662 at 1 @0
+
+Target trace:
+  156 = source {l3s3_1-2-s}
+Source trace:
+  13 = source {3-split}
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5317588 = combine 37 splice 1 with 5126692 rotate 3 connect at 4 @2
+  5644474 = combine 5317588 splice 3 with 13 rotate 0 connect at 5 @3
+  5944407 = connect 5644474 at 1 @0
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  6227680 = combine 5944407 splice 2 with 5126548 rotate 3 connect at 5 @0
+  6929507 = connect 6227680 at 4 @0
+  6934078 = combine 6929507 splice 0 with 5126548 rotate 2 connect at 7 @1
+  221 = connect 6934078 at 1 @0
+  8574222 = combine 221 splice 2 with 13 rotate 0 connect at 4 @0
+  10594026 = combine 8574222 splice 2 with 5126294 rotate 0 connect at 5 @0
+  11312760 = connect 10594026 at 2 @0
+  11365957 = combine 11312760 splice 2 with 5126351 rotate 3 connect at 5 @0
+  12776598 = connect 11365957 at 4 @0
+  14672400 = combine 12776598 splice 1 with 13 rotate 0 connect at 3 @0
+  15034338 = connect 14672400 at 2 @0
+  16485710 = combine 15034338 splice 0 with 13 rotate 0 connect at 6 @0
+  156 = connect 16485710 at 4 @1
+
+Target trace:
+  159 = source {l3s3_1-0-s}
+Source trace:
+  13 = source {3-split}
+  10325 = source {seven-toggle-noncrossing-mismatched-closed-1-r, toggle-seven-noncrossing-mismatched-1-closed-s}
+  5126533 = close 10325 @0
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5317588 = combine 37 splice 1 with 5126692 rotate 3 connect at 4 @2
+  5644474 = combine 5317588 splice 3 with 13 rotate 0 connect at 5 @3
+  5944407 = connect 5644474 at 1 @0
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  6227680 = combine 5944407 splice 2 with 5126548 rotate 3 connect at 5 @0
+  6929507 = connect 6227680 at 4 @0
+  6934078 = combine 6929507 splice 0 with 5126548 rotate 2 connect at 7 @1
+  221 = connect 6934078 at 1 @0
+  8574222 = combine 221 splice 2 with 13 rotate 0 connect at 4 @0
+  11066893 = combine 8574222 splice 3 with 5126533 rotate 0 connect at 6 @0
+  11306016 = connect 11066893 at 2 @0
+  11728862 = combine 11306016 splice 1 with 13 rotate 0 connect at 3 @0
+  12778413 = connect 11728862 at 2 @0
+  13960862 = combine 12778413 splice 2 with 5126351 rotate 3 connect at 5 @3
+  15042882 = connect 13960862 at 0 @1
+  16571223 = combine 15042882 splice 0 with 13 rotate 0 connect at 6 @0
+  159 = connect 16571223 at 4 @1
+
+Target trace:
+  160 = source {l3s3_1-1-r}
+Source trace:
+  13 = source {3-split}
+  10242 = source {seven-toggle-noncrossing-matched-open-1-r, toggle-seven-noncrossing-matched-1-open-s}
+  5126402 = close 10242 @0
+  10307 = source {seven-toggle-noncrossing-matched-closed-0-r, toggle-seven-noncrossing-matched-0-closed-s}
+  5126359 = close 10307 @3
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131509 = combine 3 splice 0 with 13 rotate 0 connect at 4 @0
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  5132355 = combine 5131509 splice 1 with 5126692 rotate 1 connect at 4 @4
+  5143194 = connect 5132355 at 1 @0
+  5143919 = combine 5143194 splice 1 with 5126402 rotate 0 connect at 4 @1
+  34 = connect 5143919 at 0 @2
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5247596 = combine 34 splice 0 with 5126351 rotate 1 connect at 3 @2
+  5701228 = combine 5247596 splice 0 with 13 rotate 0 connect at 2 @0
+  5944394 = connect 5701228 at 1 @2
+  6745258 = combine 5944394 splice 0 with 5126402 rotate 0 connect at 3 @0
+  6932985 = connect 6745258 at 5 @1
+  7201637 = combine 6932985 splice 0 with 5126359 rotate 0 connect at 7 @3
+  224 = connect 7201637 at 2 @0
+  9074296 = combine 224 splice 0 with 13 rotate 0 connect at 2 @0
+  10630893 = combine 9074296 splice 1 with 5126692 rotate 2 connect at 4 @3
+  11310177 = connect 10630893 at 5 @0
+  11810027 = combine 11310177 splice 0 with 5126294 rotate 0 connect at 3 @0
+  12780347 = connect 11810027 at 6 @1
+  14364748 = combine 12780347 splice 0 with 13 rotate 0 connect at 2 @0
+  15034889 = connect 14364748 at 1 @0
+  16571252 = combine 15034889 splice 2 with 13 rotate 0 connect at 4 @2
+  160 = connect 16571252 at 1 @1
+
+Target trace:
+  12960 = source {seven-seven-antiparallel-mismatched-closed-open-s, seven-seven-antiparallel-mismatched-s}
+  5127805 = close 12960 @3
+Source trace:
+  13 = source {3-split}
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5390936 = combine 37 splice 1 with 5126294 rotate 2 connect at 4 @1
+  5699195 = combine 5390936 splice 2 with 13 rotate 0 connect at 4 @2
+  5944475 = connect 5699195 at 1 @2
+  5971687 = combine 5944475 splice 2 with 13 rotate 0 connect at 4 @2
+  56 = connect 5971687 at 4 @2
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  7389307 = combine 56 splice 0 with 5126548 rotate 2 connect at 6 @1
+  22 = connect 7389307 at 1 @0
+  8894479 = combine 22 splice 0 with 13 rotate 0 connect at 5 @0
+  10562471 = combine 8894479 splice 1 with 5126351 rotate 2 connect at 4 @4
+  11309093 = connect 10562471 at 2 @0
+  11700493 = combine 11309093 splice 0 with 13 rotate 0 connect at 2 @0
+  14700246 = combine 11700493 splice 2 with 5126548 rotate 3 connect at 5 @0
+  15032940 = connect 14700246 at 1 @1
+  16227992 = combine 15032940 splice 3 with 13 rotate 0 connect at 5 @3
+  5127805 = connect 16227992 at 1 @1
+
+Target trace:
+  11060 = source {seven-seven-parallel-mismatched-closed-open}
+  5127920 = close 11060 @3
+Source trace:
+  13 = source {3-split}
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5390936 = combine 37 splice 1 with 5126294 rotate 2 connect at 4 @1
+  5699195 = combine 5390936 splice 2 with 13 rotate 0 connect at 4 @2
+  5944475 = connect 5699195 at 1 @2
+  5971687 = combine 5944475 splice 2 with 13 rotate 0 connect at 4 @2
+  56 = connect 5971687 at 4 @2
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  7389307 = combine 56 splice 0 with 5126548 rotate 2 connect at 6 @1
+  22 = connect 7389307 at 1 @0
+  8894479 = combine 22 splice 0 with 13 rotate 0 connect at 5 @0
+  10614881 = combine 8894479 splice 1 with 5126294 rotate 0 connect at 4 @4
+  11311130 = connect 10614881 at 2 @0
+  11934021 = combine 11311130 splice 2 with 13 rotate 0 connect at 4 @0
+  13778175 = combine 11934021 splice 1 with 5126294 rotate 0 connect at 4 @1
+  15036612 = connect 13778175 at 2 @0
+  16276984 = combine 15036612 splice 0 with 13 rotate 0 connect at 7 @0
+  5127920 = connect 16276984 at 5 @1
+
+Target trace:
+  11457 = source {seven-seven-antiparallel-mismatched-closed-open-r, seven-seven-antiparallel-mismatched-r}
+  5128008 = close 11457 @0
+Source trace:
+  13 = source {3-split}
+  10307 = source {seven-toggle-noncrossing-matched-closed-0-r, toggle-seven-noncrossing-matched-0-closed-s}
+  5126359 = close 10307 @3
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5390936 = combine 37 splice 1 with 5126294 rotate 2 connect at 4 @1
+  5699195 = combine 5390936 splice 2 with 13 rotate 0 connect at 4 @2
+  5944475 = connect 5699195 at 1 @2
+  5971687 = combine 5944475 splice 2 with 13 rotate 0 connect at 4 @2
+  56 = connect 5971687 at 4 @2
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  7389307 = combine 56 splice 0 with 5126548 rotate 2 connect at 6 @1
+  22 = connect 7389307 at 1 @0
+  8894479 = combine 22 splice 0 with 13 rotate 0 connect at 5 @0
+  10614881 = combine 8894479 splice 1 with 5126294 rotate 0 connect at 4 @4
+  11311130 = connect 10614881 at 2 @0
+  11934021 = combine 11311130 splice 2 with 13 rotate 0 connect at 4 @0
+  15016736 = combine 11934021 splice 1 with 5126359 rotate 1 connect at 4 @4
+  15039669 = connect 15016736 at 6 @0
+  16178953 = combine 15039669 splice 1 with 13 rotate 0 connect at 3 @0
+  5128008 = connect 16178953 at 2 @0
+
+Target trace:
+  12097 = source {seven-seven-parallel-mismatched-open-closed}
+  5128051 = close 12097 @0
+Source trace:
+  13 = source {3-split}
+  10404 = source {seven-toggle-noncrossing-mismatched-open-0-s, toggle-seven-noncrossing-mismatched-0-open-r}
+  5126294 = close 10404 @3
+  3 = connect 5126294 at 0 @0
+  5131510 = combine 3 splice 0 with 13 rotate 0 connect at 2 @0
+  5132352 = combine 5131510 splice 1 with 5126294 rotate 0 connect at 4 @1
+  5143193 = connect 5132352 at 4 @1
+  10482 = source {seven-toggle-noncrossing-mismatched-closed-1-s, toggle-seven-noncrossing-mismatched-1-closed-r}
+  5126692 = close 10482 @2
+  10493 = source {seven-toggle-noncrossing-mismatched-open-0-r, toggle-seven-noncrossing-mismatched-0-open-s}
+  5126351 = close 10493 @0
+  5143918 = combine 5143193 splice 0 with 5126351 rotate 2 connect at 6 @1
+  37 = connect 5143918 at 0 @0
+  5390936 = combine 37 splice 1 with 5126294 rotate 2 connect at 4 @1
+  5699195 = combine 5390936 splice 2 with 13 rotate 0 connect at 4 @2
+  5944475 = connect 5699195 at 1 @2
+  5971687 = combine 5944475 splice 2 with 13 rotate 0 connect at 4 @2
+  56 = connect 5971687 at 4 @2
+  10739 = source {seven-toggle-noncrossing-matched-open-1-s, toggle-seven-noncrossing-matched-1-open-r}
+  5126548 = close 10739 @3
+  7389307 = combine 56 splice 0 with 5126548 rotate 2 connect at 6 @1
+  22 = connect 7389307 at 1 @0
+  8894479 = combine 22 splice 0 with 13 rotate 0 connect at 5 @0
+  10614881 = combine 8894479 splice 1 with 5126294 rotate 0 connect at 4 @4
+  11311130 = connect 10614881 at 2 @0
+  11934021 = combine 11311130 splice 2 with 13 rotate 0 connect at 4 @0
+  14612330 = combine 11934021 splice 1 with 5126692 rotate 1 connect at 4 @4
+  15040485 = connect 14612330 at 6 @0
+  16387777 = combine 15040485 splice 1 with 13 rotate 0 connect at 3 @0
+  5128051 = connect 16387777 at 2 @0
+
+==> Step 80: 0 user, 0 sys, 0h0m0s wall (0.32), 3.22 GiB (0.00, 0)
+-->    closed:    13080913          68   big       0 MiB
+--> closemirr:       22434          19   big       0 MiB
+-->   connect:       22434          19   big       0 MiB
+-->   combine:     3209694        9658 332.3       0 MiB
+--> provenance:   0.06 GiB   0.06 GiB 0.90
+
+==> Step 81: 0 user, 0 sys, 0h0m0s wall (1.00), 3.22 GiB (0.00, 0)
+-->    closed:    13080913          68   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:       22434          19   big       0 MiB
+-->   combine:     3209694        9658 332.3       0 MiB
+--> provenance:   0.06 GiB   0.06 GiB 0.90
+
+==> Step 82: 0 user, 0 sys, 0h0m0s wall (1.11), 3.22 GiB (0.00, 0)
+-->    closed:    13081101          68   big       0 MiB
+--> closemirr:         188           1 188.0       0 MiB
+-->   connect:         188           1 188.0       0 MiB
+-->   combine:     3209882        9658 332.4       0 MiB
+--> provenance:   0.06 GiB   0.06 GiB 0.90
+
+==> Step 83: 0 user, 0 sys, 0h0m0s wall (1.01), 3.22 GiB (0.00, 0)
+-->    closed:    13081101          68   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:         188           1 188.0       0 MiB
+-->   combine:     3209882        9658 332.4       0 MiB
+--> provenance:   0.06 GiB   0.06 GiB 0.90
+
+==> Step 84: 0 user, 0 sys, 0h0m0s wall (0.99), 3.22 GiB (0.00, 0)
+-->    closed:    13081101          68   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:     3209882        9658 332.4       0 MiB
+--> provenance:   0.06 GiB   0.06 GiB 0.90
+
+==> Step 85: 0 user, 0 sys, 0h0m0s wall (1.00), 3.22 GiB (0.00, 0)
+-->    closed:    13081101          68   big       0 MiB
+--> closemirr:           0           0             0 MiB
+-->   connect:           0           0             0 MiB
+-->   combine:           0           0             0 MiB
+--> provenance:   0.06 GiB   0.06 GiB 0.90
+
+==> REPORT COMPLETED
+--> 245 targets found:
+   2st_28-2st_59-antiparallel-matched-1-1-s [closed] (5129194)
+   2st_28-2st_59-parallel-matched-1-1-s [closed] (5129194)
+   2st_28-2st_71-noncrossing-matched-1-1-s [closed] (5129194)
+   2st_28-wire-noncrossing-1-1-s [closed] (5129194)
+   2st_35-2st_59-antiparallel-mismatched-0-1-s [closed] (5129194)
+   2st_35-2st_59-parallel-mismatched-0-1-s [closed] (5129194)
+   2st_35-2st_71-noncrossing-mismatched-0-1-s [closed] (5129194)
+   2st_35-wire-noncrossing-0-0-s [closed] (5129194)
+   2st_36-2st_39-noncrossing-matched-1-1-r [closed] (5129171)
+   2st_36-2st_39-noncrossing-matched-1-1-s [closed] (5129173)
+   2st_36-2st_60-noncrossing-matched-1-1-s [closed] (5129185)
+   2st_39-1 [closed] (5129147)
+   2st_39-2st_36-noncrossing-matched-1-1-r [closed] (5129173)
+   2st_39-2st_36-noncrossing-matched-1-1-s [closed] (5129171)
+   2st_39-2st_41-noncrossing-matched-1-1-r [closed] (5129184)
+   2st_39-2st_56-parallel-mismatched-1-0-r [closed] (5129182)
+   2st_39-2st_59-parallel-matched-1-1-s [closed] (5129192)
+   2st_41-2st_39-noncrossing-matched-1-1-s [closed] (5129184)
+   2st_41-2st_59-noncrossing-matched-1-1-r [closed] (5129194)
+   2st_41-2st_59-noncrossing-mismatched-0-1-s [closed] (5129194)
+   2st_41-2st_71-noncrossing-matched-1-1-r [closed] (5129194)
+   2st_41-2st_71-noncrossing-mismatched-0-1-s [closed] (5129194)
+   2st_41-wire-noncrossing-1-1 [closed] (5129194)
+   2st_49-2st_59-antiparallel-matched-1-1-s [closed] (5129194)
+   2st_49-2st_59-parallel-matched-1-1-s [closed] (5129194)
+   2st_49-2st_71-noncrossing-matched-1-1-s [closed] (5129194)
+   2st_49-wire-noncrossing-1-1-s [closed] (5129194)
+   2st_51-2st_56-antiparallel-mismatched-1-0-r [closed] (5129181)
+   2st_51-2st_59-antiparallel-matched-1-1-s [closed] (5129194)
+   2st_51-2st_59-parallel-matched-1-1-s [closed] (5129194)
+   2st_51-2st_71-noncrossing-matched-1-1-s [closed] (5129194)
+   2st_51-wire-noncrossing-1-1-s [closed] (5129194)
+   2st_56-2st_39-parallel-mismatched-0-1-s [closed] (5129182)
+   2st_56-2st_51-antiparallel-mismatched-0-1-r [closed] (5129181)
+   2st_56-2st_59-antiparallel-mismatched-0-1-s [closed] (5129194)
+   2st_56-2st_59-parallel-mismatched-0-1-s [closed] (5129194)
+   2st_56-2st_68-parallel-mismatched-0-1-s [closed] (5129189)
+   2st_56-2st_71-noncrossing-mismatched-0-1-s [closed] (5129194)
+   2st_56-wire-noncrossing-0-0-s [closed] (5129194)
+   2st_59-2st_28-antiparallel-matched-1-1-s [closed] (5129194)
+   2st_59-2st_28-parallel-matched-1-1-r [closed] (5129194)
+   2st_59-2st_35-antiparallel-mismatched-1-0-s [closed] (5129194)
+   2st_59-2st_35-parallel-mismatched-1-0-r [closed] (5129194)
+   2st_59-2st_39-parallel-matched-1-1-r [closed] (5129192)
+   2st_59-2st_41-noncrossing-matched-1-1-s [closed] (5129194)
+   2st_59-2st_41-noncrossing-mismatched-1-0-r [closed] (5129194)
+   2st_59-2st_49-antiparallel-matched-1-1-s [closed] (5129194)
+   2st_59-2st_49-parallel-matched-1-1-r [closed] (5129194)
+   2st_59-2st_51-antiparallel-matched-1-1-s [closed] (5129194)
+   2st_59-2st_51-parallel-matched-1-1-r [closed] (5129194)
+   2st_59-2st_56-antiparallel-mismatched-1-0-s [closed] (5129194)
+   2st_59-2st_56-parallel-mismatched-1-0-r [closed] (5129194)
+   2st_59-2st_62-antiparallel-mismatched-1-0-s [closed] (5129194)
+   2st_59-2st_62-parallel-mismatched-1-0-r [closed] (5129194)
+   2st_59-2st_63-antiparallel-matched-1-1-s [closed] (5129194)
+   2st_59-2st_63-parallel-matched-1-1-r [closed] (5129194)
+   2st_59-seven-antiparallel-mismatched-1-closed-s [closed] (5129194)
+   2st_59-seven-parallel-mismatched-1-closed-r [closed] (5129194)
+   2st_59-shortcut-antiparallel-mismatched-1-closed-s [closed] (5129194)
+   2st_59-shortcut-parallel-mismatched-1-closed-r [closed] (5129194)
+   2st_60-2st_36-noncrossing-matched-1-1-r [closed] (5129185)
+   2st_60-2st_62-parallel-mismatched-1-0-s [closed] (5129190)
+   2st_62-2st_59-antiparallel-mismatched-0-1-s [closed] (5129194)
+   2st_62-2st_59-parallel-mismatched-0-1-s [closed] (5129194)
+   2st_62-2st_60-parallel-mismatched-0-1-r [closed] (5129190)
+   2st_62-2st_71-noncrossing-mismatched-0-1-s [closed] (5129194)
+   2st_62-wire-noncrossing-0-0-s [closed] (5129194)
+   2st_63-2st_59-antiparallel-matched-1-1-s [closed] (5129194)
+   2st_63-2st_59-parallel-matched-1-1-s [closed] (5129194)
+   2st_63-2st_71-noncrossing-matched-1-1-s [closed] (5129194)
+   2st_63-wire-noncrossing-1-1-s [closed] (5129194)
+   2st_68-2st_56-parallel-mismatched-1-0-r [closed] (5129189)
+   2st_68-toggle-noncrossing-matched-0-0-s [closed] (5128022)
+   2st_71-2st_28-noncrossing-matched-1-1-r [closed] (5129194)
+   2st_71-2st_35-noncrossing-mismatched-1-0-r [closed] (5129194)
+   2st_71-2st_41-noncrossing-matched-1-1-s [closed] (5129194)
+   2st_71-2st_41-noncrossing-mismatched-1-0-r [closed] (5129194)
+   2st_71-2st_49-noncrossing-matched-1-1-r [closed] (5129194)
+   2st_71-2st_51-noncrossing-matched-1-1-r [closed] (5129194)
+   2st_71-2st_56-noncrossing-mismatched-1-0-r [closed] (5129194)
+   2st_71-2st_62-noncrossing-mismatched-1-0-r [closed] (5129194)
+   2st_71-2st_63-noncrossing-matched-1-1-r [closed] (5129194)
+   2st_71-seven-noncrossing-mismatched-1-closed-r [closed] (5129194)
+   2st_71-shortcut-noncrossing-mismatched-1-closed-r [closed] (5129194)
+   2st_74-toggle-noncrossing-mismatched-0-1-s [closed] (5127972)
+   4-split (207)
+   5-split (16839)
+   6-split (19580)
+   l3s3_1-0-r (149)
+   l3s3_1-0-s (159)
+   l3s3_1-1-r (160)
+   l3s3_1-1-s (155)
+   l3s3_1-2-r (148)
+   l3s3_1-2-s (156)
+   l3s3_11-0-r (22)
+   l3s3_11-0-s (21)
+   l3s3_11-1-r (23)
+   l3s3_11-1-s (19)
+   l3s3_11-2-r (1105683)
+   l3s3_11-2-s (1105684)
+   l3s3_16-0-r (135)
+   l3s3_16-0-s (137)
+   l3s3_16-1-r (136)
+   l3s3_16-1-s (129)
+   l3s3_16-2-r (131)
+   l3s3_16-2-s (138)
+   l3s3_17-1 (1105670)
+   l3s3_17-2-r (5121092)
+   l3s3_17-2-s (5121091)
+   l3s3_18-1-r (1105680)
+   l3s3_18-1-s (1105674)
+   l3s3_18-2-r (1105679)
+   l3s3_18-2-s (1105677)
+   l3s3_19-0-r (137)
+   l3s3_19-0-s (135)
+   l3s3_19-1-r (129)
+   l3s3_19-1-s (136)
+   l3s3_19-2-r (138)
+   l3s3_19-2-s (131)
+   l3s3_20-1-r (1105674)
+   l3s3_20-1-s (1105680)
+   l3s3_20-2-r (1105677)
+   l3s3_20-2-s (1105679)
+   l3s3_21-1 (1105670)
+   l3s3_21-2-r (5121091)
+   l3s3_21-2-s (5121092)
+   l3s3_25-1 (1105670)
+   l3s3_28-0 (38)
+   l3s3_28-1 (37)
+   l3s3_28-2 (34)
+   l3s3_29-0-r (36)
+   l3s3_29-0-s (41)
+   l3s3_29-1-r (35)
+   l3s3_29-1-s (39)
+   l3s3_29-2-r (40)
+   l3s3_29-2-s (42)
+   l3s3_30-2-r (1105672)
+   l3s3_30-2-s (1105671)
+   l3s3_32-2 (1105670)
+   l3s3_4-0-r (22)
+   l3s3_4-0-s (21)
+   l3s3_4-1-r (23)
+   l3s3_4-1-s (19)
+   l3s3_4-2-r (1105681)
+   l3s3_4-2-s (1105682)
+   l3s3_42-0-r (128)
+   l3s3_42-0-s (127)
+   l3s3_42-1-r (127)
+   l3s3_42-1-s (128)
+   l3s3_42-2-r (1105686)
+   l3s3_42-2-s (1105685)
+   l3s3_44-0-r (133)
+   l3s3_44-0-s (139)
+   l3s3_44-1-r (134)
+   l3s3_44-1-s (140)
+   l3s3_44-2-r (130)
+   l3s3_44-2-s (132)
+   l3s3_7-0-r (54)
+   l3s3_7-0-s (81)
+   l3s3_7-1-r (70)
+   l3s3_7-1-s (67)
+   l3s3_7-2-r (46)
+   l3s3_7-2-s (51)
+   l3s3_8-0-r (56)
+   l3s3_8-0-s (45)
+   l3s3_8-1-r (53)
+   l3s3_8-1-s (47)
+   l3s3_8-2-r (59)
+   l3s3_8-2-s (61)
+   l3s3_9-0-r (22)
+   l3s3_9-0-s (21)
+   l3s3_9-1-r (23)
+   l3s3_9-1-s (19)
+   l3s3_9-2-r (1105678)
+   l3s3_9-2-s (1105676)
+   lock-seven-noncrossing-matched-closed-open-r [closed] (5126640)
+   lock-seven-noncrossing-matched-closed-open-s [closed] (5126646)
+   lock-seven-noncrossing-matched-open-closed-r [closed] (5126354)
+   lock-seven-noncrossing-matched-open-closed-s [closed] (5126450)
+   lock-toggle-noncrossing-matched-closed-1-r (222)
+   lock-toggle-noncrossing-matched-closed-1-s (224)
+   lock-toggle-noncrossing-matched-open-0-r (221)
+   lock-toggle-noncrossing-matched-open-0-s (223)
+   lock-toggle-noncrossing-mismatched-closed-0-r (224)
+   lock-toggle-noncrossing-mismatched-closed-0-s (222)
+   lock-toggle-noncrossing-mismatched-open-1-r (223)
+   lock-toggle-noncrossing-mismatched-open-1-s (221)
+   locking-2-toggle-antiparallel-locked-r (3175)
+   locking-2-toggle-antiparallel-locked-s (3172)
+   locking-2-toggle-antiparallel-open-r (3171)
+   locking-2-toggle-antiparallel-open-s (3180)
+   locking-2-toggle-parallel-bottom (3179)
+   locking-2-toggle-parallel-open (3178)
+   locking-2-toggle-parallel-top (3174)
+   s3l3_5-0-r (56)
+   s3l3_5-0-s (45)
+   s3l3_5-1-r (53)
+   s3l3_5-1-s (47)
+   s3l3_5-2-r (59)
+   s3l3_5-2-s (61)
+   seven-2st_59-antiparallel-mismatched-closed-1-s [closed] (5129194)
+   seven-2st_59-parallel-mismatched-closed-1-s [closed] (5129194)
+   seven-2st_71-noncrossing-mismatched-closed-1-s [closed] (5129194)
+   seven-lock-noncrossing-matched-closed-open-r [closed] (5126450)
+   seven-lock-noncrossing-matched-closed-open-s [closed] (5126354)
+   seven-lock-noncrossing-matched-open-closed-r [closed] (5126646)
+   seven-lock-noncrossing-matched-open-closed-s [closed] (5126640)
+   seven-seven-antiparallel-mismatched-closed-open-r [closed] (5128008)
+   seven-seven-antiparallel-mismatched-closed-open-s [closed] (5127805)
+   seven-seven-antiparallel-mismatched-r [closed] (5128008)
+   seven-seven-antiparallel-mismatched-s [closed] (5127805)
+   seven-seven-parallel-mismatched-closed-open [closed] (5127920)
+   seven-seven-parallel-mismatched-open-closed [closed] (5128051)
+   seven-wire-noncrossing-closed-0-s [closed] (5129194)
+   shortcut-2st_59-antiparallel-mismatched-closed-1-s [closed] (5129194)
+   shortcut-2st_59-parallel-mismatched-closed-1-s [closed] (5129194)
+   shortcut-2st_71-noncrossing-mismatched-closed-1-s [closed] (5129194)
+   shortcut-wire-noncrossing-closed-0-s [closed] (5129194)
+   toggle (3)
+   toggle-2st_68-noncrossing-matched-0-0-r [closed] (5128022)
+   toggle-2st_74-noncrossing-mismatched-1-0-r [closed] (5127972)
+   toggle-lock-noncrossing-matched-0-open-r (223)
+   toggle-lock-noncrossing-matched-0-open-s (221)
+   toggle-lock-noncrossing-matched-1-closed-r (224)
+   toggle-lock-noncrossing-matched-1-closed-s (222)
+   toggle-lock-noncrossing-mismatched-0-closed-r (222)
+   toggle-lock-noncrossing-mismatched-0-closed-s (224)
+   toggle-lock-noncrossing-mismatched-1-open-r (221)
+   toggle-lock-noncrossing-mismatched-1-open-s (223)
+   toggle-wire-noncrossing-0-0 (236)
+   toggle-wire-noncrossing-1-1 (230)
+   wire (1)
+   wire-2st_28-noncrossing-1-1-r [closed] (5129194)
+   wire-2st_35-noncrossing-0-0-r [closed] (5129194)
+   wire-2st_41-noncrossing-0-0 [closed] (5129194)
+   wire-2st_49-noncrossing-1-1-r [closed] (5129194)
+   wire-2st_51-noncrossing-1-1-r [closed] (5129194)
+   wire-2st_56-noncrossing-0-0-r [closed] (5129194)
+   wire-2st_62-noncrossing-0-0-r [closed] (5129194)
+   wire-2st_63-noncrossing-1-1-r [closed] (5129194)
+   wire-seven-noncrossing-0-closed-r [closed] (5129194)
+   wire-shortcut-noncrossing-0-closed-r [closed] (5129194)
+   wire-toggle-noncrossing-0-0 (230)
+   wire-toggle-noncrossing-1-1 (236)
+   wire-wire-noncrossing (205)
+--> 495 gadgets mentioned: 1 3 13 19 21 22 23 34 35 36 37 38 39 40 41 42 45 46 47 51 53 54 56 59 61 67 70 81 127 128 129 130 131 132 133 134 135 136 137 138 139 140 148 149 155 156 159 160 205 207 221 222 223 224 230 236 3171 3172 3174 3175 3178 3179 3180 10110 10231 10242 10307 10325 10343 10404 10482 10493 10518 10544 10739 10815 11060 11273 11457 12097 12960 16839 19580 1105667 1105670 1105671 1105672 1105674 1105676 1105677 1105678 1105679 1105680 1105681 1105682 1105683 1105684 1105685 1105686 1106461 1108614 1108701 1108774 1108900 1109162 1109292 1109710 1110345 1110707 5121091 5121092 5126294 5126351 5126354 5126359 5126402 5126450 5126533 5126548 5126602 5126640 5126646 5126692 5127805 5127920 5127972 5128008 5128022 5128051 5129147 5129171 5129173 5129181 5129182 5129184 5129185 5129189 5129190 5129192 5129194 5131509 5131510 5131516 5131521 5131555 5131556 5131563 5131565 5131567 5131570 5131572 5131574 5131587 5131588 5131592 5131595 5132067 5132068 5132069 5132070 5132077 5132163 5132167 5132352 5132355 5132380 5132547 5132549 5132552 5132553 5132554 5132555 5132559 5132562 5132563 5132565 5132566 5132569 5133184 5133185 5133265 5133267 5133346 5143193 5143194 5143197 5143199 5143200 5143201 5143202 5143203 5143204 5143254 5143648 5143712 5143918 5143919 5143922 5143950 5143952 5143957 5143958 5143960 5143961 5226969 5247596 5262147 5303819 5307590 5316059 5317588 5353411 5358854 5360343 5390936 5401777 5403325 5406306 5413972 5423592 5439555 5447572 5494162 5494163 5528744 5567357 5644474 5699195 5701228 5715462 5717458 5717459 5737771 5776113 5782123 5944389 5944393 5944394 5944396 5944402 5944406 5944407 5944464 5944475 5945132 5945135 5945138 5945143 5960339 5967831 5967841 5971687 6009777 6025049 6074782 6133390 6144066 6227680 6443679 6664486 6737570 6745258 6750284 6756880 6929507 6929875 6930626 6930726 6932230 6932779 6932915 6932985 6933480 6933763 6934078 6964662 6988695 7031291 7073951 7086134 7104395 7110287 7134657 7159131 7189598 7201637 7304278 7389307 7419784 7498958 7631762 7765052 7947727 8099720 8214891 8489176 8489285 8489818 8492812 8492956 8494121 8495897 8507096 8557311 8563097 8574222 8596387 8602138 8669450 8714543 8748187 8759426 8765141 8793489 8888969 8894479 8906090 9074296 9096732 9102371 9253528 9382418 9393584 9399172 9505578 9505585 9595557 9757616 9807915 9919835 10522441 10532541 10537737 10540746 10543818 10546866 10562471 10571657 10594026 10605675 10614881 10630893 10633982 10683161 10697541 10701383 10707434 10731450 10756728 10780643 10795829 10802761 10854727 10857060 10967286 10998836 11066893 11210437 11217507 11305318 11305500 11306016 11306184 11306397 11306601 11307019 11307158 11307200 11307328 11307518 11308882 11309093 11309129 11309375 11309517 11310177 11310397 11310473 11310474 11310805 11311130 11311990 11312229 11312760 11312811 11312896 11313170 11330694 11358986 11365957 11376009 11393217 11444613 11491363 11501586 11507074 11507143 11524282 11541480 11603706 11616254 11643441 11700493 11728862 11763129 11810027 11934021 11951064 11956573 11984906 11990759 12081913 12155918 12413454 12773322 12775040 12775802 12775895 12775993 12775995 12776598 12777178 12778413 12779719 12780347 12780450 12781454 12781569 12782367 13601235 13715356 13759149 13778175 13802960 13881776 13960862 14030991 14101461 14136421 14215506 14259422 14302924 14355745 14355751 14364748 14612330 14672400 14700246 14953088 15006356 15016736 15032802 15032940 15034338 15034889 15035216 15035838 15036581 15036612 15039326 15039450 15039669 15040462 15040485 15042397 15042882 15044372 15045194 15045748 15046032 15046786 15049051 15049487 16141798 16178953 16191089 16215606 16227992 16252234 16276646 16276984 16362661 16362662 16387777 16399534 16461106 16473171 16485710 16485727 16571223 16571252 16632103 16632104 16668736 17061549
